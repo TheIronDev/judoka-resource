@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/TheIronDeveloper/judoka-resource/issues"
   },
-  "homepage": "https://github.com/TheIronDeveloper/judoka-resource"
+  "homepage": "https://github.com/TheIronDeveloper/judoka-resource",
+  "dependencies": {
+    "express": "~4.0.0",
+    "ejs": "~1.0.0",
+    "ejs-locals": "~1.0.2"
+  }
 }

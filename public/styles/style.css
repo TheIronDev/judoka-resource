@@ -1,0 +1,4 @@
+html{background: #efefef;}
+.container{background:#fff;box-shadow:5px 5px 5px #ddd;margin: 0 auto;padding:1em;width: 960px;}
+
+header, footer{border: 1px solid #efefef;}
