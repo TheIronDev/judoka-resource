@@ -1,0 +1,24 @@
+{
+  "name": "judoka-resource",
+  "version": "0.0.0",
+  "description": "A resource for judoka to post and learn more about judo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/TheIronDeveloper/judoka-resource.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "judo"
+  ],
+  "author": "Tyler Stark",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/TheIronDeveloper/judoka-resource/issues"
+  },
+  "homepage": "https://github.com/TheIronDeveloper/judoka-resource"
+}
