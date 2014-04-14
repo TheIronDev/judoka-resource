@@ -25,5 +25,9 @@
     "express": "~4.0.0",
     "ejs": "~1.0.0",
     "ejs-locals": "~1.0.2"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-jshint": "~0.10.0"
   }
 }
