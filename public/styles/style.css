@@ -1,4 +1,13 @@
+/* Globals */
+*{box-sizing: border-box; -moz-box-sizing: border-box}
 html{background: #efefef;}
-.container{background:#fff;box-shadow:5px 5px 5px #ddd;margin: 0 auto;padding:1em;width: 960px;}
 
-header, footer{border: 1px solid #efefef;}
+/* Layout */
+.container{background:#fff;box-shadow:5px 5px 5px #ddd;margin: 0 auto;max-width: 1024px;width: 100%;}
+.inner{padding:5px;}
+.main{display: inline-block;width: 74%;}
+.sidebar{display: inline-block;width: 25%;}
+
+/* Global Styles */
+.header{background: #0d3349;color: #fff;}
+.footer{background: #444444;color: #fff;font-size: 0.6em;}
