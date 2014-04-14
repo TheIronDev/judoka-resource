@@ -1,0 +1,7 @@
+{
+	"types": ["Nage-Waza", "Katame-Waza"],
+	"sub-types": {
+		"Nage-Waza": ["Te-Waza", "Ashi-Waza", "Koshi-Waza", "Sutemi-Waza"],
+		"Katame-Waza": ["Osaekomi-Waza", "Shime-Waza", "Kansetsu-Waza"]
+	}
+}
