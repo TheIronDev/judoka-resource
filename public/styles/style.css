@@ -6,8 +6,12 @@ html{background: #efefef;}
 .container{background:#fff;box-shadow:5px 5px 5px #ddd;margin: 0 auto;max-width: 1024px;width: 100%;}
 .inner{padding:5px;}
 .main{display: inline-block;width: 74%;}
-.sidebar{display: inline-block;width: 25%;}
+.sidebar{float:right;width: 25%;}
 
 /* Global Styles */
 .header{background: #0d3349;color: #fff;}
 .footer{background: #444444;color: #fff;font-size: 0.6em;}
+
+
+.technique-list{}
+.technique-item{float:left;width:100%;max-width: 23%;height: 4em;text-align: center;border: 1px solid #efefef;margin: 0.5%;}

@@ -13,7 +13,11 @@ require.config({
 	}
 });
 
-require(['jquery', 'app/Router'], function($, Router){
+require(['jquery', 'backbone', 'underscore', 'app/Router'], function($, Backbone, _, Router){
+
+	_.templateSettings = {
+		interpolate: /\{\{(.+?)\}\}/g
+	};
 
 	$(document).ready(function(){
 		router = new Router();

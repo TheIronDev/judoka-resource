@@ -1,24 +1,53 @@
-define(['backbone', 'app/collections/techniques'], function(Backbone, TechniquesCollection){
+define(['backbone', 'app/collections/techniques', 'app/models/techniquesItem', 'app/views/techniquesItem'],
+	function(Backbone, TechniquesCollection, TechniqueModel, TechniqueItemView){
+
 	var TechniquesView = Backbone.View.extend({
 
 		el: '.techniques-container',
+		events: {
+			'change input[name=group]': 'sortByGroup',
+			'change input[name=subgroup]': 'sortBySubGroup'
+		},
 		initialize: function(options) {
 			this.techniqueList = this.$('.technique-list');
 			this.collection = new TechniquesCollection();
 
-			this.listenToOnce(this.collection, 'reset', this.render);
+			this.listenToOnce(this.collection, 'reset', this.renderAll);
 			this.collection.reset(this.techniqueList.data('techniques'));
-
-
-
-			// populate collection here
 		},
-		render: function(subGroup) {
-			//this.techniqueList.html('');
-			_.each(this.collection.models, function(technique){
-				var techniqueJSON = technique.toJSON();
-				this.techniqueList.append('('+techniqueJSON.name+')');
+		renderOne: function(techniqueModel) {
+			var techniqueItemView = new TechniqueItemView({model:techniqueModel})
+			techniqueHtml = techniqueItemView.render();
+
+			this.techniqueList.append(techniqueHtml);
+		},
+		renderGroup: function(group) {
+			this.$('.technique-list').html('');
+			_.each(group, function(techniqueModel){
+				this.renderOne(techniqueModel);
 			}, this);
+		},
+		renderAll: function() {
+			this.$('.technique-list').html('');
+			this.renderGroup(this.collection.models);
+		},
+		sortByGroup: function(event) {
+			var type = event.currentTarget.value,
+				groupedBy = this.collection.where({'type': type});
+
+			this.$('input[name=subgroup]').removeAttr('checked');
+
+			if(type === 'all') {
+				this.renderAll();
+			} else {
+				this.renderGroup(groupedBy);
+			}
+		},
+		sortBySubGroup: function(event) {
+			var subType = event.currentTarget.value,
+				groupedBy = this.collection.where({'subtype': subType});
+
+			this.renderGroup(groupedBy);
 		}
 	});
 

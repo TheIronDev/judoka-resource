@@ -3,10 +3,28 @@
 <h1>Judo Techniques</h1>
 
 <section class="techniques-container">
-    <ul>
-        <li>All</li>
-        <li>Nage-waza</li>
-        <li>Katame-waza</li>
-    </ul>
+    <label><input type="radio" name="group" value="all" checked="checked"> All </label>
+    <label><input type="radio" name="group" value="Nage-Waza"> Nage-Waza </label>
+    <label><input type="radio" name="group" value="Katame-Waza"> Katame-Waza </label>
+
+    <br />
+    <label><input type="radio" name="subgroup" value="Ashi-Waza"> Ashi-Waza </label>
+    <label><input type="radio" name="subgroup" value="Koshi-Waza"> Koshi-Waza </label>
+    <label><input type="radio" name="subgroup" value="Te-Waza"> Te-Waza </label>
+    <label><input type="radio" name="subgroup" value="Yoko-sutemi"> Yoko-sutemi </label>
+    <label><input type="radio" name="subgroup" value="Ma-sutemi"> Ma-sutemi </label>
+
+    <br />
+    <label><input type="radio" name="subgroup" value="Osaekomi-Waza"> Osaekomi-Waza </label>
+    <label><input type="radio" name="subgroup" value="Shimewaza"> Shimewaza </label>
+    <label><input type="radio" name="subgroup" value="Kinshi-Waza"> Kinshi-Waza </label>
+    <label><input type="radio" name="subgroup" value="Kansetsu-Waza"> Kansetsu-Waza </label>
+
+
     <section class="technique-list" data-techniques='<%- techniquesJson %>'></section>
 </section>
+<script id="techniqueItem" type="text/template">
+    <article class="technique-item">
+        {{ name }}
+    </article>
+</script>

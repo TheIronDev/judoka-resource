@@ -14,7 +14,6 @@ define(['backbone', 'app/views/techniquesList'], function(Backbone, TechniquesVi
 			if(!this.techniquesView){
 				this.techniquesView = new TechniquesView();
 			}
-			this.techniquesView.render();
 		},
 		start: function() {
 			Backbone.history.start({pushState: true});

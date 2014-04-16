@@ -1,109 +1,109 @@
 [
 	{
 		"type": "Nage-Waza",
-		"subtype": "Ashi-waza",
+		"subtype": "Ashi-Waza",
 		"name": "Deashi Harai",
 		"path": "Deashi-Harai"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Ashi-waza",
+		"subtype": "Ashi-Waza",
 		"name": "Hiza Guruma",
 		"path": "Hiza-Guruma"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Ashi-waza",
+		"subtype": "Ashi-Waza",
 		"name": "Sasae Tsurikomi Ashi",
 		"path": "Sasae-Tsurikomi-Ashi"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Koshi-waza",
+		"subtype": "Koshi-Waza",
 		"name": "Uki Goshi",
 		"path": "Uki-Goshi"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Ashi-waza",
+		"subtype": "Ashi-Waza",
 		"name": "Osoto Gari",
 		"path": "Osoto-Gari"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Koshi-waza",
+		"subtype": "Koshi-Waza",
 		"name": "O Goshi",
 		"path": "O-Goshi"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Ashi-waza",
+		"subtype": "Ashi-Waza",
 		"name": "Ouchi Gari",
 		"path": "Ouchi-Gari"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Te-waza",
+		"subtype": "Te-Waza",
 		"name": "Seoi Nage",
 		"path": "Seoi-Nage"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Ashi-waza",
+		"subtype": "Ashi-Waza",
 		"name": "Kosoto Gari",
 		"path": "Kosoto-Gari"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Ashi-waza",
+		"subtype": "Ashi-Waza",
 		"name": "Kouchi Gari",
 		"path": "Kouchi-Gari"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Koshi-waza",
+		"subtype": "Koshi-Waza",
 		"name": "Koshi Guruma",
 		"path": "Koshi-Guruma"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Koshi-waza",
+		"subtype": "Koshi-Waza",
 		"name": "Tsurikomi Goshi",
 		"path": "Tsurikomi-Goshi"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Ashi-waza",
+		"subtype": "Ashi-Waza",
 		"name": "Okuriashi Harai",
 		"path": "Okuriashi-Harai"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Te-waza",
+		"subtype": "Te-Waza",
 		"name": "Tai Otoshi",
 		"path": "Tai-Otoshi"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Koshi-waza",
+		"subtype": "Koshi-Waza",
 		"name": "Harai Goshi",
 		"path": "Harai-Goshi"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Ashi-waza",
+		"subtype": "Ashi-Waza",
 		"name": "Uchi Mata",
 		"path": "Uchi-Mata"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Ashi-waza",
+		"subtype": "Ashi-Waza",
 		"name": "Kosoto Gake",
 		"path": "Kosoto-Gake"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Koshi-waza",
+		"subtype": "Koshi-Waza",
 		"name": "Tsuri Goshi",
 		"path": "Tsuri-Goshi"
 	},
@@ -115,19 +115,19 @@
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Ashi-waza",
+		"subtype": "Ashi-Waza",
 		"name": "Ashi Guruma",
 		"path": "Ashi-Guruma"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Koshi-waza",
+		"subtype": "Koshi-Waza",
 		"name": "Hane Goshi",
 		"path": "Hane-Goshi"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Ashi-waza",
+		"subtype": "Ashi-Waza",
 		"name": "Harai Tsurikomi Ashi",
 		"path": "Harai-Tsurikomi-Ashi"
 	},
@@ -139,7 +139,7 @@
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Te-waza",
+		"subtype": "Te-Waza",
 		"name": "Kata Guruma",
 		"path": "Kata-Guruma"
 	},
@@ -163,19 +163,19 @@
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Te-waza",
+		"subtype": "Te-Waza",
 		"name": "Sukui Nage",
 		"path": "Sukui-Nage"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Koshi-waza",
+		"subtype": "Koshi-Waza",
 		"name": "Utsuri Goshi",
 		"path": "Utsuri-Goshi"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Ashi-waza",
+		"subtype": "Ashi-Waza",
 		"name": "O Guruma",
 		"path": "O-Guruma"
 	},
@@ -187,13 +187,13 @@
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Te-waza",
+		"subtype": "Te-Waza",
 		"name": "Uki Otoshi",
 		"path": "Uki-Otoshi"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Ashi-waza",
+		"subtype": "Ashi-Waza",
 		"name": "Osoto Guruma",
 		"path": "Osoto-Guruma"
 	},
@@ -217,7 +217,7 @@
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Koshi-waza",
+		"subtype": "Koshi-Waza",
 		"name": "Ushiro Goshi",
 		"path": "Ushiro-Goshi"
 	},
@@ -229,7 +229,7 @@
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Te-waza",
+		"subtype": "Te-Waza",
 		"name": "Sumi Otoshi",
 		"path": "Sumi-Otoshi"
 	},
@@ -241,25 +241,25 @@
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Te-waza",
+		"subtype": "Te-Waza",
 		"name": "Obi Otoshi",
 		"path": "Obi-Otoshi"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Te-waza",
+		"subtype": "Te-Waza",
 		"name": "Seoi Otoshi",
 		"path": "Seoi-Otoshi"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Te-waza",
+		"subtype": "Te-Waza",
 		"name": "Yama Arashi",
 		"path": "Yama-Arashi"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Ashi-waza",
+		"subtype": "Ashi-Waza",
 		"name": "Osoto Otoshi",
 		"path": "Osoto-Otoshi"
 	},
@@ -289,73 +289,73 @@
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Te-waza",
+		"subtype": "Te-Waza",
 		"name": "Morote Gari",
 		"path": "Morote-Gari"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Te-waza",
+		"subtype": "Te-Waza",
 		"name": "Kuchiki Taoshi",
 		"path": "Kuchiki-Taoshi"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Te-waza",
+		"subtype": "Te-Waza",
 		"name": "Kibisu Gaeshi",
 		"path": "Kibisu-Gaeshi"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Te-waza",
+		"subtype": "Te-Waza",
 		"name": "Uchi Mata Sukashi",
 		"path": "Uchi-Mata-Sukashi"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Koshi-waza",
+		"subtype": "Koshi-Waza",
 		"name": "Daki Age",
 		"path": "Daki-Age"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Ashi-waza",
+		"subtype": "Ashi-Waza",
 		"name": "Tsubame Gaeshi",
 		"path": "Tsubame-Gaeshi"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Te-waza",
+		"subtype": "Te-Waza",
 		"name": "Kouchi Gaeshi",
 		"path": "Kouchi-Gaeshi"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Ashi-waza",
+		"subtype": "Ashi-Waza",
 		"name": "Ouchi Gaeshi",
 		"path": "Ouchi-Gaeshi"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Ashi-waza",
+		"subtype": "Ashi-Waza",
 		"name": "Osoto Gaeshi",
 		"path": "Osoto-Gaeshi"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Ashi-waza",
+		"subtype": "Ashi-Waza",
 		"name": "Harai Goshi Gaeshi",
 		"path": "Harai-Goshi-Gaeshi"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Ashi-waza",
+		"subtype": "Ashi-Waza",
 		"name": "Uchi Mata Gaeshi",
 		"path": "Uchi-Mata-Gaeshi"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Ashi-waza",
+		"subtype": "Ashi-Waza",
 		"name": "Hane Goshi Gaeshi",
 		"path": "Hane-Goshi-Gaeshi"
 	},
@@ -391,199 +391,199 @@
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Koshi-waza",
+		"subtype": "Koshi-Waza",
 		"name": "Sode Tsurikomi Goshi",
 		"path": "Sode-Tsurikomi-Goshi"
 	},
 	{
 		"type": "Nage-Waza",
-		"subtype": "Te-waza",
+		"subtype": "Te-Waza",
 		"name": "Ippon Seoinage",
 		"path": "Ippon-Seoinage"
 	},
 	{
-		"type": "Katame-waza",
-		"subtype": "Osaekomi-waza",
+		"type": "Katame-Waza",
+		"subtype": "Osaekomi-Waza",
 		"name": "Kuzure-kesa-gatame",
 		"path": "Kuzure-kesa-gatame"
 	},
 	{
-		"type": "Katame-waza",
-		"subtype": "Osaekomi-waza",
+		"type": "Katame-Waza",
+		"subtype": "Osaekomi-Waza",
 		"name": "Kata-gatame",
 		"path": "Kata-gatame"
 	},
 	{
-		"type": "Katame-waza",
-		"subtype": "Osaekomi-waza",
+		"type": "Katame-Waza",
+		"subtype": "Osaekomi-Waza",
 		"name": "Kami-shiho-gatame",
 		"path": "Kami-shiho-gatame"
 	},
 	{
-		"type": "Katame-waza",
-		"subtype": "Osaekomi-waza",
+		"type": "Katame-Waza",
+		"subtype": "Osaekomi-Waza",
 		"name": "Kuzure-kami-shiho-gatame",
 		"path": "Kuzure-kami-shiho-gatame"
 	},
 	{
-		"type": "Katame-waza",
-		"subtype": "Osaekomi-waza",
+		"type": "Katame-Waza",
+		"subtype": "Osaekomi-Waza",
 		"name": "Yoko-shiho-gatame",
 		"path": "Yoko-shiho-gatame"
 	},
 	{
-		"type": "Katame-waza",
-		"subtype": "Osaekomi-waza",
+		"type": "Katame-Waza",
+		"subtype": "Osaekomi-Waza",
 		"name": "Tate-shiho-gatame",
 		"path": "Tate-shiho-gatame"
 	},
 	{
-		"type": "Katame-waza",
-		"subtype": "Osaekomi-waza",
+		"type": "Katame-Waza",
+		"subtype": "Osaekomi-Waza",
 		"name": "Kesa-gatame",
 		"path": "Kesa-gatame"
 	},
 	{
-		"type": "Katame-waza",
+		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
 		"name": "Nami-juji-jime",
 		"path": "Nami-juji-jime"
 	},
 	{
-		"type": "Katame-waza",
+		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
 		"name": "Gyaku-juji-jime",
 		"path": "Gyaku-juji-jime"
 	},
 	{
-		"type": "Katame-waza",
+		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
 		"name": "Kata-juji-jime",
 		"path": "Kata-juji-jime"
 	},
 	{
-		"type": "Katame-waza",
+		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
 		"name": "Hadaka-jime",
 		"path": "Hadaka-jime"
 	},
 	{
-		"type": "Katame-waza",
+		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
 		"name": "Okuri-eri-jime",
 		"path": "Okuri-eri-jime"
 	},
 	{
-		"type": "Katame-waza",
+		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
 		"name": "Kata-ha-jime",
 		"path": "Kata-ha-jime"
 	},
 	{
-		"type": "Katame-waza",
-		"subtype": "Kinshi-waza",
+		"type": "Katame-Waza",
+		"subtype": "Kinshi-Waza",
 		"name": "Do-jime",
 		"path": "Do-jime"
 	},
 	{
-		"type": "Katame-waza",
+		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
 		"name": "Sode-guruma-jime",
 		"path": "Sode-guruma-jime"
 	},
 	{
-		"type": "Katame-waza",
+		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
 		"name": "Kata-te-jime",
 		"path": "Kata-te-jime"
 	},
 	{
-		"type": "Katame-waza",
+		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
 		"name": "Ryo-te-jime",
 		"path": "Ryo-te-jime"
 	},
 	{
-		"type": "Katame-waza",
+		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
 		"name": "Tsukkomi-jime",
 		"path": "Tsukkomi-jime"
 	},
 	{
-		"type": "Katame-waza",
+		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
 		"name": "Sankaku-jime",
 		"path": "Sankaku-jime"
 	},
 	{
-		"type": "Katame-waza",
-		"subtype": "Kansetsu-waza",
+		"type": "Katame-Waza",
+		"subtype": "Kansetsu-Waza",
 		"name": "Ude-garami",
 		"path": "Ude-garami"
 	},
 	{
-		"type": "Katame-waza",
-		"subtype": "Kansetsu-waza",
+		"type": "Katame-Waza",
+		"subtype": "Kansetsu-Waza",
 		"name": "Ude-hishigi-juji-gatame",
 		"path": "Ude-hishigi-juji-gatame"
 	},
 	{
-		"type": "Katame-waza",
-		"subtype": "Kansetsu-waza",
+		"type": "Katame-Waza",
+		"subtype": "Kansetsu-Waza",
 		"name": "Ude-hishigi-ude-gatame",
 		"path": "Ude-hishigi-ude-gatame"
 	},
 	{
-		"type": "Katame-waza",
-		"subtype": "Kansetsu-waza",
+		"type": "Katame-Waza",
+		"subtype": "Kansetsu-Waza",
 		"name": "Ude-hishigi-hiza-gatame",
 		"path": "Ude-hishigi-hiza-gatame"
 	},
 	{
-		"type": "Katame-waza",
-		"subtype": "Kansetsu-waza",
+		"type": "Katame-Waza",
+		"subtype": "Kansetsu-Waza",
 		"name": "Ude-hishigi-waki-gatame",
 		"path": "Ude-hishigi-waki-gatame"
 	},
 	{
-		"type": "Katame-waza",
-		"subtype": "Kansetsu-waza",
+		"type": "Katame-Waza",
+		"subtype": "Kansetsu-Waza",
 		"name": "Ude-hishigi-hara-gatame",
 		"path": "Ude-hishigi-hara-gatame"
 	},
 	{
-		"type": "Katame-waza",
-		"subtype": "Kinshi-waza",
+		"type": "Katame-Waza",
+		"subtype": "Kinshi-Waza",
 		"name": "Ashi-garami",
 		"path": "Ashi-garami"
 	},
 	{
-		"type": "Katame-waza",
-		"subtype": "Kansetsu-waza",
+		"type": "Katame-Waza",
+		"subtype": "Kansetsu-Waza",
 		"name": "Ude-hishigi-ashi-gatame",
 		"path": "Ude-hishigi-ashi-gatame"
 	},
 	{
-		"type": "Katame-waza",
-		"subtype": "Kansetsu-waza",
+		"type": "Katame-Waza",
+		"subtype": "Kansetsu-Waza",
 		"name": "Ude-hishigi-te-gatame",
 		"path": "Ude-hishigi-te-gatame"
 	},
 	{
-		"type": "Katame-waza",
-		"subtype": "Kansetsu-waza",
+		"type": "Katame-Waza",
+		"subtype": "Kansetsu-Waza",
 		"name": "Ude-hishigi-sankaku-gatame",
 		"path": "Ude-hishigi-sankaku-gatame"
 	},
 	{
-		"type": "Katame-waza",
-		"subtype": "Kinshi-waza",
+		"type": "Katame-Waza",
+		"subtype": "Kinshi-Waza",
 		"name": "Kani-basami",
 		"path": "Kani-basami"
 	},
 	{
-		"type": "Katame-waza",
-		"subtype": "Kinshi-waza",
+		"type": "Katame-Waza",
+		"subtype": "Kinshi-Waza",
 		"name": "Kawazu-gake",
 		"path": "Kawazu-gake"
 	}
