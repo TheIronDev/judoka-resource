@@ -1,24 +1,26 @@
 <% layout('../globals/layout') %>
 
-<h1>Judo Techniques</h1>
-
 <section class="techniques-container">
-    <label><input type="radio" name="group" value="all" checked="checked"> All </label>
-    <label><input type="radio" name="group" value="Nage-Waza"> Nage-Waza </label>
-    <label><input type="radio" name="group" value="Katame-Waza"> Katame-Waza </label>
+    <h1>Judo Techniques</h1>
+    <section>
+        <label><input type="radio" name="group" value="all" checked="checked" data-title="Judo Techniques"> All </label>
+        <label><input type="radio" name="group" value="Nage-Waza" data-title="Nage-Waza Techniques"> Nage-Waza </label>
+        <label><input type="radio" name="group" value="Katame-Waza" data-title="Katame-Waza Techniques"> Katame-Waza </label>
 
-    <br />
-    <label><input type="radio" name="subgroup" value="Ashi-Waza"> Ashi-Waza </label>
-    <label><input type="radio" name="subgroup" value="Koshi-Waza"> Koshi-Waza </label>
-    <label><input type="radio" name="subgroup" value="Te-Waza"> Te-Waza </label>
-    <label><input type="radio" name="subgroup" value="Yoko-sutemi"> Yoko-sutemi </label>
-    <label><input type="radio" name="subgroup" value="Ma-sutemi"> Ma-sutemi </label>
+        <br />
+        <label><input type="radio" name="subgroup" value="Ashi-Waza" data-title="Ashi-Waza Techniques"> Ashi-Waza </label>
+        <label><input type="radio" name="subgroup" value="Koshi-Waza" data-title="Koshi-Waza Techniques"> Koshi-Waza </label>
+        <label><input type="radio" name="subgroup" value="Te-Waza" data-title="Te-Waza Techniques"> Te-Waza </label>
+        <label><input type="radio" name="subgroup" value="Yoko-sutemi" data-title="Yoko-sutemi Techniques"> Yoko-sutemi </label>
+        <label><input type="radio" name="subgroup" value="Ma-sutemi" data-title="Ma-sutemi Techniques"> Ma-sutemi </label>
 
-    <br />
-    <label><input type="radio" name="subgroup" value="Osaekomi-Waza"> Osaekomi-Waza </label>
-    <label><input type="radio" name="subgroup" value="Shimewaza"> Shimewaza </label>
-    <label><input type="radio" name="subgroup" value="Kinshi-Waza"> Kinshi-Waza </label>
-    <label><input type="radio" name="subgroup" value="Kansetsu-Waza"> Kansetsu-Waza </label>
+        <br />
+        <label><input type="radio" name="subgroup" value="Osaekomi-Waza" data-title="Osaekomi-Waza Techniques"> Osaekomi-Waza </label>
+        <label><input type="radio" name="subgroup" value="Shimewaza" data-title="Shimewaza Techniques"> Shimewaza </label>
+        <label><input type="radio" name="subgroup" value="Kinshi-Waza" data-title="Kinshi-Waza Techniques"> Kinshi-Waza </label>
+        <label><input type="radio" name="subgroup" value="Kansetsu-Waza" data-title="Kansetsu-Waza Techniques"> Kansetsu-Waza </label>
+    </section>
+
 
 
     <section class="technique-list" data-techniques='<%- techniquesJson %>'></section>

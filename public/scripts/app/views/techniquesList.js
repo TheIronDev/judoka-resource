@@ -33,8 +33,10 @@ define(['backbone', 'app/collections/techniques', 'app/models/techniquesItem', '
 		},
 		sortByGroup: function(event) {
 			var type = event.currentTarget.value,
+				h1Title = event.currentTarget.dataset.title,
 				groupedBy = this.collection.where({'type': type});
 
+			this.updateTitle(h1Title);
 			this.$('input[name=subgroup]').removeAttr('checked');
 
 			if(type === 'all') {
@@ -45,9 +47,16 @@ define(['backbone', 'app/collections/techniques', 'app/models/techniquesItem', '
 		},
 		sortBySubGroup: function(event) {
 			var subType = event.currentTarget.value,
+				h1Title = event.currentTarget.dataset.title,
 				groupedBy = this.collection.where({'subtype': subType});
 
+			this.updateTitle(h1Title);
 			this.renderGroup(groupedBy);
+		},
+		updateTitle: function(newTitle) {
+			$('h1').fadeOut(400, function(){
+				$('h1').text(newTitle).fadeIn();
+			});
 		}
 	});
 
