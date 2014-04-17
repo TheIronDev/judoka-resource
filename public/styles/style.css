@@ -1,17 +1,35 @@
 /* Globals */
 *{box-sizing: border-box; -moz-box-sizing: border-box}
-html{background: #efefef;}
+html{background: #efefef;margin: 0;}
+body{margin: 0;}
+
+h1{text-align: center;font-size: 1.5em;margin: 0.5em;}
 
 /* Layout */
-.container{background:#fff;box-shadow:5px 5px 5px #ddd;margin: 0 auto;max-width: 1024px;width: 100%;}
-.inner{padding:5px;}
-.main{display: inline-block;width: 74%;}
-.sidebar{float:right;width: 25%;}
+.container{margin-bottom: 1em;}
+.inner{padding:5px;max-width: 1024px;width: 100%;margin: 0 auto;}
+.container .inner{background:#fff;box-shadow:5px 5px 5px #ddd;overflow: hidden}
+.main{}
 
 /* Global Styles */
-.header{background: #0d3349;color: #fff;}
-.footer{background: #444444;color: #fff;font-size: 0.6em;}
+.header{background: #0d3349;box-shadow:0 3px 3px #999;color: #fff;margin-bottom: 1em;}
+.footer{background: #444444;color: #fff;}
 
-
+/* Technique Section */
 .technique-list{}
-.technique-item{float:left;width:100%;max-width: 23%;height: 4em;text-align: center;border: 1px solid #efefef;margin: 0.5%;}
+.technique-group{text-align: center}
+.technique-item{float:left;width:100%;max-width: 24%;height: 4em;text-align: center;border: 1px solid #efefef;margin: 0.5%;}
+
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .technique-item{max-width: 32%;}
+}
+
+@media (max-width: 768px) {
+    .technique-item{max-width: 49%;}
+}
+
+@media (max-width: 480px) {
+    .technique-item{max-width: 99%;}
+}

@@ -9,25 +9,25 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.11/require.min.js" data-main="/scripts/main.js"></script>
 </head>
 <body>
+<section class="header">
+    <div class="inner">
+        Header
+    </div>
+</section>
 
 <div class="container">
-
-    <section class="header inner">
-        Header
-    </section>
-
     <section class="inner">
         <section class="main">
             <%- body %>
         </section>
-        <section class="sidebar">
-            <% include sidebar.ejs %>
-        </section>
-    </section>
-
-    <section class="footer inner">
-        Footer
     </section>
 </div>
+
+<section class="footer">
+    <div class="inner">
+        Footer
+    </div>
+</section>
+
 </body>
 </html>

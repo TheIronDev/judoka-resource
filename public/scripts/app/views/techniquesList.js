@@ -50,6 +50,7 @@ define(['backbone', 'app/collections/techniques', 'app/models/techniquesItem', '
 				h1Title = event.currentTarget.dataset.title,
 				groupedBy = this.collection.where({'subtype': subType});
 
+			this.$('input[name=group]').removeAttr('checked');
 			this.updateTitle(h1Title);
 			this.renderGroup(groupedBy);
 		},
