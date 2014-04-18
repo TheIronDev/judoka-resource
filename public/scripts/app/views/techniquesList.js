@@ -9,11 +9,25 @@ define(['backbone', 'app/collections/techniques', 'app/models/techniquesItem', '
 			'change input[name=subgroup]': 'sortBySubGroup'
 		},
 		initialize: function(options) {
+			// Reference Parent router
+			this.router = options.router;
+
+			this.shouldResetH1 = false;
+
+			// Canvas where we will redraw judo techniques
 			this.techniqueList = this.$('.technique-list');
+
 			this.collection = new TechniquesCollection();
 
 			this.listenToOnce(this.collection, 'reset', this.renderAll);
 			this.collection.reset(this.techniqueList.data('techniques'));
+		},
+		clickInput: function(inputValue) {
+			this.shouldResetH1 = false;
+			this.$('input[value='+inputValue+']').click();
+		},
+		navigateTo: function(page) {
+			this.router.navigate('/techniques'+page);
 		},
 		renderOne: function(techniqueModel) {
 			var techniqueItemView = new TechniqueItemView({model:techniqueModel})
@@ -30,6 +44,7 @@ define(['backbone', 'app/collections/techniques', 'app/models/techniquesItem', '
 		renderAll: function() {
 			this.$('.technique-list').html('');
 			this.renderGroup(this.collection.models);
+			this.shouldResetH1 = true;
 		},
 		sortByGroup: function(event) {
 			var type = event.currentTarget.value,
@@ -41,8 +56,10 @@ define(['backbone', 'app/collections/techniques', 'app/models/techniquesItem', '
 
 			if(type === 'all') {
 				this.renderAll();
+				this.navigateTo('');
 			} else {
 				this.renderGroup(groupedBy);
+				this.navigateTo('/'+type);
 			}
 		},
 		sortBySubGroup: function(event) {
@@ -53,11 +70,15 @@ define(['backbone', 'app/collections/techniques', 'app/models/techniquesItem', '
 			this.$('input[name=group]').removeAttr('checked');
 			this.updateTitle(h1Title);
 			this.renderGroup(groupedBy);
+			this.navigateTo('/'+subType);
 		},
 		updateTitle: function(newTitle) {
-			$('h1').fadeOut(400, function(){
-				$('h1').text(newTitle).fadeIn();
-			});
+			if(this.shouldResetH1) {
+				$('h1').fadeOut(400, function(){
+					$('h1').text(newTitle).fadeIn();
+				});
+			}
+			this.shouldResetH1 = true;
 		}
 	});
 

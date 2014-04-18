@@ -13,6 +13,9 @@ h1{text-align: center;font-size: 1.5em;margin: 0.5em;}
 
 /* Global Styles */
 .header{background: #0d3349;box-shadow:0 3px 3px #999;color: #fff;margin-bottom: 1em;}
+.header ul{margin: 0;padding: 0;}
+.header ul li{display: inline;}
+.header li a{color: #fff;}
 .footer{background: #444444;color: #fff;}
 
 /* Technique Section */

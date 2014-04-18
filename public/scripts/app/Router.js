@@ -5,15 +5,22 @@ define(['backbone', 'app/views/techniquesList'], function(Backbone, TechniquesVi
 		},
 		routes: {
 			"": "index",
-			"techniques": "techniques"
+			"techniques": "techniques",
+			"techniques/:techniqueGroup": "techniquesGroup"
 		},
 		index: function(){
-			console.log('index')
+
 		},
 		techniques: function() {
 			if(!this.techniquesView){
-				this.techniquesView = new TechniquesView();
+				this.techniquesView = new TechniquesView({'router': this});
 			}
+		},
+		techniquesGroup: function(techniqueGroup) {
+			if(!this.techniquesView){
+				this.techniquesView = new TechniquesView({'router': this});
+			}
+			this.techniquesView.clickInput(techniqueGroup);
 		},
 		start: function() {
 			Backbone.history.start({pushState: true});
