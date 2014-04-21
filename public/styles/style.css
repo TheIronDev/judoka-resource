@@ -21,7 +21,13 @@ h1{text-align: center;font-size: 1.5em;margin: 0.5em;}
 /* Technique Section */
 .technique-list{}
 .technique-group{text-align: center}
-.technique-item{float:left;width:100%;max-width: 24%;height: 4em;text-align: center;border: 1px solid #efefef;margin: 0.5%;}
+.technique-item{float:left;width:100%;max-width: 24%;height: 5em;text-align: center;border: 1px solid #efefef;margin: 0.5%;}
+
+
+
+.sprite{background: #efefef;float: left;width: 4.5em;height: 100%;}
+.gokyo-sprite{background: url(/images/gokyo.jpg) no-repeat top left;background-size: 600px;}
+
 
 
 /* Media Queries */

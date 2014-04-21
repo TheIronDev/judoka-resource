@@ -26,7 +26,8 @@
     <section class="technique-list" data-techniques='<%- techniquesJson %>'></section>
 </section>
 <script id="techniqueItem" type="text/template">
-    <article class="technique-item">
+    <article class="technique-item" style="">
+        <div class="sprite {{ spriteName }}" style="background-position: {{ backgroundPosition }}">&nbsp;</div>
         {{ name }}
     </article>
 </script>

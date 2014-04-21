@@ -3,588 +3,784 @@
 		"type": "Nage-Waza",
 		"subtype": "Ashi-Waza",
 		"name": "Deashi Harai",
-		"path": "Deashi-Harai"
+		"path": "Deashi-Harai",
+		"backgroundPosition": "0 -60px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Ashi-Waza",
 		"name": "Hiza Guruma",
-		"path": "Hiza-Guruma"
+		"path": "Hiza-Guruma",
+		"backgroundPosition": "-75px -60px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Ashi-Waza",
 		"name": "Sasae Tsurikomi Ashi",
-		"path": "Sasae-Tsurikomi-Ashi"
+		"path": "Sasae-Tsurikomi-Ashi",
+		"backgroundPosition": "-150px -60px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Koshi-Waza",
 		"name": "Uki Goshi",
-		"path": "Uki-Goshi"
+		"path": "Uki-Goshi",
+		"backgroundPosition": "-375px -60px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Ashi-Waza",
 		"name": "Osoto Gari",
-		"path": "Osoto-Gari"
+		"path": "Osoto-Gari",
+		"backgroundPosition": "-300px -60px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Koshi-Waza",
 		"name": "O Goshi",
-		"path": "O-Goshi"
+		"path": "O-Goshi",
+		"backgroundPosition": "-225px -60px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Ashi-Waza",
 		"name": "Ouchi Gari",
-		"path": "Ouchi-Gari"
+		"path": "Ouchi-Gari",
+		"backgroundPosition": "-450px -60px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Te-Waza",
 		"name": "Seoi Nage",
-		"path": "Seoi-Nage"
+		"path": "Seoi-Nage",
+		"backgroundPosition": "-525px -60px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Ashi-Waza",
 		"name": "Kosoto Gari",
-		"path": "Kosoto-Gari"
+		"path": "Kosoto-Gari",
+		"backgroundPosition": "0 -150px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Ashi-Waza",
 		"name": "Kouchi Gari",
-		"path": "Kouchi-Gari"
+		"path": "Kouchi-Gari",
+		"backgroundPosition": "-75px -150px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Koshi-Waza",
 		"name": "Koshi Guruma",
-		"path": "Koshi-Guruma"
+		"path": "Koshi-Guruma",
+		"backgroundPosition": "-150px -150px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Koshi-Waza",
 		"name": "Tsurikomi Goshi",
-		"path": "Tsurikomi-Goshi"
+		"path": "Tsurikomi-Goshi",
+		"backgroundPosition": "-225px -150px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Ashi-Waza",
 		"name": "Okuriashi Harai",
-		"path": "Okuriashi-Harai"
+		"path": "Okuriashi-Harai",
+		"backgroundPosition": "-300px -150px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Te-Waza",
 		"name": "Tai Otoshi",
-		"path": "Tai-Otoshi"
+		"path": "Tai-Otoshi",
+		"backgroundPosition": "-375px -150px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Koshi-Waza",
 		"name": "Harai Goshi",
-		"path": "Harai-Goshi"
+		"path": "Harai-Goshi",
+		"backgroundPosition": "-455px -150px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Ashi-Waza",
 		"name": "Uchi Mata",
-		"path": "Uchi-Mata"
+		"path": "Uchi-Mata",
+		"backgroundPosition": "-525px -150px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Ashi-Waza",
 		"name": "Kosoto Gake",
-		"path": "Kosoto-Gake"
+		"path": "Kosoto-Gake",
+		"backgroundPosition": "0 -240px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Koshi-Waza",
 		"name": "Tsuri Goshi",
-		"path": "Tsuri-Goshi"
+		"path": "Tsuri-Goshi",
+		"backgroundPosition": "-75px -240px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Sutemi-Waza",
 		"subtype": "Yoko-sutemi",
 		"name": "Yoko Otoshi",
-		"path": "Yoko-Otoshi"
+		"path": "Yoko-Otoshi",
+		"backgroundPosition": "-150px -240px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Ashi-Waza",
 		"name": "Ashi Guruma",
-		"path": "Ashi-Guruma"
+		"path": "Ashi-Guruma",
+		"backgroundPosition": "-225px -240px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Koshi-Waza",
 		"name": "Hane Goshi",
-		"path": "Hane-Goshi"
+		"path": "Hane-Goshi",
+		"backgroundPosition": "-300px -240px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Ashi-Waza",
 		"name": "Harai Tsurikomi Ashi",
-		"path": "Harai-Tsurikomi-Ashi"
+		"path": "Harai-Tsurikomi-Ashi",
+		"backgroundPosition": "-375px -240px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Sutemi-Waza",
 		"subtype": "Ma-sutemi",
 		"name": "Tomoe Nage",
-		"path": "Tomoe-Nage"
+		"path": "Tomoe-Nage",
+		"backgroundPosition": "-450px -240px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Te-Waza",
 		"name": "Kata Guruma",
-		"path": "Kata-Guruma"
+		"path": "Kata-Guruma",
+		"backgroundPosition": "-525px -240px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Sutemi-Waza",
 		"subtype": "Ma-sutemi",
 		"name": "Sumi Gaeshi",
-		"path": "Sumi-Gaeshi"
+		"path": "Sumi-Gaeshi",
+		"backgroundPosition": "0 -330px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Sutemi-Waza",
 		"subtype": "Yoko-sutemi",
 		"name": "Tani Otoshi",
-		"path": "Tani-Otoshi"
+		"path": "Tani-Otoshi",
+		"backgroundPosition": "-75px -330px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Sutemi-Waza",
 		"subtype": "Yoko-sutemi",
 		"name": "Hane Makikomi",
-		"path": "Hane-Makikomi"
+		"path": "Hane-Makikomi",
+		"backgroundPosition": "-150px -330px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Te-Waza",
 		"name": "Sukui Nage",
-		"path": "Sukui-Nage"
+		"path": "Sukui-Nage",
+		"backgroundPosition": "-225px -330px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Koshi-Waza",
 		"name": "Utsuri Goshi",
-		"path": "Utsuri-Goshi"
+		"path": "Utsuri-Goshi",
+		"backgroundPosition": "-300px -330px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Ashi-Waza",
 		"name": "O Guruma",
-		"path": "O-Guruma"
+		"path": "O-Guruma",
+		"backgroundPosition": "-375px -330px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Sutemi-Waza",
 		"subtype": "Yoko-sutemi",
 		"name": "Soto Makikomi",
-		"path": "Soto-Makikomi"
+		"path": "Soto-Makikomi",
+		"backgroundPosition": "-450px -330px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Te-Waza",
 		"name": "Uki Otoshi",
-		"path": "Uki-Otoshi"
+		"path": "Uki-Otoshi",
+		"backgroundPosition": "-525px -330px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Ashi-Waza",
 		"name": "Osoto Guruma",
-		"path": "Osoto-Guruma"
+		"path": "Osoto-Guruma",
+		"backgroundPosition": "0 -420px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Sutemi-Waza",
 		"subtype": "Yoko-sutemi",
 		"name": "Uki Waza",
-		"path": "Uki-Waza"
+		"path": "Uki-Waza",
+		"backgroundPosition": "-75px -420px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Sutemi-Waza",
 		"subtype": "Yoko-sutemi",
 		"name": "Yoko Wakare",
-		"path": "Yoko-Wakare"
+		"path": "Yoko-Wakare",
+		"backgroundPosition": "-150px -420px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Sutemi-Waza",
 		"subtype": "Yoko-sutemi",
 		"name": "Yoko Guruma",
-		"path": "Yoko-Guruma"
+		"path": "Yoko-Guruma",
+		"backgroundPosition": "-225px -420px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Koshi-Waza",
 		"name": "Ushiro Goshi",
-		"path": "Ushiro-Goshi"
+		"path": "Ushiro-Goshi",
+		"backgroundPosition": "-300px -420px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Sutemi-Waza",
 		"subtype": "Ma-sutemi",
 		"name": "Ura Nage",
-		"path": "Ura-Nage"
+		"path": "Ura-Nage",
+		"backgroundPosition": "-375px -420px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Te-Waza",
 		"name": "Sumi Otoshi",
-		"path": "Sumi-Otoshi"
+		"path": "Sumi-Otoshi",
+		"backgroundPosition": "-450px -420px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Sutemi-Waza",
 		"subtype": "Yoko-sutemi",
 		"name": "Yoko Gake",
-		"path": "Yoko-Gake"
+		"path": "Yoko-Gake",
+		"backgroundPosition": "-525px -420px",
+		"spriteName": "gokyo-sprite"
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Te-Waza",
 		"name": "Obi Otoshi",
-		"path": "Obi-Otoshi"
+		"path": "Obi-Otoshi",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Te-Waza",
 		"name": "Seoi Otoshi",
-		"path": "Seoi-Otoshi"
+		"path": "Seoi-Otoshi",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Te-Waza",
 		"name": "Yama Arashi",
-		"path": "Yama-Arashi"
+		"path": "Yama-Arashi",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Ashi-Waza",
 		"name": "Osoto Otoshi",
-		"path": "Osoto-Otoshi"
+		"path": "Osoto-Otoshi",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Sutemi-Waza",
 		"subtype": "Yoko-sutemi",
 		"name": "Daki Wakare",
-		"path": "Daki-Wakare"
+		"path": "Daki-Wakare",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Sutemi-Waza",
 		"subtype": "Ma-sutemi",
 		"name": "Hikikomi Gaeshi",
-		"path": "Hikikomi-Gaeshi"
+		"path": "Hikikomi-Gaeshi",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Sutemi-Waza",
 		"subtype": "Ma-sutemi",
 		"name": "Tawara Gaeshi",
-		"path": "Tawara-Gaeshi"
+		"path": "Tawara-Gaeshi",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Sutemi-Waza",
 		"subtype": "Yoko-sutemi",
 		"name": "Uchi Makikomi",
-		"path": "Uchi-Makikomi"
+		"path": "Uchi-Makikomi",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Te-Waza",
 		"name": "Morote Gari",
-		"path": "Morote-Gari"
+		"path": "Morote-Gari",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Te-Waza",
 		"name": "Kuchiki Taoshi",
-		"path": "Kuchiki-Taoshi"
+		"path": "Kuchiki-Taoshi",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Te-Waza",
 		"name": "Kibisu Gaeshi",
-		"path": "Kibisu-Gaeshi"
+		"path": "Kibisu-Gaeshi",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Te-Waza",
 		"name": "Uchi Mata Sukashi",
-		"path": "Uchi-Mata-Sukashi"
+		"path": "Uchi-Mata-Sukashi",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Koshi-Waza",
 		"name": "Daki Age",
-		"path": "Daki-Age"
+		"path": "Daki-Age",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Ashi-Waza",
 		"name": "Tsubame Gaeshi",
-		"path": "Tsubame-Gaeshi"
+		"path": "Tsubame-Gaeshi",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Te-Waza",
 		"name": "Kouchi Gaeshi",
-		"path": "Kouchi-Gaeshi"
+		"path": "Kouchi-Gaeshi",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Ashi-Waza",
 		"name": "Ouchi Gaeshi",
-		"path": "Ouchi-Gaeshi"
+		"path": "Ouchi-Gaeshi",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Ashi-Waza",
 		"name": "Osoto Gaeshi",
-		"path": "Osoto-Gaeshi"
+		"path": "Osoto-Gaeshi",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Ashi-Waza",
 		"name": "Harai Goshi Gaeshi",
-		"path": "Harai-Goshi-Gaeshi"
+		"path": "Harai-Goshi-Gaeshi",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Ashi-Waza",
 		"name": "Uchi Mata Gaeshi",
-		"path": "Uchi-Mata-Gaeshi"
+		"path": "Uchi-Mata-Gaeshi",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Ashi-Waza",
 		"name": "Hane Goshi Gaeshi",
-		"path": "Hane-Goshi-Gaeshi"
+		"path": "Hane-Goshi-Gaeshi",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Sutemi-Waza",
 		"subtype": "Yoko-sutemi",
 		"name": "Kani Basami",
-		"path": "Kani-Basami"
+		"path": "Kani-Basami",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Sutemi-Waza",
 		"subtype": "Yoko-sutemi",
 		"name": "Osoto Makikomi",
-		"path": "Osoto-Makikomi"
+		"path": "Osoto-Makikomi",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Sutemi-Waza",
 		"subtype": "Yoko-sutemi",
 		"name": "Kawazu Gake",
-		"path": "Kawazu-Gake"
+		"path": "Kawazu-Gake",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Sutemi-Waza",
 		"subtype": "Yoko-sutemi",
 		"name": "Harai Makikomi",
-		"path": "Harai-Makikomi"
+		"path": "Harai-Makikomi",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Sutemi-Waza",
 		"subtype": "Yoko-sutemi",
 		"name": "Uchi Mata Makikomi",
-		"path": "Uchi-Mata-Makikomi"
+		"path": "Uchi-Mata-Makikomi",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Koshi-Waza",
 		"name": "Sode Tsurikomi Goshi",
-		"path": "Sode-Tsurikomi-Goshi"
+		"path": "Sode-Tsurikomi-Goshi",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Nage-Waza",
 		"subtype": "Te-Waza",
 		"name": "Ippon Seoinage",
-		"path": "Ippon-Seoinage"
+		"path": "Ippon-Seoinage",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Osaekomi-Waza",
 		"name": "Kuzure-kesa-gatame",
-		"path": "Kuzure-kesa-gatame"
+		"path": "Kuzure-kesa-gatame",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Osaekomi-Waza",
 		"name": "Kata-gatame",
-		"path": "Kata-gatame"
+		"path": "Kata-gatame",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Osaekomi-Waza",
 		"name": "Kami-shiho-gatame",
-		"path": "Kami-shiho-gatame"
+		"path": "Kami-shiho-gatame",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Osaekomi-Waza",
 		"name": "Kuzure-kami-shiho-gatame",
-		"path": "Kuzure-kami-shiho-gatame"
+		"path": "Kuzure-kami-shiho-gatame",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Osaekomi-Waza",
 		"name": "Yoko-shiho-gatame",
-		"path": "Yoko-shiho-gatame"
+		"path": "Yoko-shiho-gatame",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Osaekomi-Waza",
 		"name": "Tate-shiho-gatame",
-		"path": "Tate-shiho-gatame"
+		"path": "Tate-shiho-gatame",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Osaekomi-Waza",
 		"name": "Kesa-gatame",
-		"path": "Kesa-gatame"
+		"path": "Kesa-gatame",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
 		"name": "Nami-juji-jime",
-		"path": "Nami-juji-jime"
+		"path": "Nami-juji-jime",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
 		"name": "Gyaku-juji-jime",
-		"path": "Gyaku-juji-jime"
+		"path": "Gyaku-juji-jime",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
 		"name": "Kata-juji-jime",
-		"path": "Kata-juji-jime"
+		"path": "Kata-juji-jime",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
 		"name": "Hadaka-jime",
-		"path": "Hadaka-jime"
+		"path": "Hadaka-jime",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
 		"name": "Okuri-eri-jime",
-		"path": "Okuri-eri-jime"
+		"path": "Okuri-eri-jime",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
 		"name": "Kata-ha-jime",
-		"path": "Kata-ha-jime"
+		"path": "Kata-ha-jime",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kinshi-Waza",
 		"name": "Do-jime",
-		"path": "Do-jime"
+		"path": "Do-jime",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
 		"name": "Sode-guruma-jime",
-		"path": "Sode-guruma-jime"
+		"path": "Sode-guruma-jime",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
 		"name": "Kata-te-jime",
-		"path": "Kata-te-jime"
+		"path": "Kata-te-jime",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
 		"name": "Ryo-te-jime",
-		"path": "Ryo-te-jime"
+		"path": "Ryo-te-jime",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
 		"name": "Tsukkomi-jime",
-		"path": "Tsukkomi-jime"
+		"path": "Tsukkomi-jime",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
 		"name": "Sankaku-jime",
-		"path": "Sankaku-jime"
+		"path": "Sankaku-jime",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kansetsu-Waza",
 		"name": "Ude-garami",
-		"path": "Ude-garami"
+		"path": "Ude-garami",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kansetsu-Waza",
 		"name": "Ude-hishigi-juji-gatame",
-		"path": "Ude-hishigi-juji-gatame"
+		"path": "Ude-hishigi-juji-gatame",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kansetsu-Waza",
 		"name": "Ude-hishigi-ude-gatame",
-		"path": "Ude-hishigi-ude-gatame"
+		"path": "Ude-hishigi-ude-gatame",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kansetsu-Waza",
 		"name": "Ude-hishigi-hiza-gatame",
-		"path": "Ude-hishigi-hiza-gatame"
+		"path": "Ude-hishigi-hiza-gatame",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kansetsu-Waza",
 		"name": "Ude-hishigi-waki-gatame",
-		"path": "Ude-hishigi-waki-gatame"
+		"path": "Ude-hishigi-waki-gatame",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kansetsu-Waza",
 		"name": "Ude-hishigi-hara-gatame",
-		"path": "Ude-hishigi-hara-gatame"
+		"path": "Ude-hishigi-hara-gatame",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kinshi-Waza",
 		"name": "Ashi-garami",
-		"path": "Ashi-garami"
+		"path": "Ashi-garami",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kansetsu-Waza",
 		"name": "Ude-hishigi-ashi-gatame",
-		"path": "Ude-hishigi-ashi-gatame"
+		"path": "Ude-hishigi-ashi-gatame",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kansetsu-Waza",
 		"name": "Ude-hishigi-te-gatame",
-		"path": "Ude-hishigi-te-gatame"
+		"path": "Ude-hishigi-te-gatame",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kansetsu-Waza",
 		"name": "Ude-hishigi-sankaku-gatame",
-		"path": "Ude-hishigi-sankaku-gatame"
+		"path": "Ude-hishigi-sankaku-gatame",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kinshi-Waza",
 		"name": "Kani-basami",
-		"path": "Kani-basami"
+		"path": "Kani-basami",
+		"backgroundPosition": "",
+		"spriteName": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kinshi-Waza",
 		"name": "Kawazu-gake",
-		"path": "Kawazu-gake"
+		"path": "Kawazu-gake",
+		"backgroundPosition": "",
+		"spriteName": ""
 	}
 ]
