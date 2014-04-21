@@ -3,19 +3,19 @@
 <section class="techniques-container">
     <h1><%= titleOverride ? titleOverride : 'Judo' %> Techniques</h1>
     <section class="technique-groups">
-        <section class="technique-group">
-            <label><input type="radio" name="group" value="all" checked="checked" data-title="Judo Techniques"> All </label>
+        <section class="technique-group col3">
+            <label class="<%= allTechniquesClass %>" ><input type="radio" name="group" value="all" checked="checked" data-title="Judo Techniques"> All </label>
             <label><input type="radio" name="group" value="Nage-Waza" data-title="Nage-Waza Techniques"> Nage-Waza </label>
             <label><input type="radio" name="group" value="Katame-Waza" data-title="Katame-Waza Techniques"> Katame-Waza </label>
         </section>
-        <section class="technique-group">
+        <section class="technique-group col5">
             <label><input type="radio" name="subgroup" value="Ashi-Waza" data-title="Ashi-Waza Techniques"> Ashi-Waza </label>
             <label><input type="radio" name="subgroup" value="Koshi-Waza" data-title="Koshi-Waza Techniques"> Koshi-Waza </label>
             <label><input type="radio" name="subgroup" value="Te-Waza" data-title="Te-Waza Techniques"> Te-Waza </label>
             <label><input type="radio" name="subgroup" value="Yoko-sutemi" data-title="Yoko-sutemi Techniques"> Yoko-sutemi </label>
             <label><input type="radio" name="subgroup" value="Ma-sutemi" data-title="Ma-sutemi Techniques"> Ma-sutemi </label>
         </section>
-        <section class="technique-group">
+        <section class="technique-group col4">
             <label><input type="radio" name="subgroup" value="Osaekomi-Waza" data-title="Osaekomi-Waza Techniques"> Osaekomi-Waza </label>
             <label><input type="radio" name="subgroup" value="Shimewaza" data-title="Shimewaza Techniques"> Shimewaza </label>
             <label><input type="radio" name="subgroup" value="Kinshi-Waza" data-title="Kinshi-Waza Techniques"> Kinshi-Waza </label>

@@ -23,8 +23,12 @@ define(['backbone', 'app/collections/techniques', 'app/models/techniquesItem', '
 			this.collection.reset(this.techniqueList.data('techniques'));
 		},
 		clickInput: function(inputValue) {
-			this.shouldResetH1 = false;
-			this.$('input[value='+inputValue+']').click();
+			var $selectedInput = this.$('input[value='+inputValue+']');
+
+			if($selectedInput) {
+				this.shouldResetH1 = false;
+				$selectedInput.click();
+			}
 		},
 		navigateTo: function(page) {
 			this.router.navigate('/techniques'+page);
@@ -49,10 +53,11 @@ define(['backbone', 'app/collections/techniques', 'app/models/techniquesItem', '
 		sortByGroup: function(event) {
 			var type = event.currentTarget.value,
 				h1Title = event.currentTarget.dataset.title,
-				groupedBy = this.collection.where({'type': type});
+				groupedBy = this.collection.where({'type': type}),
+				$selectedGroup = this.$('input[name=subgroup]'),
+				$selectedLabel = event.currentTarget.parentNode;
 
-			this.updateTitle(h1Title);
-			this.$('input[name=subgroup]').removeAttr('checked');
+			this.updateSelectionUI($selectedGroup, $selectedLabel, h1Title);
 
 			if(type === 'all') {
 				this.renderAll();
@@ -65,12 +70,22 @@ define(['backbone', 'app/collections/techniques', 'app/models/techniquesItem', '
 		sortBySubGroup: function(event) {
 			var subType = event.currentTarget.value,
 				h1Title = event.currentTarget.dataset.title,
-				groupedBy = this.collection.where({'subtype': subType});
+				groupedBy = this.collection.where({'subtype': subType}),
+				$selectedGroup = this.$('input[name=group]'),
+				$selectedLabel = event.currentTarget.parentNode;
 
-			this.$('input[name=group]').removeAttr('checked');
-			this.updateTitle(h1Title);
+			this.updateSelectionUI($selectedGroup, $selectedLabel, h1Title);
 			this.renderGroup(groupedBy);
 			this.navigateTo('/'+subType);
+		},
+		updateSelectionUI: function($selectedGroup, $selectedLabel, newTitle){
+			// Reset UI
+			this.$('label').removeClass('selectedLabel');
+			$selectedGroup.removeAttr('checked');
+
+			// Update the selected Label, and the title (if necessary)
+			$selectedLabel.className += " selectedLabel";
+			this.updateTitle(newTitle);
 		},
 		updateTitle: function(newTitle) {
 			if(this.shouldResetH1) {

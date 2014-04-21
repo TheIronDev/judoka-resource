@@ -20,9 +20,16 @@ h1{text-align: center;font-size: 1.5em;margin: 0.5em;}
 
 /* Technique Section */
 .technique-list{}
-.technique-group{text-align: center}
+.technique-groups{overflow: hidden;background: #efefef;}
+.technique-group{text-align: center;}
+.technique-group label{float: left;border: 1px solid #fafafa;}
+.technique-group .selectedLabel{background: #abc;color:#fff;text-shadow: 1px 1px 1px #666;}
+.technique-group input{display: none;}
 .technique-item{float:left;width:100%;max-width: 24%;height: 5em;text-align: center;border: 1px solid #efefef;margin: 0.5%;}
 
+.col3 label{width: 33.33%}
+.col4 label{width: 25%}
+.col5 label{width: 20%}
 
 
 .sprite{background: #efefef;float: left;width: 4.5em;height: 100%;}
