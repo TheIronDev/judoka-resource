@@ -5,7 +5,8 @@
 		"name": "Deashi Harai",
 		"path": "Deashi-Harai",
 		"backgroundPosition": "0 -60px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Forward Foot Sweep"
 	},
 	{
 		"type": "Nage-Waza",
@@ -13,7 +14,8 @@
 		"name": "Hiza Guruma",
 		"path": "Hiza-Guruma",
 		"backgroundPosition": "-75px -60px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Knee Wheel"
 	},
 	{
 		"type": "Nage-Waza",
@@ -21,7 +23,8 @@
 		"name": "Sasae Tsurikomi Ashi",
 		"path": "Sasae-Tsurikomi-Ashi",
 		"backgroundPosition": "-150px -60px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Lifting Pulling Ankle Block"
 	},
 	{
 		"type": "Nage-Waza",
@@ -29,7 +32,8 @@
 		"name": "Uki Goshi",
 		"path": "Uki-Goshi",
 		"backgroundPosition": "-375px -60px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Floating Hip"
 	},
 	{
 		"type": "Nage-Waza",
@@ -37,7 +41,8 @@
 		"name": "Osoto Gari",
 		"path": "Osoto-Gari",
 		"backgroundPosition": "-300px -60px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Large Outer Reaping"
 	},
 	{
 		"type": "Nage-Waza",
@@ -45,7 +50,8 @@
 		"name": "O Goshi",
 		"path": "O-Goshi",
 		"backgroundPosition": "-225px -60px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Large Hip Throw"
 	},
 	{
 		"type": "Nage-Waza",
@@ -53,7 +59,8 @@
 		"name": "Ouchi Gari",
 		"path": "Ouchi-Gari",
 		"backgroundPosition": "-450px -60px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Large Inner Reaping"
 	},
 	{
 		"type": "Nage-Waza",
@@ -61,7 +68,8 @@
 		"name": "Seoi Nage",
 		"path": "Seoi-Nage",
 		"backgroundPosition": "-525px -60px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Shoulder Throw (spread leg version)"
 	},
 	{
 		"type": "Nage-Waza",
@@ -69,7 +77,8 @@
 		"name": "Kosoto Gari",
 		"path": "Kosoto-Gari",
 		"backgroundPosition": "0 -150px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Small Outside Reap"
 	},
 	{
 		"type": "Nage-Waza",
@@ -77,7 +86,8 @@
 		"name": "Kouchi Gari",
 		"path": "Kouchi-Gari",
 		"backgroundPosition": "-75px -150px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Small Inner Reap"
 	},
 	{
 		"type": "Nage-Waza",
@@ -85,7 +95,8 @@
 		"name": "Koshi Guruma",
 		"path": "Koshi-Guruma",
 		"backgroundPosition": "-150px -150px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Hip Wheel"
 	},
 	{
 		"type": "Nage-Waza",
@@ -93,7 +104,8 @@
 		"name": "Tsurikomi Goshi",
 		"path": "Tsurikomi-Goshi",
 		"backgroundPosition": "-225px -150px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Lifting Pulling Hip"
 	},
 	{
 		"type": "Nage-Waza",
@@ -101,7 +113,8 @@
 		"name": "Okuriashi Harai",
 		"path": "Okuriashi-Harai",
 		"backgroundPosition": "-300px -150px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Following Foot Sweep"
 	},
 	{
 		"type": "Nage-Waza",
@@ -109,7 +122,8 @@
 		"name": "Tai Otoshi",
 		"path": "Tai-Otoshi",
 		"backgroundPosition": "-375px -150px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Body Drop"
 	},
 	{
 		"type": "Nage-Waza",
@@ -117,7 +131,8 @@
 		"name": "Harai Goshi",
 		"path": "Harai-Goshi",
 		"backgroundPosition": "-455px -150px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Sweeping Hip Throw"
 	},
 	{
 		"type": "Nage-Waza",
@@ -125,7 +140,8 @@
 		"name": "Uchi Mata",
 		"path": "Uchi-Mata",
 		"backgroundPosition": "-525px -150px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Inner Thigh Throw"
 	},
 	{
 		"type": "Nage-Waza",
@@ -133,7 +149,8 @@
 		"name": "Kosoto Gake",
 		"path": "Kosoto-Gake",
 		"backgroundPosition": "0 -240px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Small Outside Hook"
 	},
 	{
 		"type": "Nage-Waza",
@@ -141,7 +158,8 @@
 		"name": "Tsuri Goshi",
 		"path": "Tsuri-Goshi",
 		"backgroundPosition": "-75px -240px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Lifting Hip"
 	},
 	{
 		"type": "Sutemi-Waza",
@@ -149,7 +167,8 @@
 		"name": "Yoko Otoshi",
 		"path": "Yoko-Otoshi",
 		"backgroundPosition": "-150px -240px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Side Drop"
 	},
 	{
 		"type": "Nage-Waza",
@@ -157,7 +176,8 @@
 		"name": "Ashi Guruma",
 		"path": "Ashi-Guruma",
 		"backgroundPosition": "-225px -240px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Leg Wheel"
 	},
 	{
 		"type": "Nage-Waza",
@@ -165,7 +185,8 @@
 		"name": "Hane Goshi",
 		"path": "Hane-Goshi",
 		"backgroundPosition": "-300px -240px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Spring Hip Throw"
 	},
 	{
 		"type": "Nage-Waza",
@@ -173,7 +194,8 @@
 		"name": "Harai Tsurikomi Ashi",
 		"path": "Harai-Tsurikomi-Ashi",
 		"backgroundPosition": "-375px -240px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Lifting Pulling Foot Sweep"
 	},
 	{
 		"type": "Sutemi-Waza",
@@ -181,7 +203,8 @@
 		"name": "Tomoe Nage",
 		"path": "Tomoe-Nage",
 		"backgroundPosition": "-450px -240px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Circle Throw"
 	},
 	{
 		"type": "Nage-Waza",
@@ -189,7 +212,8 @@
 		"name": "Kata Guruma",
 		"path": "Kata-Guruma",
 		"backgroundPosition": "-525px -240px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Shoulder Wheel"
 	},
 	{
 		"type": "Sutemi-Waza",
@@ -197,7 +221,8 @@
 		"name": "Sumi Gaeshi",
 		"path": "Sumi-Gaeshi",
 		"backgroundPosition": "0 -330px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Corner Reversal"
 	},
 	{
 		"type": "Sutemi-Waza",
@@ -205,7 +230,8 @@
 		"name": "Tani Otoshi",
 		"path": "Tani-Otoshi",
 		"backgroundPosition": "-75px -330px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Valley Drop"
 	},
 	{
 		"type": "Sutemi-Waza",
@@ -213,7 +239,8 @@
 		"name": "Hane Makikomi",
 		"path": "Hane-Makikomi",
 		"backgroundPosition": "-150px -330px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Spring Wrap-around Throw"
 	},
 	{
 		"type": "Nage-Waza",
@@ -221,7 +248,8 @@
 		"name": "Sukui Nage",
 		"path": "Sukui-Nage",
 		"backgroundPosition": "-225px -330px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Scoop Throw"
 	},
 	{
 		"type": "Nage-Waza",
@@ -229,7 +257,8 @@
 		"name": "Utsuri Goshi",
 		"path": "Utsuri-Goshi",
 		"backgroundPosition": "-300px -330px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Changing Hip Throw"
 	},
 	{
 		"type": "Nage-Waza",
@@ -237,7 +266,8 @@
 		"name": "O Guruma",
 		"path": "O-Guruma",
 		"backgroundPosition": "-375px -330px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Large Wheel"
 	},
 	{
 		"type": "Sutemi-Waza",
@@ -245,7 +275,8 @@
 		"name": "Soto Makikomi",
 		"path": "Soto-Makikomi",
 		"backgroundPosition": "-450px -330px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Outer Wrap Around"
 	},
 	{
 		"type": "Nage-Waza",
@@ -253,7 +284,8 @@
 		"name": "Uki Otoshi",
 		"path": "Uki-Otoshi",
 		"backgroundPosition": "-525px -330px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Floating Drop"
 	},
 	{
 		"type": "Nage-Waza",
@@ -261,7 +293,8 @@
 		"name": "Osoto Guruma",
 		"path": "Osoto-Guruma",
 		"backgroundPosition": "0 -420px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Large Outer Wheel"
 	},
 	{
 		"type": "Sutemi-Waza",
@@ -269,7 +302,8 @@
 		"name": "Uki Waza",
 		"path": "Uki-Waza",
 		"backgroundPosition": "-75px -420px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Floating Technique"
 	},
 	{
 		"type": "Sutemi-Waza",
@@ -277,7 +311,8 @@
 		"name": "Yoko Wakare",
 		"path": "Yoko-Wakare",
 		"backgroundPosition": "-150px -420px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Side Separation"
 	},
 	{
 		"type": "Sutemi-Waza",
@@ -285,7 +320,8 @@
 		"name": "Yoko Guruma",
 		"path": "Yoko-Guruma",
 		"backgroundPosition": "-225px -420px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Side Wheel"
 	},
 	{
 		"type": "Nage-Waza",
@@ -293,7 +329,8 @@
 		"name": "Ushiro Goshi",
 		"path": "Ushiro-Goshi",
 		"backgroundPosition": "-300px -420px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Rear Hip Throw"
 	},
 	{
 		"type": "Sutemi-Waza",
@@ -301,7 +338,8 @@
 		"name": "Ura Nage",
 		"path": "Ura-Nage",
 		"backgroundPosition": "-375px -420px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Rear Throw"
 	},
 	{
 		"type": "Nage-Waza",
@@ -309,7 +347,8 @@
 		"name": "Sumi Otoshi",
 		"path": "Sumi-Otoshi",
 		"backgroundPosition": "-450px -420px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Corner Drop"
 	},
 	{
 		"type": "Sutemi-Waza",
@@ -317,7 +356,8 @@
 		"name": "Yoko Gake",
 		"path": "Yoko-Gake",
 		"backgroundPosition": "-525px -420px",
-		"spriteName": "gokyo-sprite"
+		"spriteName": "gokyo-sprite",
+		"description": "Side Hook"
 	},
 	{
 		"type": "Nage-Waza",
@@ -325,7 +365,8 @@
 		"name": "Obi Otoshi",
 		"path": "Obi-Otoshi",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Belt Drop"
 	},
 	{
 		"type": "Nage-Waza",
@@ -333,7 +374,8 @@
 		"name": "Seoi Otoshi",
 		"path": "Seoi-Otoshi",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Nage-Waza",
@@ -341,7 +383,8 @@
 		"name": "Yama Arashi",
 		"path": "Yama-Arashi",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Mountain Storm"
 	},
 	{
 		"type": "Nage-Waza",
@@ -349,7 +392,8 @@
 		"name": "Osoto Otoshi",
 		"path": "Osoto-Otoshi",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Large Outer Drop"
 	},
 	{
 		"type": "Sutemi-Waza",
@@ -357,7 +401,8 @@
 		"name": "Daki Wakare",
 		"path": "Daki-Wakare",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "High Lift and Separate"
 	},
 	{
 		"type": "Sutemi-Waza",
@@ -365,7 +410,8 @@
 		"name": "Hikikomi Gaeshi",
 		"path": "Hikikomi-Gaeshi",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Pulling-in Reversal"
 	},
 	{
 		"type": "Sutemi-Waza",
@@ -373,7 +419,8 @@
 		"name": "Tawara Gaeshi",
 		"path": "Tawara-Gaeshi",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Rice Bale Reversal"
 	},
 	{
 		"type": "Sutemi-Waza",
@@ -381,7 +428,8 @@
 		"name": "Uchi Makikomi",
 		"path": "Uchi-Makikomi",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Inner Wraparound"
 	},
 	{
 		"type": "Nage-Waza",
@@ -389,7 +437,8 @@
 		"name": "Morote Gari",
 		"path": "Morote-Gari",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Two Hand Reaping"
 	},
 	{
 		"type": "Nage-Waza",
@@ -397,7 +446,8 @@
 		"name": "Kuchiki Taoshi",
 		"path": "Kuchiki-Taoshi",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Nage-Waza",
@@ -405,7 +455,8 @@
 		"name": "Kibisu Gaeshi",
 		"path": "Kibisu-Gaeshi",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Heel Trip Reversal"
 	},
 	{
 		"type": "Nage-Waza",
@@ -413,7 +464,8 @@
 		"name": "Uchi Mata Sukashi",
 		"path": "Uchi-Mata-Sukashi",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Nage-Waza",
@@ -421,7 +473,8 @@
 		"name": "Daki Age",
 		"path": "Daki-Age",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Nage-Waza",
@@ -429,7 +482,8 @@
 		"name": "Tsubame Gaeshi",
 		"path": "Tsubame-Gaeshi",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Swallows Flight Reversal"
 	},
 	{
 		"type": "Nage-Waza",
@@ -437,7 +491,8 @@
 		"name": "Kouchi Gaeshi",
 		"path": "Kouchi-Gaeshi",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Small Inner Reversal"
 	},
 	{
 		"type": "Nage-Waza",
@@ -445,7 +500,8 @@
 		"name": "Ouchi Gaeshi",
 		"path": "Ouchi-Gaeshi",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Large Inner Reversal"
 	},
 	{
 		"type": "Nage-Waza",
@@ -453,7 +509,8 @@
 		"name": "Osoto Gaeshi",
 		"path": "Osoto-Gaeshi",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Nage-Waza",
@@ -461,7 +518,8 @@
 		"name": "Harai Goshi Gaeshi",
 		"path": "Harai-Goshi-Gaeshi",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Nage-Waza",
@@ -469,7 +527,8 @@
 		"name": "Uchi Mata Gaeshi",
 		"path": "Uchi-Mata-Gaeshi",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Nage-Waza",
@@ -477,7 +536,8 @@
 		"name": "Hane Goshi Gaeshi",
 		"path": "Hane-Goshi-Gaeshi",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Sutemi-Waza",
@@ -485,7 +545,8 @@
 		"name": "Kani Basami",
 		"path": "Kani-Basami",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Sutemi-Waza",
@@ -493,7 +554,8 @@
 		"name": "Osoto Makikomi",
 		"path": "Osoto-Makikomi",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Sutemi-Waza",
@@ -501,7 +563,8 @@
 		"name": "Kawazu Gake",
 		"path": "Kawazu-Gake",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Sutemi-Waza",
@@ -509,7 +572,8 @@
 		"name": "Harai Makikomi",
 		"path": "Harai-Makikomi",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Sutemi-Waza",
@@ -517,7 +581,8 @@
 		"name": "Uchi Mata Makikomi",
 		"path": "Uchi-Mata-Makikomi",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Nage-Waza",
@@ -525,7 +590,8 @@
 		"name": "Sode Tsurikomi Goshi",
 		"path": "Sode-Tsurikomi-Goshi",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Sleeve Lifting Pulling Hip"
 	},
 	{
 		"type": "Nage-Waza",
@@ -533,7 +599,8 @@
 		"name": "Ippon Seoinage",
 		"path": "Ippon-Seoinage",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "One Arm Shoulder Throw"
 	},
 	{
 		"type": "Katame-Waza",
@@ -541,7 +608,8 @@
 		"name": "Kuzure-kesa-gatame",
 		"path": "Kuzure-kesa-gatame",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Katame-Waza",
@@ -549,7 +617,8 @@
 		"name": "Kata-gatame",
 		"path": "Kata-gatame",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Katame-Waza",
@@ -557,7 +626,8 @@
 		"name": "Kami-shiho-gatame",
 		"path": "Kami-shiho-gatame",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Katame-Waza",
@@ -565,7 +635,8 @@
 		"name": "Kuzure-kami-shiho-gatame",
 		"path": "Kuzure-kami-shiho-gatame",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Katame-Waza",
@@ -573,214 +644,241 @@
 		"name": "Yoko-shiho-gatame",
 		"path": "Yoko-shiho-gatame",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Osaekomi-Waza",
-		"name": "Tate-shiho-gatame",
+		"name": "Tate Shiho Gatame",
 		"path": "Tate-shiho-gatame",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Osaekomi-Waza",
-		"name": "Kesa-gatame",
+		"name": "Kesa Gatame",
 		"path": "Kesa-gatame",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
-		"name": "Nami-juji-jime",
+		"name": "Nami Juji Jime",
 		"path": "Nami-juji-jime",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Normal Cross Choke"
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
-		"name": "Gyaku-juji-jime",
+		"name": "Gyaku Juji Jime",
 		"path": "Gyaku-juji-jime",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Reverse Cross Choke"
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
-		"name": "Kata-juji-jime",
+		"name": "Kata Juji Jime",
 		"path": "Kata-juji-jime",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Half Cross Choke"
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
-		"name": "Hadaka-jime",
+		"name": "Hadaka Jime",
 		"path": "Hadaka-jime",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Rear Naked Choke"
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
-		"name": "Okuri-eri-jime",
+		"name": "Okuri Eri Jime",
 		"path": "Okuri-eri-jime",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Sliding Lapel Choke"
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
-		"name": "Kata-ha-jime",
+		"name": "Kata Ha Jime",
 		"path": "Kata-ha-jime",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Single Wing Choke"
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kinshi-Waza",
-		"name": "Do-jime",
+		"name": "Do Jime",
 		"path": "Do-jime",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
-		"name": "Sode-guruma-jime",
+		"name": "Sode Guruma Jime",
 		"path": "Sode-guruma-jime",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Sleeve Wheel Choke"
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
-		"name": "Kata-te-jime",
+		"name": "Kata Te Jime",
 		"path": "Kata-te-jime",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "One hand Choke"
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
-		"name": "Ryo-te-jime",
+		"name": "Ryo Te Jime",
 		"path": "Ryo-te-jime",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Two Handed Choke"
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
-		"name": "Tsukkomi-jime",
+		"name": "Tsukkomi Jime",
 		"path": "Tsukkomi-jime",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Thrust Choke"
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Shimewaza",
-		"name": "Sankaku-jime",
+		"name": "Sankaku Jime",
 		"path": "Sankaku-jime",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Triangle Choke"
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kansetsu-Waza",
-		"name": "Ude-garami",
+		"name": "Ude Garami",
 		"path": "Ude-garami",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Bent Arm Lock"
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kansetsu-Waza",
-		"name": "Ude-hishigi-juji-gatame",
+		"name": "Ude Hishigi Juji Gatame",
 		"path": "Ude-hishigi-juji-gatame",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Cross Lock"
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kansetsu-Waza",
-		"name": "Ude-hishigi-ude-gatame",
+		"name": "Ude Hishigi Ude Gatame",
 		"path": "Ude-hishigi-ude-gatame",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Straight Arm Lock"
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kansetsu-Waza",
-		"name": "Ude-hishigi-hiza-gatame",
+		"name": "Ude Hishigi Hiza Gatame",
 		"path": "Ude-hishigi-hiza-gatame",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Knee Lock"
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kansetsu-Waza",
-		"name": "Ude-hishigi-waki-gatame",
+		"name": "Ude Hishigi Waki Gatame",
 		"path": "Ude-hishigi-waki-gatame",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Armpit Lock"
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kansetsu-Waza",
-		"name": "Ude-hishigi-hara-gatame",
+		"name": "Ude Hishigi Hara Gatame",
 		"path": "Ude-hishigi-hara-gatame",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Stomach Lock"
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kinshi-Waza",
-		"name": "Ashi-garami",
+		"name": "Ashi Garami",
 		"path": "Ashi-garami",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kansetsu-Waza",
-		"name": "Ude-hishigi-ashi-gatame",
+		"name": "Ude Hishigi Ashi Gatame",
 		"path": "Ude-hishigi-ashi-gatame",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Leg Lock"
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kansetsu-Waza",
-		"name": "Ude-hishigi-te-gatame",
+		"name": "Ude Hishigi Te Gatame",
 		"path": "Ude-hishigi-te-gatame",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Hand Lock"
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kansetsu-Waza",
-		"name": "Ude-hishigi-sankaku-gatame",
+		"name": "Ude Hishigi Sankaku Gatame",
 		"path": "Ude-hishigi-sankaku-gatame",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": "Triangular Lock"
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kinshi-Waza",
-		"name": "Kani-basami",
+		"name": "Kani Basami",
 		"path": "Kani-basami",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	},
 	{
 		"type": "Katame-Waza",
 		"subtype": "Kinshi-Waza",
-		"name": "Kawazu-gake",
+		"name": "Kawazu Gake",
 		"path": "Kawazu-gake",
 		"backgroundPosition": "",
-		"spriteName": ""
+		"spriteName": "",
+		"description": ""
 	}
 ]
