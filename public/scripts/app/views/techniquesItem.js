@@ -1,4 +1,4 @@
-define(['backbone', 'app/models/techniquesItem'], function(Backbone, TechniquesItem){
+define(['backbone', 'app/models/technique'], function(Backbone, TechniqueModel){
 
 	var TechniquesItemView = Backbone.View.extend({
 
@@ -6,7 +6,7 @@ define(['backbone', 'app/models/techniquesItem'], function(Backbone, TechniquesI
 		initialize: function() {
 
 		},
-		render: function(subGroup) {
+		render: function() {
 			var attr = this.model.toJSON();
 
 			return _.template($('#techniqueItem').html(), attr);

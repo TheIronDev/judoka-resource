@@ -1,9 +1,9 @@
-define(['backbone', 'app/models/techniquesItem'], function(Backbone, TechniquesItem){
+define(['backbone', 'app/models/technique'], function(Backbone, TechniqueModel){
 	var TechniqueCollection = Backbone.Collection.extend({
 		initialize: function() {
 
 		},
-		model: TechniquesItem,
+		model: TechniqueModel,
 		parse: function(resp) {
 			return resp;
 		}

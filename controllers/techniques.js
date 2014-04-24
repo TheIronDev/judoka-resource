@@ -12,6 +12,16 @@ module.exports = function(app){
 		});
 	}
 
+	function techniquePage(req, resp) {
+
+		// TODO: Fix titleoverride to be a title rather than path.
+		resp.render('techniques/index', {
+			techniquesJson: JSON.stringify(techniquesJson),
+			titleOverride: req.param('techniqueName'),
+			allTechniquesClass: ''
+		});
+	}
+
 	function techniquesGroupPage(req, resp) {
 		resp.render('techniques/index', {
 			techniquesJson: JSON.stringify(techniquesJson),
@@ -25,6 +35,8 @@ module.exports = function(app){
 	}
 
 	app.get('/techniques', techniquesPage);
+	app.get('/techniques/:techniqueName', techniquePage);
+
 	app.get('/techniques/group/:techniqueGroup('+techniqueGroups+')', techniquesGroupPage);
 
 	// In the event the url is a non-specified technique group, we go back to rendering the default page

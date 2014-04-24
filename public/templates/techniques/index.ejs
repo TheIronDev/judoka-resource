@@ -24,11 +24,18 @@
     </section>
 
     <section class="technique-list" data-techniques='<%- techniquesJson %>'></section>
+
+    <section class="technique-page"></section>
 </section>
 <script id="techniqueItem" type="text/template">
-    <article class="technique-item" style="">
+    <article class="technique-item" data-path="{{ path }}">
         <div class="sprite {{ spriteName }}" style="background-position: {{ backgroundPosition }}">&nbsp;</div>
         <header>{{ name }}</header>
         <section>{{ description }}</section>
     </article>
+</script>
+
+<script id="techniquePage" type="text/template">
+    <header>{{ name }}</header>
+    <section>{{ description }}</section>
 </script>
