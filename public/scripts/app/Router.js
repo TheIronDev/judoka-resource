@@ -6,7 +6,7 @@ define(['backbone', 'app/views/techniquesList'], function(Backbone, TechniquesVi
 		routes: {
 			"": "index",
 			"techniques": "techniques",
-			"techniques/:techniqueGroup": "techniquesGroup"
+			"techniques/group/:techniqueGroup": "techniquesGroup"
 		},
 		index: function(){
 

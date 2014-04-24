@@ -64,7 +64,7 @@ define(['backbone', 'app/collections/techniques', 'app/models/techniquesItem', '
 				this.navigateTo('');
 			} else {
 				this.renderGroup(groupedBy);
-				this.navigateTo('/'+type);
+				this.navigateTo('/group/'+type);
 			}
 		},
 		sortBySubGroup: function(event) {
@@ -76,7 +76,7 @@ define(['backbone', 'app/collections/techniques', 'app/models/techniquesItem', '
 
 			this.updateSelectionUI($selectedGroup, $selectedLabel, h1Title);
 			this.renderGroup(groupedBy);
-			this.navigateTo('/'+subType);
+			this.navigateTo('/group/'+subType);
 		},
 		updateSelectionUI: function($selectedGroup, $selectedLabel, newTitle){
 			// Reset UI

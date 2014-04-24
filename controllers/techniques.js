@@ -25,9 +25,9 @@ module.exports = function(app){
 	}
 
 	app.get('/techniques', techniquesPage);
-	app.get('/techniques/:techniqueGroup('+techniqueGroups+')', techniquesGroupPage);
+	app.get('/techniques/group/:techniqueGroup('+techniqueGroups+')', techniquesGroupPage);
 
 	// In the event the url is a non-specified technique group, we go back to rendering the default page
-	app.get('/techniques/:techniqueGroup', redirectToTransferPage);
+	app.get('/techniques/group/:techniqueGroup', redirectToTransferPage);
 
 };
