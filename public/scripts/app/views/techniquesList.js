@@ -1,5 +1,5 @@
-define(['backbone', 'app/collections/techniques', 'app/models/technique', 'app/views/techniquesItem'],
-	function(Backbone, TechniquesCollection, TechniqueModel, TechniqueItemView){
+define(['backbone', 'app/collections/techniques', 'app/models/technique', 'app/views/techniquesItem', 'app/views/techniquePage'],
+	function(Backbone, TechniquesCollection, TechniqueModel, TechniqueItemView, TechniquesPage){
 
 	var TechniquesView = Backbone.View.extend({
 
@@ -33,7 +33,6 @@ define(['backbone', 'app/collections/techniques', 'app/models/technique', 'app/v
 			var $selectedInput = this.$('input[value='+inputValue+']');
 
 			if($selectedInput) {
-				this.shouldResetH1 = false;
 				$selectedInput.click();
 			}
 		},
@@ -79,7 +78,6 @@ define(['backbone', 'app/collections/techniques', 'app/models/technique', 'app/v
 		 */
 		renderAll: function() {
 			this.renderGroup(this.collection.models);
-			this.shouldResetH1 = true;
 		},
 		/**
 		 * Display / Hide the List or Page experience
@@ -101,12 +99,12 @@ define(['backbone', 'app/collections/techniques', 'app/models/technique', 'app/v
 		 *  (i.e: /techniques/seio-nage
 		 * @param event
 		 */
-		renderPage: function(event) {
-			var $technique = $(event.currentTarget),
-				path = $technique.data('path');
-
+		renderPage: function(path) {
 			// TODO: Get a techniqueView, pass in the current technique model, and bind it to .technique-page
-			console.log('Render Individual Technique page.');
+			var pageModel = this.collection.findWhere({'path': path}),
+				pageView = new TechniquesPage({model: pageModel});
+
+			this.updateTitle(pageModel.get('name'));
 		},
 		/**
 		 * Sort Technique List by Group (All/ Tachi-Waza, Katame-Waza), passing in the sorted list to renderGroup

@@ -3,7 +3,8 @@ define(['backbone'], function(Backbone){
 		initialize: function() {
 			// TODO: add url, wire in a posts collection
 		},
-		idAttribute: 'path',
+		urlRoot: '/posts/',
+		idAttribute: 'pageId',
 		parse: function(resp) {
 			return resp;
 		},
