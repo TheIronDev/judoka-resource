@@ -1,9 +1,13 @@
 define(['backbone'], function(Backbone){
+
+	/**
+	 * This model closer represents a "page".
+	 *  Fetch returns a json list of posts.
+	 */
 	var TechniquesItem = Backbone.Model.extend({
 		initialize: function() {
-			// TODO: add url, wire in a posts collection
 		},
-		urlRoot: '/posts/',
+		urlRoot: '/page-posts/',
 		idAttribute: 'pageId',
 		parse: function(resp) {
 			return resp;

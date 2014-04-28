@@ -1,0 +1,35 @@
+[
+	{
+		"id":1,
+		"pageId": 5,
+		"userId": 1,
+		"type": "youtube",
+		"url": "https://www.youtube.com/watch?v=4m8Qf3X-eW4",
+		"title": "Seoi Nage Instructional",
+		"score": 50,
+		"timestamp": "2014-04-28T07:56:51.258Z",
+		"approved": true
+	},
+	{
+		"id":2,
+		"pageId": 5,
+		"userId": 1,
+		"type": "youtube",
+		"url": "https://www.youtube.com/watch?v=4m8Qf3X-eW4",
+		"title": "Seoi Nage Instructional",
+		"score": 50,
+		"timestamp": "2014-04-28T07:56:51.258Z",
+		"approved": true
+	},
+	{
+		"id":3,
+		"pageId": 5,
+		"userId": 1,
+		"type": "youtube",
+		"url": "https://www.youtube.com/watch?v=4m8Qf3X-eW4",
+		"title": "Seoi Nage Instructional",
+		"score": 50,
+		"timestamp": "2014-04-28T07:56:51.258Z",
+		"approved": false
+	}
+]
