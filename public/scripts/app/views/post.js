@@ -1,4 +1,4 @@
-define(['backbone', 'app/models/technique'], function(Backbone, TechniqueModel){
+define(['backbone'], function(Backbone){
 
 	/**
 	 *	PostView - Handles display of posts

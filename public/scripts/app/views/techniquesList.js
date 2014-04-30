@@ -1,5 +1,5 @@
-define(['backbone', 'app/collections/techniques', 'app/models/technique', 'app/views/techniquesItem', 'app/views/techniquePage'],
-	function(Backbone, TechniquesCollection, TechniqueModel, TechniqueItemView, TechniquesPage){
+define(['backbone', 'app/collections/techniques', 'app/views/techniquesItem', 'app/views/page'],
+	function(Backbone, TechniquesCollection, TechniqueItemView, PageView){
 
 	var TechniquesView = Backbone.View.extend({
 
@@ -87,11 +87,11 @@ define(['backbone', 'app/collections/techniques', 'app/models/technique', 'app/v
 			if(viewType === "page") {
 				this.$('.technique-list').hide();
 				this.$('.technique-groups').hide();
-				this.$('.technique-page').show();
+				this.$('.page').show();
 			} else {
 				this.$('.technique-list').show();
 				this.$('.technique-groups').show();
-				this.$('.technique-page').hide();
+				this.$('.page').hide();
 			}
 		},
 		/**
@@ -100,9 +100,9 @@ define(['backbone', 'app/collections/techniques', 'app/models/technique', 'app/v
 		 * @param event
 		 */
 		renderPage: function(path) {
-			// TODO: Get a techniqueView, pass in the current technique model, and bind it to .technique-page
+			// TODO: Get a techniqueView, pass in the current technique model, and bind it to .page
 			var pageModel = this.collection.findWhere({'path': path}),
-				pageView = new TechniquesPage({model: pageModel});
+				pageView = new PageView({model: pageModel});
 
 			this.updateTitle(pageModel.get('name'));
 		},

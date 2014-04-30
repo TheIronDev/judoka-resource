@@ -1,7 +1,7 @@
-define(['backbone', 'app/models/technique', 'app/collections/posts', 'app/views/postList'], function(Backbone, TechniquesModel, PostList, PostListView){
+define(['backbone', 'app/collections/posts', 'app/views/postList'], function(Backbone, PostList, PostListView){
 
-	var TechniquePageView = Backbone.View.extend({
-		el: '.technique-page',
+	var PageView = Backbone.View.extend({
+		el: '.page',
 		initialize: function() {
 			this.listenTo(this.model, 'change', this.render);
 			this.model.fetch();
@@ -11,7 +11,7 @@ define(['backbone', 'app/models/technique', 'app/collections/posts', 'app/views/
 			this.$el.html('');
 
 			var attr = this.model.toJSON(),
-				renderedContent = _.template($('#techniquePage').html(), attr);
+				renderedContent = _.template($('#pageTemplate').html(), attr);
 
 			this.$el.html(renderedContent);
 			this.$el.append('<div class="post-list"></div>');
@@ -22,5 +22,5 @@ define(['backbone', 'app/models/technique', 'app/collections/posts', 'app/views/
 		}
 	});
 
-	return TechniquePageView;
+	return PageView;
 });

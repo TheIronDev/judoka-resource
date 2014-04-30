@@ -1,4 +1,4 @@
-define(['backbone', 'app/models/technique'], function(Backbone, TechniqueModel){
+define(['backbone'], function(Backbone){
 
 	var TechniquesItemView = Backbone.View.extend({
 
