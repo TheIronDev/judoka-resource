@@ -26,7 +26,8 @@ h1{text-align: center;font-size: 1.5em;margin: 0.5em;}
 .technique-group .selectedLabel{background: #abc;color:#fff;text-shadow: 1px 1px 1px #666;}
 .technique-group input{display: none;}
 
-.technique-item{float:left;width:100%;max-width: 24%;height: 5em;text-align: center;border: 1px solid #efefef;margin: 0.5%;}
+.technique-item{float:left;width:100%;max-width: 24%;height: 5em;text-align: center;border: 1px solid #8DB0F0;margin: 0.5%;cursor: pointer}
+.technique-item:hover{box-shadow: 0 0 5px #999;}
 .technique-item header{font-weight: bold;}
 .technique-item section{font-size: 0.8em;}
 
@@ -38,7 +39,8 @@ h1{text-align: center;font-size: 1.5em;margin: 0.5em;}
 .sprite{background: #efefef;float: left;width: 4.5em;height: 100%;}
 .gokyo-sprite{background: url(/images/gokyo.jpg) no-repeat top left;background-size: 600px;}
 
-.post{border: 1px solid #ccc;display: inline-block;padding: 0.5em;}
+.post-list{overflow: hidden;}
+.post{border: 1px solid #8DB0F0;float: left;padding: 0.5em;box-shadow: 0 0 5px #ccc;margin: 0.5%;}
 
 /* Media Queries */
 @media (max-width: 1024px) {
