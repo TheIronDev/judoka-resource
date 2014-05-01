@@ -1,2 +1,7 @@
-// Placeholder for user posts
-// Schema: userId, url, pageId, postId, date, time
+
+
+module.exports = function(mongoose, PostSchema) {
+	var PostModel = mongoose.model('post', PostSchema);
+
+	return PostModel;
+};
