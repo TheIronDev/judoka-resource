@@ -11,8 +11,8 @@ module.exports = function(mongoose, userSchema, pageSchema) {
 		url: String,
 		timestamp: Date,
 		approved: Boolean,
-		pageId: pageSchema,
-		userId: userSchema
+		pageId: Number,
+		userId: Number
 	});
 
 	return PostSchema;

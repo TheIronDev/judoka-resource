@@ -1,4 +1,5 @@
 var express = require('express'),
+	bodyParser = require('body-parser'),
 	ejs = require('ejs'),
 	engine = require('ejs-locals'),
 	app = express(),
@@ -10,6 +11,7 @@ app.engine('ejs', engine);
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/public/templates');
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser());
 
 mongoose.connect('mongodb://localhost/test');
 var db = mongoose.connection;
@@ -18,7 +20,7 @@ db.once('open', function callback () {
 	console.log('db initialized');
 
 	// Init Controllers
-	var models = require('./controllers/index.js')(mongoose);
+	var models = require('./models/index.js')(mongoose);
 	require('./controllers/index.js')(app, models);
 });
 

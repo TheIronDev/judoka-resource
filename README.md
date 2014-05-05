@@ -3,6 +3,24 @@ judoka-resource
 
 Resource for judoka to post online
 
+# Getting Started
+This is a NodeJS/Express app that uses MongoDB as a datastore.
+Make sure you have [MongoDB](http://www.mongodb.org/downloads) installed, as well as
+ [Node](http://nodejs.org/download/) and [NPM](https://github.com/npm/npm#fancy-install-unix).
+
+In one terminal, type:
+```
+    mongod
+```
+
+In another, type:
+```
+    npm install
+    node .
+```
+
+Visit localhost:5000/ ... and, thats it!
+
 
 # Urls
 * /

@@ -1,0 +1,22 @@
+<style>
+    label{display: block;}
+</style>
+
+
+<form method="post" action="/posts">
+    <label>Title: <input type="text" name="title" /></label>
+    <label>Url: <input type="text" name="url" /></label>
+    <label>Score: <input type="number" min="0" name="score" /></label>
+    <label>Approved: <input type="checkbox" name="approved" /></label>
+    <label>
+        Type -
+        Youtube: <input type="radio" name="type" value="youtube" />
+        Image: <input type="radio" name="type" value="image" />
+        Link: <input type="radio" name="type" value="link" />
+    </label>
+
+    <label>PageId: <input type="text" name="pageId" /></label>
+    <label>UserId: <input type="text" name="userId" value="1" /></label>
+
+    <input type="submit" />
+</form>
