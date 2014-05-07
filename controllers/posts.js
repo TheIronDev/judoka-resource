@@ -4,26 +4,33 @@ module.exports = function(app, models){
 	var dummyPosts = require('../data/dummyPosts'),
 		PostModel = models.PostModel;
 
+	// Return alll the posts!
 	function returnAllPosts(req, resp) {
 
 		PostModel.find(function (err, posts) {
 			if (err) return console.error(err);
-
-			console.log(posts);
-			resp.json({posts: dummyPosts});
+			resp.json({posts: posts});
 		});
 	}
 
+	// Return posts by pageId
 	function returnPostsByPageId(req, resp) {
 
 		var pageId = req.param('pageId');
-		resp.json({posts: dummyPosts});
+		PostModel.find({'pageId': pageId}, function(err, posts) {
+			if(err) return console.error(err);
+			resp.json({posts: posts});
+		})
 	}
 
+	// Return a single post by its unique id
 	function returnPostById(req, resp) {
 
 		var postId = req.param('postId');
-		resp.json({posts: dummyPosts});
+		PostModel.findById(postId, function(err, post){
+			if(err) return console.error(err);
+			resp.json({post: post});
+		});
 	}
 
 	// Create a new post
@@ -31,29 +38,38 @@ module.exports = function(app, models){
 		var payload = req.body,
 			newPost = new PostModel(payload);
 
-		// TODO: Validation.
-		newPost.save();
-		resp.json({posts: dummyPosts});
+		newPost.updateUrl(function() {
+			newPost.save();
+			resp.json({posts: newPost});
+		});
 	}
 
+	// Update a post's details
 	function updatePostById(req, resp) {
 
+		// TODO: this
 		var postId = req.param('postId');
 		resp.json({posts: dummyPosts});
 	}
 
+	// Remove a post from the database
 	function removePostById(req, resp) {
 		var postId = req.param('postId');
-		resp.json({posts: dummyPosts});
+		PostModel.findById(postId, function(err, post){
+			if(err) return console.error(err);
+			resp.json({posts: dummyPosts});
+			post.remove()
+		});
 	}
 
+	// This is an unstyled test page used for testing.
 	function addNewPostPage(req, resp) {
 		resp.render('posts/new', {});
 	}
 
+
 	// Helper Page for testing
 	app.get('/posts/new', addNewPostPage);
-	// TODO: Remove this route.
 
 	// Page related Routes
 	app.get('/page-posts', returnAllPosts);
