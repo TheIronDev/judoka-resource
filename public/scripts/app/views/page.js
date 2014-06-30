@@ -17,7 +17,10 @@ define(['backbone', 'app/collections/posts', 'app/views/postList'], function(Bac
 			this.$el.append('<div class="post-list"></div>');
 
 			this.collection = new PostList(attr.posts);
-			this.collectionView = new PostListView({collection: this.collection});
+			this.collectionView = new PostListView({
+				collection: this.collection,
+				pageId: attr.pageId
+			});
 			this.$el.append(this.collectionView.render());
 		}
 	});
