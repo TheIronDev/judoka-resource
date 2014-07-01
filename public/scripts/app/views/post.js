@@ -6,20 +6,26 @@ define(['backbone'], function(Backbone){
 	 */
 	var PostView = Backbone.View.extend({
 
-		el: '.post',
+		tagName: "article",
+		className: "post",
 		initialize: function(opts) {
 			this.template = opts.template || '#postTemplate';
 			// TODO: Map events
 		},
 		events: {
-			'click .submitNewPost': 'submitNewPost'
+			'click': 'submitNewPost'
 		},
 		render: function() {
 			var attr = this.model.toJSON();
-			return _.template($(this.template).html(), attr);
+
+			// TODO: Clean this up.
+			attr.title = attr.title || '&nbsp;';
+			attr.userId = attr.userId || 0;
+
+			this.$el.html(_.template($(this.template).html(), attr));
+			return this.el;
 		},
 		submitNewPost: function(event) {
-			alert('aaa');
 			event.preventDefault();
 
 			// Submit the new post

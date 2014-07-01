@@ -1,7 +1,5 @@
 <script id="newPostTemplate" type="text/template">
-    <article class="post">
         <header>Add a new Post</header>
-        <form method="post" action="/posts">
             <label><strong>Title: </strong><input type="text" name="title" /></label>
             <label><strong>Url:</strong><input type="text" name="url" /></label>
             <strong>Type </strong><br/>
@@ -11,6 +9,4 @@
 
             <input type="hidden" name="pageId" value="{{pageId}}" />
             <input class="submitNewPost" type="submit" />
-        </form>
-	</article>
 </script>
