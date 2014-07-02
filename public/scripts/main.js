@@ -16,7 +16,8 @@ require.config({
 require(['jquery', 'backbone', 'underscore', 'app/Router'], function($, Backbone, _, Router){
 
 	_.templateSettings = {
-		interpolate: /\{\{(.+?)\}\}/g
+		evaluate : /\{\[([\s\S]+?)\]\}/g,
+		interpolate : /\{\{([\s\S]+?)\}\}/g
 	};
 
 	$(document).ready(function(){

@@ -67,6 +67,13 @@ module.exports = function(app, models){
 		resp.render('posts/new', {});
 	}
 
+	// Middleware approach to populate the user to the model
+	function addUserToReq(req, resp, next) {
+
+		req.body.userId = 1;
+		next();
+	}
+
 
 	// Helper Page for testing
 	app.get('/posts/new', addNewPostPage);
@@ -76,7 +83,7 @@ module.exports = function(app, models){
 	app.get('/page-posts/:pageId', returnPostsByPageId);
 
 	// Post Routes
-	app.post('/posts', addNewPost);
+	app.post('/posts', addUserToReq, addNewPost);
 	app.get('/posts', returnAllPosts);
 	app.get('/posts/:postId', returnPostById);
 	app.put('/posts/:postId', updatePostById);

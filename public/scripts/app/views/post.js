@@ -13,13 +13,13 @@ define(['backbone'], function(Backbone){
 			// TODO: Map events
 		},
 		events: {
-			'click': 'submitNewPost'
+			'click .submitNewPost': 'submitNewPost'
 		},
 		render: function() {
 			var attr = this.model.toJSON();
 
 			// TODO: Clean this up.
-			attr.title = attr.title || '&nbsp;';
+			attr.title = attr.title || 'No Title';
 			attr.userId = attr.userId || 0;
 
 			this.$el.html(_.template($(this.template).html(), attr));
@@ -28,16 +28,16 @@ define(['backbone'], function(Backbone){
 		submitNewPost: function(event) {
 			event.preventDefault();
 
-			// Submit the new post
-			this.model.set('title', 'test title');
-
-			// TODO: Remove me. :)
-			this.model.set('userId', 1);
+			this.model.set({
+				'title': this.$('input[name=title]').val(),
+				'url': this.$('input[name=url]').val(),
+				'type': this.$('input[name=type]:checked').val(),
+				'pageId': this.$('input[name=pageId]').val(),
+				'timestamp': (new Date()).toISOString()
+			});
 
 			// Upon success we should emit an add event that the collectionView listens to.
 			this.model.save();
-
-			return false;
 		}
 	});
 

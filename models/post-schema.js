@@ -23,7 +23,7 @@ module.exports = function(mongoose) {
 		switch (type) {
 			case 'youtube':
 
-				this.url = 'www.youtube.com/embed/'+queryParams.v
+				this.url = 'www.youtube.com/v/'+queryParams.v
 				break;
 			case 'image':
 
