@@ -20,20 +20,32 @@ h1{text-align: center;font-size: 1.5em;margin: 0.5em;}
 
 /* Technique Section */
 .technique-list{}
-.technique-groups{overflow: hidden;background: #efefef;}
+.technique-groups{overflow: hidden;}
 .technique-group{text-align: center;}
-.technique-group label{float: left;border: 1px solid #fafafa;}
-.technique-group .selectedLabel{background: #abc;color:#fff;text-shadow: 1px 1px 1px #666;}
+.technique-group label{float: left;border: 1px solid #fafafa;background: #efefef;}
+.technique-group .selectedLabel{background: #000 !important;color:#fff;text-shadow: 1px 1px 1px #666;}
 .technique-group input{display: none;}
+
+.technique-group.sub-group {width: 50%;float: left}
+
+.technique-group.throws label,
+.technique-group .throws{background: #abc;}
+
+.technique-group.grapples label,
+.technique-group .grapples{background: #EE5757;}
 
 .technique-item{float:left;width:100%;max-width: 24%;height: 5em;text-align: center;border: 1px solid #8DB0F0;margin: 0.5%;cursor: pointer}
 .technique-item:hover{box-shadow: 0 0 5px #999;}
 .technique-item header{font-weight: bold;}
 .technique-item section{font-size: 0.8em;}
 
+.col1 label {width: 100%}
+.col2 label {width: 50%}
 .col3 label{width: 33.33%}
 .col4 label{width: 25%}
 .col5 label{width: 20%}
+
+label.col2 {width: 50%;}
 
 
 .sprite{background: #efefef;float: left;width: 4.5em;height: 100%;}

@@ -28,7 +28,10 @@
     "ejs-locals": "~1.0.2",
     "mongoose": "~3.8.8",
     "body-parser": "~1.0.2",
-    "url": "~0.10.1"
+    "url": "~0.10.1",
+    "passport": "~0.2.0",
+    "passport-local": "~1.0.0",
+    "passport-local-mongoose": "~0.3.0"
   },
   "devDependencies": {
     "grunt": "~0.4.4",
