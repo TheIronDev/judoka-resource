@@ -1,15 +1,48 @@
 module.exports = function(app, models){
 
-	// Working with a dummy JSON to get the front end rolling.
-	var dummyPosts = require('../data/dummyPosts'),
-		PostModel = models.PostModel;
+	var passport = require('passport'),
+		_ = require('underscore');
+
+	var PostModel = models.PostModel,
+		AccountModel = models.AccountModel;
+
+	// Get a list of the accounts and place them on a map
+	function getAccounts(req, resp, next) {
+		AccountModel.find(function(err, accounts){
+			if (err) return console.error(err);
+
+			req.accountsMap = {};
+			_.each(accounts, function(account) {
+				req.accountsMap[account._id] = account.username;
+			});
+			next();
+		});
+	}
+
+	/**
+	 * Clean the posts for the json response
+	 * @param posts
+	 * @returns {*}
+	 */
+	function getFormattedPosts(posts, accountsMap) {
+		return _.map(posts, function(post) {
+
+			var formattedPost = _.pick(post, 'pageId', 'title', 'type', 'url');
+			formattedPost.username = accountsMap[post.userId] || 'n/a';
+
+			return formattedPost;
+		});
+	}
 
 	// Return alll the posts!
 	function returnAllPosts(req, resp) {
 
 		PostModel.find(function (err, posts) {
 			if (err) return console.error(err);
-			resp.json({posts: posts});
+
+			var formattedPosts = getFormattedPosts(posts, req.accountsMap);
+
+			resp.json({posts: formattedPosts});
 		});
 	}
 
@@ -19,7 +52,9 @@ module.exports = function(app, models){
 		var pageId = req.param('pageId');
 		PostModel.find({'pageId': pageId}, function(err, posts) {
 			if(err) return console.error(err);
-			resp.json({posts: posts});
+
+			var formattedPosts = getFormattedPosts(posts, req.accountsMap);
+			resp.json({posts: formattedPosts});
 		})
 	}
 
@@ -35,8 +70,11 @@ module.exports = function(app, models){
 
 	// Create a new post
 	function addNewPost(req, resp) {
-		var payload = req.body,
-			newPost = new PostModel(payload);
+		var payload = req.body;
+
+		payload.userId = req.user._id;
+
+		var newPost = new PostModel(payload);
 
 		newPost.updateUrl(function() {
 			newPost.save();
@@ -47,7 +85,7 @@ module.exports = function(app, models){
 	// Update a post's details
 	function updatePostById(req, resp) {
 
-		// TODO: this
+		// TODO: this..
 		var postId = req.param('postId');
 		resp.json({posts: dummyPosts});
 	}
@@ -57,35 +95,36 @@ module.exports = function(app, models){
 		var postId = req.param('postId');
 		PostModel.findById(postId, function(err, post){
 			if(err) return console.error(err);
-			resp.json({posts: dummyPosts});
+
 			post.remove()
 		});
 	}
 
+	// Verify the user was logged in
+	function validateUser(req, resp, next) {
+		if(req.user) {
+			return next();
+		}
+
+		resp.send(500, 'Something broke!');
+	}
+
 	// This is an unstyled test page used for testing.
 	function addNewPostPage(req, resp) {
-		resp.render('posts/new', {});
+		resp.render('posts/new', req.model);
 	}
-
-	// Middleware approach to populate the user to the model
-	function addUserToReq(req, resp, next) {
-
-		req.body.userId = 1;
-		next();
-	}
-
 
 	// Helper Page for testing
 	app.get('/posts/new', addNewPostPage);
 
 	// Page related Routes
-	app.get('/page-posts', returnAllPosts);
-	app.get('/page-posts/:pageId', returnPostsByPageId);
+	app.get('/page-posts', getAccounts, returnAllPosts);
+	app.get('/page-posts/:pageId', getAccounts, returnPostsByPageId);
 
 	// Post Routes
-	app.post('/posts', addUserToReq, addNewPost);
-	app.get('/posts', returnAllPosts);
-	app.get('/posts/:postId', returnPostById);
-	app.put('/posts/:postId', updatePostById);
+	app.post('/posts', validateUser, addNewPost);
+	app.get('/posts', getAccounts, returnAllPosts);
+	app.get('/posts/:postId', getAccounts, returnPostById);
+	app.put('/posts/:postId', passport.authenticate('local'), updatePostById);
 	app.delete('/posts/:postId', removePostById);
 };

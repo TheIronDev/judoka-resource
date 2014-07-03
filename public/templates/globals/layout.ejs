@@ -15,6 +15,13 @@
             <li><a href="/">The Judoka Resource</a></li>
             <li><a href="/techniques">Techniques</a></li>
         </ul>
+
+        <% if(!user) { %>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+        <% } else { %>
+            You are currently logged in as <%= user.username %>
+        <% } %>
     </div>
 </section>
 

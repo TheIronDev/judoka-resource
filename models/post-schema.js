@@ -1,5 +1,10 @@
 var url = require('url');
 
+/**
+ * The Schema for new posts.
+ * @param mongoose
+ * @returns {*}
+ */
 module.exports = function(mongoose) {
 	var PostSchema = mongoose.Schema({
 		title: String,
@@ -12,7 +17,7 @@ module.exports = function(mongoose) {
 		timestamp: Date,
 		approved: Boolean,
 		pageId: Number,
-		userId: Number
+		userId: String
 	});
 
 	PostSchema.methods.updateUrl = function(cb) {
