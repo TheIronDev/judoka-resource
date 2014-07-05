@@ -1,0 +1,9 @@
+<% layout('../globals/layout') %>
+
+<h1>Users</h1>
+
+<ul>
+    <% userList.forEach(function(user){ %>
+        <li><%= user.username %></li>
+    <% }); %>
+</ul>

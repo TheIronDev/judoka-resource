@@ -1,18 +1,18 @@
 var passportLocalMongoose = require('passport-local-mongoose');
 
 /**
- * Schema for new User Accounts (as well as passport middleware magic)
+ * Schema for new User Account (as well as passport middleware magic)
  * @param mongoose
  * @returns {Mongoose.Schema}
  */
 module.exports = function(mongoose) {
 
-	var AccountSchema = new mongoose.Schema({
+	var UserSchema = new mongoose.Schema({
 		username: String,
 		password: String
 	});
 
-	AccountSchema.plugin(passportLocalMongoose);
+	UserSchema.plugin(passportLocalMongoose);
 
-	return AccountSchema;
+	return UserSchema;
 }

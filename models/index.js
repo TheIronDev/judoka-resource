@@ -5,18 +5,18 @@
  */
 module.exports = function(mongoose, passport) {
 	var PostSchema = require('./post-schema')(mongoose),
-		AccountSchema = require('./account-schema')(mongoose),
+		UserSchema = require('./user-schema')(mongoose),
 		LocalStrategy = require('passport-local').Strategy;
 
 	var PostModel = require('./post')(mongoose, PostSchema),
-		AccountModel = require('./account')(mongoose, AccountSchema);
+		UserModel = require('./user')(mongoose, UserSchema);
 
-	passport.use(new LocalStrategy(AccountModel.authenticate()));
-	passport.serializeUser(AccountModel.serializeUser());
-	passport.deserializeUser(AccountModel.deserializeUser());
+	passport.use(new LocalStrategy(UserModel.authenticate()));
+	passport.serializeUser(UserModel.serializeUser());
+	passport.deserializeUser(UserModel.deserializeUser());
 
 	return {
 		PostModel: PostModel,
-		AccountModel: AccountModel
+		UserModel: UserModel
 	};
 };

@@ -4,16 +4,16 @@ module.exports = function(app, models){
 		_ = require('underscore');
 
 	var PostModel = models.PostModel,
-		AccountModel = models.AccountModel;
+		UserModel = models.UserModel;
 
-	// Get a list of the accounts and place them on a map
-	function getAccounts(req, resp, next) {
-		AccountModel.find(function(err, accounts){
+	// Get a list of the users and place them on a map
+	function getUsers(req, resp, next) {
+		UserModel.find(function(err, users){
 			if (err) return console.error(err);
 
-			req.accountsMap = {};
-			_.each(accounts, function(account) {
-				req.accountsMap[account._id] = account.username;
+			req.usersMap = {};
+			_.each(users, function(user) {
+				req.usersMap[user._id] = user.username;
 			});
 			next();
 		});
@@ -24,11 +24,11 @@ module.exports = function(app, models){
 	 * @param posts
 	 * @returns {*}
 	 */
-	function getFormattedPosts(posts, accountsMap) {
+	function getFormattedPosts(posts, usersMap) {
 		return _.map(posts, function(post) {
 
 			var formattedPost = _.pick(post, 'pageId', 'title', 'type', 'url');
-			formattedPost.username = accountsMap[post.userId] || 'n/a';
+			formattedPost.username = usersMap[post.userId] || 'n/a';
 
 			return formattedPost;
 		});
@@ -40,7 +40,7 @@ module.exports = function(app, models){
 		PostModel.find(function (err, posts) {
 			if (err) return console.error(err);
 
-			var formattedPosts = getFormattedPosts(posts, req.accountsMap);
+			var formattedPosts = getFormattedPosts(posts, req.usersMap);
 
 			resp.json({posts: formattedPosts});
 		});
@@ -53,7 +53,7 @@ module.exports = function(app, models){
 		PostModel.find({'pageId': pageId}, function(err, posts) {
 			if(err) return console.error(err);
 
-			var formattedPosts = getFormattedPosts(posts, req.accountsMap);
+			var formattedPosts = getFormattedPosts(posts, req.usersMap);
 			resp.json({posts: formattedPosts});
 		})
 	}
@@ -118,13 +118,13 @@ module.exports = function(app, models){
 	app.get('/posts/new', addNewPostPage);
 
 	// Page related Routes
-	app.get('/page-posts', getAccounts, returnAllPosts);
-	app.get('/page-posts/:pageId', getAccounts, returnPostsByPageId);
+	app.get('/page-posts', getUsers, returnAllPosts);
+	app.get('/page-posts/:pageId', getUsers, returnPostsByPageId);
 
 	// Post Routes
 	app.post('/posts', validateUser, addNewPost);
-	app.get('/posts', getAccounts, returnAllPosts);
-	app.get('/posts/:postId', getAccounts, returnPostById);
+	app.get('/posts', getUsers, returnAllPosts);
+	app.get('/posts/:postId', getUsers, returnPostById);
 	app.put('/posts/:postId', passport.authenticate('local'), updatePostById);
 	app.delete('/posts/:postId', removePostById);
 };

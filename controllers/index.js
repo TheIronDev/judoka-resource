@@ -10,7 +10,7 @@ module.exports = function(app, models){
 	});
 
 	require('./techniques')(app);
-	require('./account')(app, models.AccountModel);
+	require('./user')(app, models.UserModel);
 	require('./posts')(app, models);
 
 	app.get('/', function(req, resp) {
