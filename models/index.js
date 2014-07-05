@@ -4,9 +4,7 @@
  * @returns a JSON set of models
  */
 module.exports = function(mongoose, passport) {
-	var UserSchema = require('./user-schema')(mongoose),
-		PageSchema = require('./page-schema')(mongoose),
-		PostSchema = require('./post-schema')(mongoose, UserSchema, PageSchema),
+	var PostSchema = require('./post-schema')(mongoose),
 		AccountSchema = require('./account-schema')(mongoose),
 		LocalStrategy = require('passport-local').Strategy;
 

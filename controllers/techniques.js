@@ -15,7 +15,6 @@ module.exports = function(app){
 
 	function techniquePage(req, resp) {
 
-		// TODO: Fix titleoverride to be a title rather than path.
 		resp.render('techniques/index', _.extend(req.model, {
 			techniquesJson: JSON.stringify(techniquesJson),
 			titleOverride: req.param('techniqueName'),
@@ -26,7 +25,7 @@ module.exports = function(app){
 	function techniquesGroupPage(req, resp) {
 		resp.render('techniques/index', _.extend(req.model, {
 			techniquesJson: JSON.stringify(techniquesJson),
-			titleOverride: req.param('techniqueGroup'),
+			titleOverride: req.param('techniqueGroup')+ ' Techniques',
 			allTechniquesClass: ''
 		}));
 	}

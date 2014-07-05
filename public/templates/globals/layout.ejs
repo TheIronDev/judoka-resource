@@ -11,17 +11,19 @@
 <body>
 <section class="header">
     <div class="inner">
-        <ul>
+        <ul class="left">
             <li><a href="/">The Judoka Resource</a></li>
             <li><a href="/techniques">Techniques</a></li>
         </ul>
+        <ul class="right">
+            <% if(!user) { %>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+            <% } else { %>
+                <li>You are currently logged in as <%= user.username %></li>
+            <% } %>
+        </ul>
 
-        <% if(!user) { %>
-            <a href="/login">Login</a>
-            <a href="/register">Register</a>
-        <% } else { %>
-            You are currently logged in as <%= user.username %>
-        <% } %>
     </div>
 </section>
 
@@ -35,7 +37,7 @@
 
 <section class="footer">
     <div class="inner">
-        Footer
+        This site was made for the benefit of all Judoka.
     </div>
 </section>
 

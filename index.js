@@ -19,7 +19,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser());
 app.use(methodOverride());
-app.use(cookieParser('your secret here'));
+app.use(cookieParser('unicorns and candy'));
 app.use(connect.session());
 app.use(passport.initialize());
 app.use(passport.session());
