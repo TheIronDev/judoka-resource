@@ -13,7 +13,10 @@ module.exports = function (app, UserModel) {
 
 	function postRegistration(req, res) {
 		UserModel.register(new UserModel({ username : req.body.username }), req.body.password, function(err, user) {
-			if (err) {
+
+			if (err || !user) {
+				req.model.user = {};
+				req.model.error = err;
 				return res.render('user/register', req.model);
 			}
 

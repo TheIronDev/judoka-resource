@@ -8,7 +8,10 @@ var passportLocalMongoose = require('passport-local-mongoose');
 module.exports = function(mongoose) {
 
 	var UserSchema = new mongoose.Schema({
-		username: String,
+		username: {
+			type: String,
+			unique: true
+		},
 		password: String
 	});
 

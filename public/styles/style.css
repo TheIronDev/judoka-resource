@@ -19,6 +19,7 @@ h1{text-align: center;font-size: 1.5em;margin: 0.5em;}
 .footer{background: #444444;color: #fff;bottom: 0;}
 .header,
 .footer {position: fixed;width: 100%;}
+.error {border:1px dashed #ccc;color: #f00;text-align: center;}
 
 /* Helpers */
 .left{float: left}
