@@ -61,9 +61,51 @@ label.col2 {width: 50%;}
 .technique-item section{font-size: 0.8em;}
 
 /* User */
-.users {list-style: none;padding: 0;}
-.users .user{background: #efefef;min-height: 75px;overflow: hidden;margin-bottom: 0.5em;}
-.users .user img{float: left;}
+.users {list-style: none;padding: 0;overflow: hidden;}
+.users .user{background: #efefef;min-height: 85px;overflow: hidden;margin-bottom: 0.5em;padding: 5px;width: 100%;max-width: 49%;margin: 0.5%;float: left}
+.users .user .avatar{float: left;height:75px;width: 80px;position: relative}
+.users .user .avatar img{display: block;margin: 0 auto;}
+
+.users .rank {
+    background: none;
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0em;
+    height: 0.8em;
+    width: 100%;
+    box-shadow: 0 0 2px #000;
+}
+
+.rank.hide {display: none}
+.rank.white-belt {background: #fff;}
+.rank.yellow-belt {background: #ff0;}
+.rank.orange-belt {background: #ffa500}
+.rank.green-belt {background: green}
+.rank.blue-belt {background: blue}
+.rank.purple-belt {background: purple}
+.rank.brown-belt {background: brown}
+
+.rank.first-dan,
+.rank.second-dan,
+.rank.third-dan,
+.rank.fourth-dan,
+.rank.fifth-dan {background: #000}
+
+.rank.sixth-dan,
+.rank.seventh-dan,
+.rank.eighth-dan {background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(left,  #ffffff 0%, #ffffff 50%, #b30909 51%, #b30909 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(50%,#ffffff), color-stop(51%,#b30909), color-stop(100%,#b30909)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #ffffff 0%,#ffffff 50%,#b30909 51%,#b30909 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #ffffff 0%,#ffffff 50%,#b30909 51%,#b30909 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #ffffff 0%,#ffffff 50%,#b30909 51%,#b30909 100%); /* IE10+ */
+    background: linear-gradient(to right,  #ffffff 0%,#ffffff 50%,#b30909 51%,#b30909 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b30909',GradientType=1 ); /* IE6-9 */
+}
+.rank.ninth-dan,
+.rank.tenth-dan,
+.rank.elevan-dan {background: #B30909}
 
 .sprite{background: #efefef;float: left;width: 4.5em;height: 100%;}
 .gokyo-sprite{background: url(/images/gokyo.jpg) no-repeat top left;background-size: 600px;}

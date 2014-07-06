@@ -5,7 +5,8 @@
  */
 module.exports = function(mongoose, passport) {
 	var PostSchema = require('./post-schema')(mongoose),
-		UserSchema = require('./user-schema')(mongoose),
+		JudoRanks = require('../collections/judoRanks'),
+		UserSchema = require('./user-schema')(mongoose, JudoRanks),
 		LocalStrategy = require('passport-local').Strategy;
 
 	var PostModel = require('./post')(mongoose, PostSchema),
@@ -17,6 +18,7 @@ module.exports = function(mongoose, passport) {
 
 	return {
 		PostModel: PostModel,
-		UserModel: UserModel
+		UserModel: UserModel,
+		JudoRanks: JudoRanks
 	};
 };

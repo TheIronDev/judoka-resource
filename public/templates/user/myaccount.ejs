@@ -9,6 +9,17 @@
     <label>
         Gravatar Email:
         <input type='text' name="gravatarEmail" placeholder='Gravatar Email Address' value="<%= user.gravatarEmail ? user.gravatarEmail : '' %>" />
+        <a href="http://en.gravatar.com/support/what-is-gravatar/">Find out about Gravatar</a>
+    </label>
+    <label>
+        Judo Ranks:
+        <select name="rank">
+            <% judoRanks.forEach(function(rank){ %>
+                <option <% if(user.rank == rank){ %> selected="selected"<% } %> >
+                    <%= rank %>
+                </option>
+            <% }); %>
+        </select>
     </label>
     <input type='submit'/>
 </form>

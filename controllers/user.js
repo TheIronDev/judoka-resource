@@ -9,7 +9,9 @@ var passport = require('passport'),
 module.exports = function (app, models) {
 
 	var UserModel = models.UserModel,
-		PostModel = models.PostModel;
+		PostModel = models.PostModel,
+		JudoRanks = models.JudoRanks,
+		rankRegex = new RegExp(/\s/);
 
 	function registerPage(req, res) {
 		res.render('user/register', req.model);
@@ -46,6 +48,10 @@ module.exports = function (app, models) {
 			updates.email = payload.email;
 		}
 
+		if (payload.rank) {
+			updates.rank = payload.rank;
+		}
+
 		UserModel.update({'username': username}, updates, {}, function(err, updatedUser) {
 			if(err) return console.error(err) ;
 
@@ -55,6 +61,7 @@ module.exports = function (app, models) {
 
 	function myAccountPage(req, resp) {
 
+		req.model.judoRanks = JudoRanks;
 		var user = req.model.user = req.user;
 		if (!user) {
 			return resp.render('user/login', req.model);
@@ -94,6 +101,9 @@ module.exports = function (app, models) {
 
 			var userList = req.model.userList = [];
 			_.each(users, function(user) {
+				if (user.rank) {
+					user.rankClass = (user.rank).toLowerCase().replace(rankRegex, '-');
+				}
 				userList.push(user);
 			});
 			next();

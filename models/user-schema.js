@@ -5,7 +5,7 @@ var passportLocalMongoose = require('passport-local-mongoose');
  * @param mongoose
  * @returns {Mongoose.Schema}
  */
-module.exports = function(mongoose) {
+module.exports = function(mongoose, JudoRanks) {
 
 	var UserSchema = new mongoose.Schema({
 		username: {
@@ -15,7 +15,11 @@ module.exports = function(mongoose) {
 		password: String,
 		email: String,
 		gravatarEmail: String,
-		gravatarHash: String
+		gravatarHash: String,
+		rank: {
+			type: String,
+			enum: JudoRanks
+		}
 	});
 
 	UserSchema.plugin(passportLocalMongoose);
