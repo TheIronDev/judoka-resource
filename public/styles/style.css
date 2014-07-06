@@ -61,7 +61,7 @@ label.col2 {width: 50%;}
 .gokyo-sprite{background: url(/images/gokyo.jpg) no-repeat top left;background-size: 600px;}
 
 .post-list{overflow: hidden;}
-.post{border: 1px solid #8DB0F0;float: left;padding: 0.5em;box-shadow: 0 0 5px #ccc;margin: 0.5%;width: 228px;height: 205px;}
+.post{border: 1px solid #8DB0F0;float: left;padding: 0.5em;box-shadow: 0 0 5px #ccc;margin: 0.5%;width: 228px;height: 205px;list-style: none;}
 .post input[type=text]{display: block;width: 100%;}
 
 .post .link-header {height: 80%;}

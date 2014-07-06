@@ -4,6 +4,6 @@
 
 <ul>
     <% userList.forEach(function(user){ %>
-        <li><%= user.username %></li>
+        <li><a href="/users/<%= user.username %>"><%= user.username %></a></li>
     <% }); %>
 </ul>

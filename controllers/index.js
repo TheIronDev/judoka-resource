@@ -5,14 +5,14 @@ module.exports = function(app, models){
 	 */
 	app.all('*', function(req, resp, next) {
 		req.model = req.model || {};
-		req.model.user = req.user || {};
+		req.model.user = req.user || '';
 		req.model.error = '';
 
 		next();
 	});
 
 	require('./techniques')(app);
-	require('./user')(app, models.UserModel);
+	require('./user')(app, models);
 	require('./posts')(app, models);
 
 	app.get('/', function(req, resp) {

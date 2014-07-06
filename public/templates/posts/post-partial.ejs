@@ -1,0 +1,22 @@
+<ul>
+    <% posts.forEach(function(post){ %>
+        <li class="post">
+            <% if(post.type === 'youtube') { %>
+                <header><%= post.title %></header>
+                <object width="210" height="150">
+                    <param name="movie" value="//<%= post.url %>"></param>
+                    <param name="allowFullScreen" value="true"></param>
+                    <param name="allowscriptaccess" value="always"></param>
+                    <embed src="//<%= post.url %>" type="application/x-shockwave-flash" width="210" height="150" allowscriptaccess="always" allowfullscreen="true"></embed>
+                </object>
+            <% } else if(post.type === 'image') { %>
+                <header><%= post.title %></header>
+                <div class="image-wrapper">
+                    <img src="<%= post.url %>" />
+                </div>
+            <% } else { %>
+                <header class="link-header"><a href="<%= post.url %>"><%= post.title %></a></header>
+            <% } %>
+        </li>
+    <% }) %>
+</ul>

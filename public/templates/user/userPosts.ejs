@@ -1,0 +1,9 @@
+<% layout('../globals/layout') %>
+
+<% if(!selectedUser) { %>
+    <h1>User not found</h1>
+<% } else { %>
+    <h1>Posted by <%= selectedUser.username %></h1>
+
+    <%- include ../posts/post-partial.ejs %>
+<% } %>

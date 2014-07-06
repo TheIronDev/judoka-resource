@@ -5,7 +5,10 @@ var passport = require('passport'),
  * Authentication routes
  * @param app
  */
-module.exports = function (app, UserModel) {
+module.exports = function (app, models) {
+
+	var UserModel = models.UserModel,
+		PostModel = models.PostModel;
 
 	function registerPage(req, res) {
 		res.render('user/register', req.model);
@@ -56,7 +59,42 @@ module.exports = function (app, UserModel) {
 		});
 	}
 
+	function findUser(req, res, next) {
+		var username = req.param('username');
+		UserModel.findOne({'username': username}, function(err, selectedUser){
+
+			req.model.selectedUser = selectedUser;
+			if(err || !selectedUser || !selectedUser._id) {
+				req.model.error = err;
+			}
+
+			next();
+		});
+	}
+
+
+	function findPostsByUser(req, res, next) {
+
+		var selectedUser = req.model.selectedUser || {};
+		PostModel.find({'userId': selectedUser._id}, function(err, posts){
+
+			var filteredPosts = [];
+			if (err || !posts) {
+				req.model.error = err;
+			}
+
+			posts.forEach(function(post){
+				var filteredPost = _.pick(post, 'pageId', 'title', 'type', 'userId', 'url');
+				filteredPosts.push(filteredPost);
+			});
+
+			req.model.posts = filteredPosts;
+			return res.render('user/userPosts', req.model);
+		});
+	}
+
 	app.get('/users', getUsers, displayUsers);
+	app.get('/users/:username', findUser, findPostsByUser);
 
 	app.get('/register', registerPage);
 	app.get('/login', loginPage);
