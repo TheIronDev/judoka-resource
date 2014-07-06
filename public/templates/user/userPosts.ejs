@@ -3,7 +3,9 @@
 <% if(!selectedUser) { %>
     <h1>User not found</h1>
 <% } else { %>
-    <h1>Posted by <%= selectedUser.username %></h1>
 
+    <h1>User Profile: <%= selectedUser.username %></h1>
+
+    <h2>Posted by <%= selectedUser.username %></h2>
     <%- include ../posts/post-partial.ejs %>
 <% } %>

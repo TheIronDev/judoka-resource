@@ -4,12 +4,13 @@ html{background: #efefef;margin: 0;}
 body{margin: 0;}
 
 h1{text-align: center;font-size: 1.5em;margin: 0.5em;}
+h2{font-size: 1.25em;}
 
 /* Layout */
 .container{margin: 2.5em 0;}
 .inner{padding:5px;max-width: 1024px;width: 100%;margin: 0 auto;overflow: hidden}
 .container .inner{background:#fff;}
-.main{}
+form label {display: block;}
 
 /* Global Styles */
 .header{background: #0d3349;box-shadow:0 3px 3px #999;color: #fff;margin-bottom: 1em;top: 0;}
@@ -19,12 +20,23 @@ h1{text-align: center;font-size: 1.5em;margin: 0.5em;}
 .footer{background: #444444;color: #fff;bottom: 0;}
 .header,
 .footer {position: fixed;width: 100%;}
+
+/* Error Handling */
 .error {border:1px dashed #ccc;color: #f00;text-align: center;}
+.hasError input[type=text]{border: 1px solid #f00;}
 
 /* Helpers */
 .left{float: left}
 .right{float: right}
 .clear{clear: both}
+
+.col1 label {width: 100%}
+.col2 label {width: 50%}
+.col3 label{width: 33.33%}
+.col4 label{width: 25%}
+.col5 label{width: 20%}
+
+label.col2 {width: 50%;}
 
 /* Technique Section */
 .technique-list{}
@@ -48,14 +60,10 @@ h1{text-align: center;font-size: 1.5em;margin: 0.5em;}
 .technique-item header{font-weight: bold;}
 .technique-item section{font-size: 0.8em;}
 
-.col1 label {width: 100%}
-.col2 label {width: 50%}
-.col3 label{width: 33.33%}
-.col4 label{width: 25%}
-.col5 label{width: 20%}
-
-label.col2 {width: 50%;}
-
+/* User */
+.users {list-style: none;padding: 0;}
+.users .user{background: #efefef;min-height: 75px;overflow: hidden;margin-bottom: 0.5em;}
+.users .user img{float: left;}
 
 .sprite{background: #efefef;float: left;width: 4.5em;height: 100%;}
 .gokyo-sprite{background: url(/images/gokyo.jpg) no-repeat top left;background-size: 600px;}

@@ -1,4 +1,5 @@
 var passport = require('passport'),
+	md5 = require('MD5'),
 	_ = require('underscore');
 
 /**
@@ -27,6 +28,46 @@ module.exports = function (app, models) {
 				res.redirect('/');
 			});
 		});
+	}
+
+	// Update user
+	function updateUser(req, resp) {
+		var payload = req.body,
+			user = req.user || {},
+			updates = {},
+			username = user.username;
+
+		if (payload.gravatarEmail) {
+			updates.gravatarEmail = payload.gravatarEmail;
+			updates.gravatarHash = getGravatarHash(payload);
+		}
+
+		if (payload.email) {
+			updates.email = payload.email;
+		}
+
+		UserModel.update({'username': username}, updates, {}, function(err, updatedUser) {
+			if(err) return console.error(err) ;
+
+			resp.json({user: updatedUser});
+		});
+	}
+
+	function myAccountPage(req, resp) {
+
+		var user = req.model.user = req.user;
+		if (!user) {
+			return resp.render('user/login', req.model);
+		}
+
+		resp.render('user/myaccount', req.model);
+	}
+
+	function getGravatarHash(payload) {
+		var gravatarEmail = payload.gravatarEmail,
+			gravatarHash = md5(gravatarEmail.toLowerCase());
+
+		return gravatarHash;
 	}
 
 	function loginPage(req, res) {
@@ -95,6 +136,9 @@ module.exports = function (app, models) {
 
 	app.get('/users', getUsers, displayUsers);
 	app.get('/users/:username', findUser, findPostsByUser);
+
+	app.get('/myaccount', myAccountPage);
+	app.post('/myaccount', updateUser);
 
 	app.get('/register', registerPage);
 	app.get('/login', loginPage);

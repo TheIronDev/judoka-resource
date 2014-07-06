@@ -1,0 +1,14 @@
+<% layout('../globals/layout') %>
+
+<h1>My Account</h1>
+
+<form role='form' action="/myaccount" method="post">
+    <div>Username: <%= user.username %></div>
+    <label>Password: <input type='password' name="password" placeholder='Password'/></label>
+    <label>Email: <input type='text' name="email" placeholder='Email Address' value="<%= user.email ? user.email : '' %>" /></label>
+    <label>
+        Gravatar Email:
+        <input type='text' name="gravatarEmail" placeholder='Gravatar Email Address' value="<%= user.gravatarEmail ? user.gravatarEmail : '' %>" />
+    </label>
+    <input type='submit'/>
+</form>

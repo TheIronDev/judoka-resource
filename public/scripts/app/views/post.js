@@ -10,10 +10,12 @@ define(['backbone'], function(Backbone){
 		className: "post",
 		initialize: function(opts) {
 			this.template = opts.template || '#postTemplate';
-			// TODO: Map events
+
+			this.listenTo(this.model, 'error', this.handleError);
 		},
 		events: {
-			'click .submitNewPost': 'submitNewPost'
+			'click .submitNewPost': 'submitNewPost',
+			'focus input[type=text]': 'focusInputs'
 		},
 		render: function() {
 			var attr = this.model.toJSON();
@@ -38,6 +40,12 @@ define(['backbone'], function(Backbone){
 
 			// Upon success we should emit an add event that the collectionView listens to.
 			this.model.save();
+		},
+		handleError: function(model) {
+			this.$el.addClass('hasError');
+		},
+		focusInputs: function() {
+			this.$el.removeClass('hasError');
 		}
 	});
 

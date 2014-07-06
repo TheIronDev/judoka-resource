@@ -2,8 +2,15 @@
 
 <h1>Users</h1>
 
-<ul>
+<ul class="users">
     <% userList.forEach(function(user){ %>
-        <li><a href="/users/<%= user.username %>"><%= user.username %></a></li>
+        <li class="user">
+            <a href="/users/<%= user.username %>">
+                <% if (user.gravatarHash) { %>
+                    <img src="http://www.gravatar.com/avatar/<%= user.gravatarHash %>?s=75" />
+                <% } %>
+                <%= user.username %>
+            </a>
+        </li>
     <% }); %>
 </ul>

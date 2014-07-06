@@ -12,7 +12,10 @@ module.exports = function(mongoose) {
 			type: String,
 			unique: true
 		},
-		password: String
+		password: String,
+		email: String,
+		gravatarEmail: String,
+		gravatarHash: String
 	});
 
 	UserSchema.plugin(passportLocalMongoose);
