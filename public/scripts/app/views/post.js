@@ -28,9 +28,9 @@ define(['backbone', 'app/models/vote'], function(Backbone, VoteModel){
 			attr.title = attr.title || 'No Title';
 			attr.userId = attr.userId || 0;
 
-			if(attr.userVote == 1) {
+			if(attr.userVote > 0) {
 				attr.userVoteClass = 'up'
-			} else if(attr.userVote == -1) {
+			} else if(attr.userVote < 0) {
 				attr.userVoteClass = 'down'
 			}
 

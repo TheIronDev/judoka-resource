@@ -39,7 +39,7 @@ module.exports = function(app, models){
 				}
 				req.votesByPostId[vote.postId] += vote.score;
 				if (vote.userId == userId) {
-					req.currentUserVotesByPostId[vote.postId] = req.votesByPostId[vote.postId];
+					req.currentUserVotesByPostId[vote.postId] = vote.score;
 				}
 			});
 			next();
