@@ -85,7 +85,7 @@ module.exports = function(app, models){
 	function getFormattedPosts(posts, usersMap, votesMap) {
 		return _.map(posts, function(post) {
 
-			var formattedPost = _.pick(post, 'pageId', 'title', 'type', 'url'),
+			var formattedPost = _.pick(post, 'pageId', 'title', 'type', 'url', 'approved'),
 				postId = post._id;
 			formattedPost.id = postId;
 			formattedPost.score = votesMap[postId] || 0;
@@ -146,12 +146,16 @@ module.exports = function(app, models){
 		});
 	}
 
-	// Update a post's details
+	// Update an existing Post
 	function updatePostById(req, resp) {
+		var payload = req.body,
+			postId = req.param('postId'),
+			options = {},
+			callback = function(err, post){
+				resp.json({posts: post});
+			};
 
-		// TODO: this..
-		var postId = req.param('postId');
-		resp.json({posts: dummyPosts});
+		PostModel.update({_id: postId}, payload, options, callback);
 	}
 
 	// Remove a post from the database
@@ -189,7 +193,7 @@ module.exports = function(app, models){
 	app.post('/posts', validateUser, addNewPost);
 	app.get('/posts', getUsers, getVotes, returnAllPosts);
 	app.get('/posts/:postId', getUsers, returnPostById);
-	app.put('/posts/:postId', passport.authenticate('local'), updatePostById);
+	app.post('/posts/:postId', validateUser, updatePostById);
 	app.delete('/posts/:postId', removePostById);
 
 	// Votes Routes

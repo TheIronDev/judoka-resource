@@ -15,7 +15,10 @@ module.exports = function(mongoose) {
 		score: Number,
 		url: String,
 		timestamp: Date,
-		approved: Boolean,
+		approved: {
+			type: Boolean,
+			default: false
+		},
 		pageId: {
 			type: Number,
 			index: true

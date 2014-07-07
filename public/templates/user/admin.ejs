@@ -1,0 +1,8 @@
+<% layout('../globals/layout') %>
+
+<h1>Admin</h1>
+
+<% if (isAdmin) { %>
+    <h2>All Posts</h2>
+    <%- include ../posts/post-partial.ejs %>
+<% } %>

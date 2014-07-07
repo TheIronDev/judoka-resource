@@ -14,13 +14,16 @@ define(['backbone', 'app/collections/posts', 'app/models/post', 'app/views/post'
 
 			_.each(this.collection.sortBy('score').reverse(), function(post){
 
-				var userVote = this.userVotes[post.get('id')];
-				if(userVote) {
-					post.set('userVote', userVote);
-				}
+				// Only display Approved Posts
+				if (post.get('approved')) {
 
-				var postView = new PostView({model:post});
-				this.$el.append(postView.render());
+					var userVote = this.userVotes[post.get('id')];
+					if (userVote) {
+						post.set('userVote', userVote);
+					}
+					var postView = new PostView({model:post});
+					this.$el.append(postView.render());
+				}
 			}, this);
 
 			// Create a new Post

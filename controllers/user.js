@@ -17,6 +17,24 @@ module.exports = function (app, models) {
 		res.render('user/register', req.model);
 	}
 
+	function adminPage(req, res, next) {
+		var user = req.user;
+		if (!user || !user.isAdmin) {
+			req.model.error = {
+				message: 'Sorry, you do not have appropriate privileges'
+			}
+			req.model.isAdmin = false;
+			return res.render('user/admin', req.model);
+		}
+
+		req.model.isAdmin = true;
+		next();
+	}
+
+	function renderAdminPage(req, res) {
+		res.render('user/admin', req.model);
+	}
+
 	function postRegistration(req, res) {
 		UserModel.register(new UserModel({ username : req.body.username }), req.body.password, function(err, user) {
 
@@ -135,12 +153,30 @@ module.exports = function (app, models) {
 			}
 
 			posts.forEach(function(post){
-				var filteredPost = _.pick(post, 'pageId', 'title', 'type', 'userId', 'url');
+				var filteredPost = _.pick(post, 'pageId', 'title', 'type', 'userId', 'url', 'approved', '_id');
 				filteredPosts.push(filteredPost);
 			});
 
 			req.model.posts = filteredPosts;
 			return res.render('user/userPosts', req.model);
+		});
+	}
+
+	function getAllPosts(req, res, next) {
+		PostModel.find(function(err, posts){
+
+			var filteredPosts = [];
+			if (err || !posts) {
+				req.model.error = err;
+			}
+
+			posts.forEach(function(post){
+				var filteredPost = _.pick(post, 'pageId', 'title', 'type', 'userId', 'url', 'approved', '_id');
+				filteredPosts.push(filteredPost);
+			});
+
+			req.model.posts = filteredPosts;
+			next();
 		});
 	}
 
@@ -152,6 +188,7 @@ module.exports = function (app, models) {
 
 	app.get('/register', registerPage);
 	app.get('/login', loginPage);
+	app.get('/admin', adminPage, getAllPosts, renderAdminPage);
 	app.get('/logout', logoutPage);
 
 	app.post('/register', postRegistration);

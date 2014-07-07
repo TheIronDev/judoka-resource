@@ -1,4 +1,4 @@
-<ul>
+<ul class="posts">
     <% posts.forEach(function(post){ %>
         <li class="post">
             <% if(post.type === 'youtube') { %>
@@ -16,6 +16,16 @@
                 </div>
             <% } else { %>
                 <header class="link-header"><a href="<%= post.url %>"><%= post.title %></a></header>
+            <% } %>
+
+            <% if (isAdmin) { %>
+                <footer>
+                    Approved: <%= post.approved %>
+                    <form method="POST" action="/posts/<%= post._id %>" class="toggleApproved">
+                        <input type="hidden" name="approved" value="<%= !post.approved %>" />
+                        <input type="submit" value="Toggle to <%= !post.approved %>" />
+                    </form>
+                </footer>
             <% } %>
         </li>
     <% }) %>
