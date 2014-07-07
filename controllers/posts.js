@@ -4,6 +4,7 @@ module.exports = function(app, models){
 		_ = require('underscore');
 
 	var PostModel = models.PostModel,
+		VoteModel = models.VoteModel
 		UserModel = models.UserModel;
 
 	// Get a list of the users and place them on a map
@@ -19,15 +20,75 @@ module.exports = function(app, models){
 		});
 	}
 
+	// Get a list of the users and place them on a map
+	function getVotes(req, resp, next) {
+
+		var userId = req.user && req.user._id || '';
+
+		VoteModel.find(function(err, votes){
+			if (err) return console.error(err);
+
+			req.votesByPostId = {};
+			req.currentUserVotesByPostId = {};
+			req.votes = votes;
+
+			// TODO: Clean This up.
+			_.each(votes, function(vote) {
+				if (!req.votesByPostId[vote.postId]) {
+					req.votesByPostId[vote.postId] = 0;
+				}
+				req.votesByPostId[vote.postId] += vote.score;
+				if (vote.userId == userId) {
+					req.currentUserVotesByPostId[vote.postId] = req.votesByPostId[vote.postId];
+				}
+			});
+			next();
+		});
+	}
+
+	function addVote(req, resp, next) {
+		var payload = req.body,
+			options = {'upsert': true},
+			callback = function(err, respVote){
+				if(err) {return console.error(err);}
+
+				resp.json({vote: respVote});
+			};
+
+		payload.userId = req.user._id;
+		payload.userPostId = payload.userId+'-'+payload.postId;
+
+		VoteModel.update({'userPostId': payload.userPostId}, payload, options, callback);
+	}
+
+	function returnAllVotes(req, resp, next) {
+		resp.json({
+			votes: req.votes,
+			votesByPostId: req.votesByPostId,
+			currentUserVotesByPostId: req.currentUserVotesByPostId
+		});
+	}
+
+	function returnVotesByPostId(req, resp, next) {
+
+		var postId = req.param('postId') || '';
+		resp.json({
+			votes: req.votesByPostId[postId]
+		});
+	}
+
 	/**
 	 * Clean the posts for the json response
 	 * @param posts
 	 * @returns {*}
 	 */
-	function getFormattedPosts(posts, usersMap) {
+	function getFormattedPosts(posts, usersMap, votesMap) {
 		return _.map(posts, function(post) {
 
-			var formattedPost = _.pick(post, 'pageId', 'title', 'type', 'url');
+			var formattedPost = _.pick(post, 'pageId', 'title', 'type', 'url'),
+				postId = post._id;
+			formattedPost.id = postId;
+			formattedPost.score = votesMap[postId] || 0;
 			formattedPost.username = usersMap[post.userId] || 'n/a';
 
 			return formattedPost;
@@ -40,7 +101,7 @@ module.exports = function(app, models){
 		PostModel.find(function (err, posts) {
 			if (err) return console.error(err);
 
-			var formattedPosts = getFormattedPosts(posts, req.usersMap);
+			var formattedPosts = getFormattedPosts(posts, req.usersMap, req.votesByPostId);
 
 			resp.json({posts: formattedPosts});
 		});
@@ -53,8 +114,11 @@ module.exports = function(app, models){
 		PostModel.find({'pageId': pageId}, function(err, posts) {
 			if(err) return console.error(err);
 
-			var formattedPosts = getFormattedPosts(posts, req.usersMap);
-			resp.json({posts: formattedPosts});
+			var formattedPosts = getFormattedPosts(posts, req.usersMap, req.votesByPostId);
+			resp.json({
+				posts: formattedPosts,
+				userVotes: req.currentUserVotesByPostId
+			});
 		})
 	}
 
@@ -106,7 +170,7 @@ module.exports = function(app, models){
 			return next();
 		}
 
-		resp.send(500, 'Something broke!');
+		resp.send(500, 'User is not logged in');
 	}
 
 	// This is an unstyled test page used for testing.
@@ -118,13 +182,18 @@ module.exports = function(app, models){
 	app.get('/posts/new', addNewPostPage);
 
 	// Page related Routes
-	app.get('/page-posts', getUsers, returnAllPosts);
-	app.get('/page-posts/:pageId', getUsers, returnPostsByPageId);
+	app.get('/page-posts', getUsers, getVotes, returnAllPosts);
+	app.get('/page-posts/:pageId', getUsers, getVotes, returnPostsByPageId);
 
 	// Post Routes
 	app.post('/posts', validateUser, addNewPost);
-	app.get('/posts', getUsers, returnAllPosts);
+	app.get('/posts', getUsers, getVotes, returnAllPosts);
 	app.get('/posts/:postId', getUsers, returnPostById);
 	app.put('/posts/:postId', passport.authenticate('local'), updatePostById);
 	app.delete('/posts/:postId', removePostById);
+
+	// Votes Routes
+	app.post('/votes', validateUser, addVote);
+	app.get('/votes', getVotes, returnAllVotes);
+	app.get('/votes/:postId', getVotes, returnVotesByPostId);
 };

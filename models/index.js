@@ -5,11 +5,13 @@
  */
 module.exports = function(mongoose, passport) {
 	var PostSchema = require('./post-schema')(mongoose),
+		VoteSchema = require('./vote-schema')(mongoose),
 		JudoRanks = require('../collections/judoRanks'),
 		UserSchema = require('./user-schema')(mongoose, JudoRanks),
 		LocalStrategy = require('passport-local').Strategy;
 
 	var PostModel = require('./post')(mongoose, PostSchema),
+		VoteModel = require('./vote')(mongoose, VoteSchema),
 		UserModel = require('./user')(mongoose, UserSchema);
 
 	passport.use(new LocalStrategy(UserModel.authenticate()));
@@ -18,6 +20,7 @@ module.exports = function(mongoose, passport) {
 
 	return {
 		PostModel: PostModel,
+		VoteModel: VoteModel,
 		UserModel: UserModel,
 		JudoRanks: JudoRanks
 	};

@@ -16,7 +16,10 @@ module.exports = function(mongoose) {
 		url: String,
 		timestamp: Date,
 		approved: Boolean,
-		pageId: Number,
+		pageId: {
+			type: Number,
+			index: true
+		},
 		userId: String
 	});
 

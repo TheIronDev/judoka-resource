@@ -62,9 +62,10 @@ label.col2 {width: 50%;}
 
 /* User */
 .users {list-style: none;padding: 0;overflow: hidden;}
-.users .user{background: #efefef;min-height: 85px;overflow: hidden;margin-bottom: 0.5em;padding: 5px;width: 100%;max-width: 49%;margin: 0.5%;float: left}
-.users .user .avatar{float: left;height:75px;width: 80px;position: relative}
-.users .user .avatar img{display: block;margin: 0 auto;}
+.users .user a{background: #efefef;min-height: 85px;overflow: hidden;margin-bottom: 0.5em;padding: 5px;width: 100%;max-width: 49%;margin: 0.5%;float: left}
+.users .user a:hover {box-shadow: 0 0 5px #999;}
+.users .user .avatar{background:#dfdfdf;float: left;height:75px;width: 80px;margin-right:0.5em;position: relative}
+.users .user .avatar img{display: block;margin: 0 auto;min-height: 75px;}
 
 .users .rank {
     background: none;
@@ -115,8 +116,12 @@ label.col2 {width: 50%;}
 .post input[type=text]{display: block;width: 100%;}
 
 .post .link-header {height: 80%;}
-.post .image-wrapper {background: #333;padding: 0.5em;max-height: 80%;overflow: hidden;}
-.post .image-wrapper img {display: block; max-width: 100%;max-height: 80%;margin: 0 auto;}
+.post .image-wrapper {background: #333;padding: 0.5em;height: 80%;overflow: hidden;}
+.post .image-wrapper img {display: block; max-width: 100%;height: 100%;margin: 0 auto;}
+
+.post .voteWrapper{cursor: pointer;float: right;background: #eee;border-radius: 1em;padding: 0 5px;}
+.post .voteWrapper.up .upVote,
+.post .voteWrapper.down .downVote{font-weight: bold}
 
 /* Media Queries */
 @media (max-width: 1024px) {
@@ -125,6 +130,10 @@ label.col2 {width: 50%;}
 
 @media (max-width: 768px) {
     .technique-item{max-width: 49%;}
+}
+
+@media (max-width: 550px) {
+    .users .user a {max-width: 99%;}
 }
 
 @media (max-width: 480px) {

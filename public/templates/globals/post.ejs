@@ -16,5 +16,11 @@
             <header class="link-header"><a href="{{url}}">{{title}}</a></header>
         {[ } ]}
 
-		<footer>Submitted by: <a href="/users/{{username}}">{{username}}</a> </footer>
+		<footer>
+            Submitted by: <a href="/users/{{username}}">{{username}}</a>
+            <span class="voteWrapper {{userVoteClass}}">
+                <span class="upVote vote" data-score="1">Up</span>
+                <span class="downVote vote" data-score="-1">Down</span>
+            </span>
+        </footer>
 </script>
