@@ -51,7 +51,7 @@ module.exports = function (app, models) {
 	}
 
 	// Update user
-	function updateUser(req, resp) {
+	function updateUser(req, resp, next) {
 		var payload = req.body,
 			user = req.user || {},
 			updates = {},
@@ -70,10 +70,13 @@ module.exports = function (app, models) {
 			updates.rank = payload.rank;
 		}
 
-		UserModel.update({'username': username}, updates, {}, function(err, updatedUser) {
+		UserModel.findOne({'username': username}, function (err, user){
 			if(err) return console.error(err) ;
+			_.extend(user, updates);
 
-			resp.json({user: updatedUser});
+			user.save();
+			req.user = user;
+			next();
 		});
 	}
 
@@ -122,7 +125,10 @@ module.exports = function (app, models) {
 				if (user.rank) {
 					user.rankClass = (user.rank).toLowerCase().replace(rankRegex, '-');
 				}
-				userList.push(user);
+
+				if (user.username) {
+					userList.push(user);
+				}
 			});
 			next();
 		});
@@ -184,7 +190,7 @@ module.exports = function (app, models) {
 	app.get('/users/:username', findUser, findPostsByUser);
 
 	app.get('/myaccount', myAccountPage);
-	app.post('/myaccount', updateUser);
+	app.post('/myaccount', updateUser, myAccountPage);
 
 	app.get('/register', registerPage);
 	app.get('/login', loginPage);
