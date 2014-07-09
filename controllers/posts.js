@@ -177,6 +177,15 @@ module.exports = function(app, models){
 		resp.send(500, 'User is not logged in');
 	}
 
+	// Verify the user was logged in
+	function isAdmin(req, resp, next) {
+		if(req.user.isAdmin) {
+			return next();
+		}
+
+		resp.send(500, 'User does not have proper privileges');
+	}
+
 	// This is an unstyled test page used for testing.
 	function addNewPostPage(req, resp) {
 		resp.render('posts/new', req.model);
@@ -193,7 +202,7 @@ module.exports = function(app, models){
 	app.post('/posts', validateUser, addNewPost);
 	app.get('/posts', getUsers, getVotes, returnAllPosts);
 	app.get('/posts/:postId', getUsers, returnPostById);
-	app.post('/posts/:postId', validateUser, updatePostById);
+	app.post('/posts/:postId', validateUser, isAdmin, updatePostById);
 	app.delete('/posts/:postId', removePostById);
 
 	// Votes Routes
