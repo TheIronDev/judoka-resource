@@ -17,7 +17,10 @@
         {[ } ]}
 
 		<footer>
-            Submitted by: <a href="/users/{{username}}">{{username}}</a>
+            <span>Posted on {{dateString}}</span>
+            {[ if(username) { ]}
+                <div class="left">Submitted by: <a href="/users/{{username}}">{{username}}</a></div>
+            {[ } ]}
             <span class="voteWrapper {{userVoteClass}}">
                 <span class="upVote vote" data-score="1">Up</span>
                 <span class="downVote vote" data-score="-1">Down</span>

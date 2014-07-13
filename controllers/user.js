@@ -35,8 +35,8 @@ module.exports = function (app, models) {
 		res.render('user/admin', req.model);
 	}
 
-	function postRegistration(req, res) {
-		UserModel.register(new UserModel({ username : req.body.username }), req.body.password, function(err, user) {
+	function postRegistration(req, res, next) {
+		UserModel.register(new UserModel({ username : req.body.username, email : req.body.email }), req.body.password, function(err, user) {
 
 			if (err || !user) {
 				req.model.user = {};
@@ -45,7 +45,7 @@ module.exports = function (app, models) {
 			}
 
 			passport.authenticate('local')(req, res, function () {
-				res.redirect('/');
+				next();
 			});
 		});
 	}
@@ -102,8 +102,8 @@ module.exports = function (app, models) {
 		res.render('user/login', req.model);
 	}
 
-	function redirectToLogin(req, res) {
-		res.redirect('/');
+	function redirectToLoggedInPage(req, res) {
+		res.redirect('/myaccount');
 	}
 
 	function logoutPage(req, res) {
@@ -121,6 +121,7 @@ module.exports = function (app, models) {
 			if (err) return console.error(err);
 
 			var userList = req.model.userList = [];
+			var userMap = req.model.userMap = {};
 			_.each(users, function(user) {
 				if (user.rank) {
 					user.rankClass = (user.rank).toLowerCase().replace(rankRegex, '-');
@@ -128,6 +129,7 @@ module.exports = function (app, models) {
 
 				if (user.username) {
 					userList.push(user);
+					userMap[user.id] = user.username;
 				}
 			});
 			next();
@@ -158,12 +160,7 @@ module.exports = function (app, models) {
 				req.model.error = err;
 			}
 
-			posts.forEach(function(post){
-				var filteredPost = _.pick(post, 'pageId', 'title', 'type', 'userId', 'url', 'approved', '_id');
-				filteredPosts.push(filteredPost);
-			});
-
-			req.model.posts = filteredPosts;
+			req.model.posts = returnFilteredPosts(posts, req.model.userMap);
 			return res.render('user/userPosts', req.model);
 		});
 	}
@@ -171,32 +168,47 @@ module.exports = function (app, models) {
 	function getAllPosts(req, res, next) {
 		PostModel.find(function(err, posts){
 
-			var filteredPosts = [];
 			if (err || !posts) {
 				req.model.error = err;
 			}
 
-			posts.forEach(function(post){
-				var filteredPost = _.pick(post, 'pageId', 'title', 'type', 'userId', 'url', 'approved', '_id');
-				filteredPosts.push(filteredPost);
-			});
-
-			req.model.posts = filteredPosts;
+			req.model.posts = returnFilteredPosts(posts, req.model.userMap);
 			next();
 		});
 	}
 
+	/**
+	 * Returns a filteredPost set
+	 * @param posts
+	 * @param userMap
+	 */
+	function returnFilteredPosts(posts, userMap) {
+		var filteredPosts = [];
+
+		userMap = userMap || {};
+
+		posts.forEach(function(post){
+			var filteredPost = _.pick(post, 'pageId', 'title', 'type', 'userId', 'url', 'approved', '_id', 'timestamp'),
+				postDate = new Date(filteredPost.timestamp);
+
+			filteredPost.username = userMap[filteredPost.userId] || '';
+			filteredPost.dateString = postDate.toDateString();
+			filteredPosts.push(filteredPost);
+		});
+		return filteredPosts;
+	}
+
 	app.get('/users', getUsers, displayUsers);
-	app.get('/users/:username', findUser, findPostsByUser);
+	app.get('/users/:username', findUser, getUsers, findPostsByUser);
 
 	app.get('/myaccount', myAccountPage);
 	app.post('/myaccount', updateUser, myAccountPage);
 
 	app.get('/register', registerPage);
 	app.get('/login', loginPage);
-	app.get('/admin', adminPage, getAllPosts, renderAdminPage);
+	app.get('/admin', adminPage, getUsers, getAllPosts, renderAdminPage);
 	app.get('/logout', logoutPage);
 
-	app.post('/register', postRegistration);
-	app.post('/login', passport.authenticate('local'), redirectToLogin);
+	app.post('/register', postRegistration, redirectToLoggedInPage);
+	app.post('/login', passport.authenticate('local'), redirectToLoggedInPage);
 };

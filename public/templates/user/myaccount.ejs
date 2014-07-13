@@ -2,18 +2,28 @@
 
 <h1>My Account</h1>
 
-<form role='form' action="/myaccount" method="post">
-    <div>Username: <%= user.username %></div>
-    <label>Password: <input type='password' name="password" placeholder='Password'/></label>
-    <label>Email: <input type='text' name="email" placeholder='Email Address' value="<%= user.email ? user.email : '' %>" /></label>
+<form role='form' action="/myaccount" method="post" class="auth-form">
+    <div>
+        Username:
+        <div class="auth-input noedit">
+            <%= user.username %>
+        </div>
+    </div>
+    <label>
+        Password:
+        <input type='password' name="password" placeholder='Password' class="auth-input" />
+    </label>
+    <label>
+        Email:
+        <input type='text' name="email" placeholder='Email Address' class="auth-input" value="<%= user.email ? user.email : '' %>" />
+    </label>
     <label>
         Gravatar Email:
-        <input type='text' name="gravatarEmail" placeholder='Gravatar Email Address' value="<%= user.gravatarEmail ? user.gravatarEmail : '' %>" />
-        <a href="http://en.gravatar.com/support/what-is-gravatar/">Find out about Gravatar</a>
+        <input type='text' name="gravatarEmail" placeholder='Gravatar Email Address'  class="auth-input" value="<%= user.gravatarEmail ? user.gravatarEmail : '' %>" />
     </label>
     <label>
         Judo Ranks:
-        <select name="rank">
+        <select name="rank" class="auth-input">
             <% judoRanks.forEach(function(rank){ %>
                 <option <% if(user.rank == rank){ %> selected="selected"<% } %> >
                     <%= rank %>

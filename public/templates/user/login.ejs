@@ -1,8 +1,8 @@
 <% layout('../globals/layout') %>
 
 <h1>Login</h1>
-<form role='form' action="/login" method="post">
-    <input type='text' name="username" placeholder='Enter Username'/>
-    <input type='password' name="password" placeholder='Password'/>
-    <input type='submit'/>
+<form role='form' action="/login" method="post" class="auth-form">
+    <label>Username: <input type='text' name="username" placeholder='Enter Username' class="auth-input" /></label>
+    <label>Password: <input type='password' name="password" placeholder='Password' class="auth-input" /></label>
+    <label><input type='submit'/></label>
 </form>

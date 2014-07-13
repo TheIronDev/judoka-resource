@@ -85,11 +85,13 @@ module.exports = function(app, models){
 	function getFormattedPosts(posts, usersMap, votesMap) {
 		return _.map(posts, function(post) {
 
-			var formattedPost = _.pick(post, 'pageId', 'title', 'type', 'url', 'approved'),
-				postId = post._id;
+			var formattedPost = _.pick(post, 'pageId', 'title', 'type', 'url', 'approved', 'timestamp'),
+				postId = post._id,
+				postDate = new Date(formattedPost.timestamp);
 			formattedPost.id = postId;
 			formattedPost.score = votesMap[postId] || 0;
-			formattedPost.username = usersMap[post.userId] || 'n/a';
+			formattedPost.dateString = postDate.toDateString();
+			formattedPost.username = usersMap[post.userId] || '';
 
 			return formattedPost;
 		});
