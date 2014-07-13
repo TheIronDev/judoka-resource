@@ -25,7 +25,12 @@ app.use(passport.initialize());
 app.use(passport.session());
 //app.use(app.router);
 
-mongoose.connect('mongodb://localhost/test');
+if (process.env.MONGOHQ_URL) {
+	mongoose.connect(process.env.MONGOHQ_URL);
+} else {
+	mongoose.connect('mongodb://localhost/test');
+}
+
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () {
