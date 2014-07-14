@@ -8,11 +8,13 @@ define(['backbone', 'app/models/vote'], function(Backbone, VoteModel){
 
 		tagName: "article",
 		className: "post",
+		savePostTemplate: '#savedPostTemplate',
 		initialize: function(opts) {
 			this.template = opts.template || '#postTemplate';
 			this.voteModel = new VoteModel({
 				'postId': this.model.get('id')
 			});
+			this.listenTo(this.model, 'sync', this.savedModel);
 			this.listenTo(this.model, 'error', this.handleError);
 			this.listenTo(this.voteModel, 'updateScoreClass', this.updateScoreClass);
 		},
@@ -50,6 +52,10 @@ define(['backbone', 'app/models/vote'], function(Backbone, VoteModel){
 
 			// Upon success we should emit an add event that the collectionView listens to.
 			this.model.save();
+		},
+		savedModel: function(model) {
+			this.$el.html(_.template($(this.savePostTemplate).html()));
+			Backbone.trigger('addNewModel');
 		},
 		handleError: function(model) {
 			this.$el.addClass('hasError');

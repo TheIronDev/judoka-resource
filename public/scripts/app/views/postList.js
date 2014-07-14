@@ -21,10 +21,17 @@ define(['backbone', 'app/collections/posts', 'app/models/post', 'app/views/post'
 					if (userVote) {
 						post.set('userVote', userVote);
 					}
+
 					var postView = new PostView({model:post});
 					this.$el.append(postView.render());
 				}
 			}, this);
+
+			this.addNewPost();
+
+			return this.$el
+		},
+		addNewPost: function() {
 
 			// Create a new Post
 			var newPost = new PostModel({pageId: this.pageId});
@@ -32,9 +39,8 @@ define(['backbone', 'app/collections/posts', 'app/models/post', 'app/views/post'
 				model: newPost,
 				template: '#newPostTemplate'
 			});
+			this.listenToOnce(Backbone, 'addNewModel', this.addNewPost);
 			this.$el.append(postView.render());
-
-			return this.$el
 		}
 	});
 
