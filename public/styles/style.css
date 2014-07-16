@@ -8,18 +8,46 @@ h2{font-size: 1.25em;}
 
 /* Layout */
 .container{margin: 2.5em 0;}
-.inner{padding:5px;max-width: 1024px;width: 100%;margin: 0 auto;overflow: hidden}
-.container .inner{background:#fff;}
+.inner{padding:5px;max-width: 1024px;width: 100%;margin: 0 auto;}
+.inner:after{clear: both;display: block;content: ' '}
+.container .inner{background:#fff; box-shadow: 2px 2px 2px #ccc}
 form label {display: block;}
 
 /* Global Styles */
-.header{background: #0d3349;box-shadow:0 3px 3px #999;color: #fff;margin-bottom: 1em;top: 0;}
+.header{background: #0074B8;box-shadow:0 3px 3px #999;color: #fff;margin-bottom: 1em;top: 0;}
 .header ul{margin: 0;padding: 0;}
 .header ul li{display: inline;}
 .header li a{color: #fff;}
 .footer{background: #444444;color: #fff;bottom: 0;}
 .header,
 .footer {position: fixed;width: 100%;}
+
+
+/* Nav-List */
+
+.nav-list {position: relative;padding:0 0.2em; cursor: pointer;text-decoration: underline;}
+.nav-list ul:before {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    border-bottom: 1px solid #000;
+    content: '';
+    width: 70px;
+}
+.nav-list ul {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background: #0074B8;
+    border: 1px solid #000;
+    width: 200px;
+}
+.nav-list:hover ul {display: block;}
+.nav-list ul li a{display: block;padding: 0.2em;border-bottom: 1px solid #eee;}
+.nav-list ul li a:hover {background: #000;}
+
 
 /* Error Handling */
 .error {border:1px dashed #ccc;color: #f00;text-align: center;}

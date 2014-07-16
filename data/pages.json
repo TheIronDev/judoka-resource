@@ -1,0 +1,19 @@
+[{
+	"type": "page",
+	"subtype": "",
+	"name": "Renraku Waza",
+	"path": "renraku-waza",
+	"backgroundPosition": "",
+	"spriteName": "",
+	"description": "Combinations",
+	"pageId": 99
+}, {
+	"type": "page",
+	"subtype": "",
+	"name": "Kuzushi",
+	"path": "kuzushi",
+	"backgroundPosition": "",
+	"spriteName": "",
+	"description": "Off balancing",
+	"pageId": 100
+}]

@@ -1,0 +1,15 @@
+<% layout('../globals/layout') %>
+
+<section class="pages-container">
+    <h1><%= title %></h1>
+
+    <section class="page" data-pagejson='<%- pageJson %>'></section>
+</section>
+
+<script id="pageTemplate" type="text/template">
+    <header>{{ name }}</header>
+    <section>{{ description }}</section>
+</script>
+
+<% include ../globals/post.ejs %>
+<% include ../globals/newPost.ejs %>

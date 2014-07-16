@@ -1,4 +1,5 @@
-define(['backbone', 'app/views/techniquesList'], function(Backbone, TechniquesView){
+define(['backbone', 'app/views/techniquesList', 'app/views/page', 'app/models/page'],
+	function(Backbone, TechniquesView, PageView, PageModel){
 	var Router = Backbone.Router.extend({
 		initialize: function(options) {
 			this.start();
@@ -7,6 +8,7 @@ define(['backbone', 'app/views/techniquesList'], function(Backbone, TechniquesVi
 			"": "index",
 			"techniques": "techniques",
 			"techniques/:techniquePath": "techniquePage",
+			"resources/:page": "page",
 			"techniques/group/:techniqueGroup": "techniquesGroup"
 		},
 		index: function(){
@@ -32,6 +34,20 @@ define(['backbone', 'app/views/techniquesList'], function(Backbone, TechniquesVi
 			}
 			this.techniquesView.renderPage(techniquePath);
 			this.techniquesView.toggleViewType('page');
+		},
+		page: function(techniquePath) {
+
+			// Hacky Cheat
+			var modelAttrs = $('.page').data('pagejson');
+
+			if(!this.pageView){
+				this.pageModel = new PageModel(modelAttrs);
+				this.pageView= new PageView({
+					'router': this,
+					'model': this.pageModel
+				});
+			}
+			this.pageView.render();
 		},
 		start: function() {
 			Backbone.history.start({pushState: true});

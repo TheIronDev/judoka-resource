@@ -22,6 +22,7 @@ module.exports = function(app, models){
 	});
 
 	require('./techniques')(app);
+	require('./pages')(app);
 	require('./user')(app, models);
 	require('./posts')(app, models);
 
