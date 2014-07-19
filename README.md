@@ -19,7 +19,7 @@ In another, type:
     node .
 ```
 
-Visit localhost:5000/ ... and, thats it!
+Visit `localhost:5000/` ... and, thats it!
 
 
 # Urls
@@ -31,16 +31,25 @@ Visit localhost:5000/ ... and, thats it!
     * Displays the technique, and all associated user posts
 * /techniques/group/:technique_group_name
     * List all the techniques sorted by group
+* /resources/:page
+    * Display posts for a particular page (kuzushi, renraku-waza)
+* /users
+    * List all Users
+* /users/:username
+    * List all posts by a particular user
+
+* /login
+    * User Login Page
+* /register
+    * Registration Page
+* /myaccount
+    * Edit account information
+* /admin
+    * Administration Page
+
+
 
 # Sources
 * [Wikipedia: List of techniques](http://en.wikipedia.org/wiki/List_of_Kodokan_judo_techniques)
 * [Judo Technique Shortnames](http://judoinfo.com/)
 * [Gokyo Sprite](http://en.wikipedia.org/wiki/File:Gokyo-no-waza.jpg)
-
-# Todo
-- [ ] User Authentication
-- [ ] Login / Register Page
-- [ ] Edit Page
-- [ ] Handle save post
-- [ ] Handle invalid post attempts (client and server
-- [ ] Handle Group Clubs

@@ -175,8 +175,19 @@ label.col2 {width: 50%;}
     white-space: nowrap;
 }
 .post .link-header {height: 150px;}
-.post .image-wrapper {background: #333;padding: 0.5em;height: 150px;overflow: hidden;}
-.post .image-wrapper img {display: block; max-width: 100%;height: 100%;margin: 0 auto;}
+.post .image-wrapper {
+    background: #333;
+    padding: 0.5em;
+    height: 150px;
+    width:100%;
+}
+.post .image-wrapper .image{
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    display: block
+}
 .post .submittedBy {font-size: 0.8em;}
 .post .voteWrapper{
     cursor: pointer;

@@ -12,8 +12,8 @@
             <% } else if(post.type === 'image') { %>
                 <header><%= post.title %></header>
                 <div class="image-wrapper">
-                    <a href="<%= post.url %>" data-lightbox="image" data-title="<%= post.title %>">
-                        <img src="<%= post.url %>" />
+                    <a class="image" href="<%= post.url %>" data-lightbox="image" data-title="<%= post.title %>" style="background-image: url('<%= post.url %>')">
+                        &nbsp;
                     </a>
                 </div>
             <% } else { %>
