@@ -15,7 +15,8 @@
                     <span class="rank <%= user.rank ? user.rankClass : 'hide' %>"></span>
                 </span>
                 <span class="profile-info">
-                    <%= user.username %>
+                    <span class="block"><%= user.displayName %></span>
+                    <span class="block"><%= user.location ? user.location : '' %></span>
                 </span>
             </a>
         </li>

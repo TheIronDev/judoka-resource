@@ -14,6 +14,14 @@
         <input type='password' name="password" placeholder='Password' class="auth-input" />
     </label>
     <label>
+        Full Name:
+        <input type='text' name="fullName" placeholder='Full Name' class="auth-input" value="<%= user.fullName ? user.fullName : '' %>" />
+    </label>
+    <label>
+        Location:
+        <input type='text' name="location" placeholder='Location' class="auth-input" value="<%= user.location ? user.location : '' %>" />
+    </label>
+    <label>
         Email:
         <input type='text' name="email" placeholder='Email Address' class="auth-input" value="<%= user.email ? user.email : '' %>" />
     </label>

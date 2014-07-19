@@ -18,7 +18,7 @@ h2{font-size: 1.25em;}
 
     background: url(/images/judoka-background.jpg) no-repeat center center;
 }
-.container{}
+.container {margin-bottom: 2.5em;}
 .inner{padding:5px;max-width: 1024px;width: 100%;margin: 0 auto;}
 .inner:after{clear: both;display: block;content: ' '}
 .container .inner{background:#fff; border: 1px solid #0074B8;}
@@ -67,6 +67,7 @@ form label {display: block;}
 .left{float: left}
 .right{float: right}
 .clear{clear: both}
+.block {display: block}
 
 .col1 label {width: 100%}
 .col2 label {width: 50%}

@@ -16,6 +16,8 @@ module.exports = function(mongoose, JudoRanks) {
 			type: Boolean,
 			default: false
 		},
+		fullName: String,
+		location: String,
 		password: String,
 		email: String,
 		gravatarEmail: String,

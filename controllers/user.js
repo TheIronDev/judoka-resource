@@ -70,6 +70,14 @@ module.exports = function (app, models) {
 			updates.rank = payload.rank;
 		}
 
+		if (payload.fullName) {
+			updates.fullName = payload.fullName;
+		}
+
+		if (payload.location) {
+			updates.location = payload.location;
+		}
+
 		UserModel.findOne({'username': username}, function (err, user){
 			if(err) return console.error(err) ;
 			_.extend(user, updates);
@@ -127,6 +135,12 @@ module.exports = function (app, models) {
 					user.rankClass = (user.rank).toLowerCase().replace(rankRegex, '-');
 				}
 
+				if (user.fullName) {
+					user.displayName = user.fullName + ' ('+ user.username +')';
+				} else {
+					user.displayName = user.username;
+				}
+
 				if (user.username) {
 					userList.push(user);
 					userMap[user.id] = user.username;
@@ -160,7 +174,7 @@ module.exports = function (app, models) {
 				req.model.error = err;
 			}
 
-			req.model.posts = returnFilteredPosts(posts, req.model.userMap);
+			req.model.posts = returnFilteredPosts(posts, req.model.userMap, req.model.isAdmin);
 			return res.render('user/userPosts', req.model);
 		});
 	}
@@ -172,7 +186,7 @@ module.exports = function (app, models) {
 				req.model.error = err;
 			}
 
-			req.model.posts = returnFilteredPosts(posts, req.model.userMap);
+			req.model.posts = returnFilteredPosts(posts, req.model.userMap, req.model.isAdmin);
 			next();
 		});
 	}
@@ -182,18 +196,24 @@ module.exports = function (app, models) {
 	 * @param posts
 	 * @param userMap
 	 */
-	function returnFilteredPosts(posts, userMap) {
+	function returnFilteredPosts(posts, userMap, isAdmin) {
 		var filteredPosts = [];
 
 		userMap = userMap || {};
 
 		posts.forEach(function(post){
 			var filteredPost = _.pick(post, 'pageId', 'title', 'type', 'userId', 'url', 'approved', '_id', 'timestamp'),
-				postDate = new Date(filteredPost.timestamp);
+				postDate = new Date(filteredPost.timestamp),
+				isApproved = filteredPost.approved;
 
 			filteredPost.username = userMap[filteredPost.userId] || '';
 			filteredPost.dateString = postDate.toDateString();
-			filteredPosts.push(filteredPost);
+
+			// If the post is approved, or the user is an admin, add the filteredPost
+			if (isApproved || isAdmin) {
+				filteredPosts.push(filteredPost);
+			}
+
 		});
 		return filteredPosts;
 	}
