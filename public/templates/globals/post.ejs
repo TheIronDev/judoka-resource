@@ -1,6 +1,6 @@
 <script id="postTemplate" type="text/template">
         {[ if(type === 'youtube') { ]}
-            <header>{{title}}</header>
+            <header title="{{title}}">{{title}}</header>
             <object width="210" height="150">
                 <param name="movie" value="//{{url}}"></param>
                 <param name="allowFullScreen" value="true"></param>
@@ -8,22 +8,24 @@
                 <embed src="//{{url}}" type="application/x-shockwave-flash" width="210" height="150" allowscriptaccess="always" allowfullscreen="true"></embed>
             </object>
         {[ } else if(type === 'image') { ]}
-            <header>{{title}}</header>
+            <header title="{{title}}">{{title}}</header>
             <div class="image-wrapper">
                 <img src="{{url}}" />
             </div>
         {[ } else { ]}
-            <header class="link-header"><a href="{{url}}">{{title}}</a></header>
+            <header title="{{title}}" class="link-header">
+                <a href="{{url}}">{{title}}</a>
+            </header>
         {[ } ]}
 
 		<footer>
-            <span>Posted on {{dateString}}</span>
+            <div>Posted on {{dateString}}</div>
             {[ if(username) { ]}
-                <div class="left">Submitted by: <a href="/users/{{username}}">{{username}}</a></div>
+                <div class="left submittedBy">Submitted by: <a href="/users/{{username}}">{{username}}</a></div>
             {[ } ]}
-            <span class="voteWrapper {{userVoteClass}}">
-                <span class="upVote vote" data-score="1">Up</span>
-                <span class="downVote vote" data-score="-1">Down</span>
+            <span class="voteWrapper {{userVoteClass}}" title="You must be logged in">
+                <span class="upVote vote" data-score="1">&#x25B2;</span>
+                <span class="downVote vote" data-score="-1">&#x25BC;</span>
             </span>
         </footer>
 </script>
