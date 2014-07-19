@@ -31,23 +31,18 @@ module.exports = function(mongoose) {
 			parsedUrl = url.parse(this.url, true),
 			queryParams = parsedUrl.query;
 
-		switch (type) {
-			case 'youtube':
+		if (type === 'youtube') {
+			this.url = 'www.youtube.com/v/'+queryParams.v;
+		} else if (type === 'image') {
 
-				this.url = 'www.youtube.com/v/'+queryParams.v
-				break;
-			case 'image':
+		} else if (type === 'link') {
 
-				// Validation?
-				break;
-			case 'link':
-
-				break
-			default:
-				this.approved = false;
+		} else {
+			this.approved = false;
 		}
+
 		cb();
-	}
+	};
 
 	return PostSchema;
 };

@@ -3,7 +3,7 @@ module.exports = function(app){
 	var pageJson = require('../data/pages.json'),
 		_ = require('underscore');
 
-	function page(req, resp) {
+	function renderPage(req, resp) {
 
 		var page = req.model.page;
 		resp.render('pages/index', _.extend(req.model, {
@@ -25,6 +25,6 @@ module.exports = function(app){
 		next();
 	}
 
-	app.get('/resources/:pageName', findPage, page);
+	app.get('/resources/:pageName', findPage, renderPage);
 
 };

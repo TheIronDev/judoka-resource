@@ -31,7 +31,7 @@ module.exports = function(mongoose) {
 
 		this.userPostId = userId + '-' + postId;
 		cb();
-	}
+	};
 
 	return VoteSchema;
-}
+};

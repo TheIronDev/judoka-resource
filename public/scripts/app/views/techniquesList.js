@@ -58,7 +58,9 @@ define(['backbone', 'app/collections/techniques', 'app/views/techniquesItem', 'a
 		 * @param techniqueModel
 		 */
 		renderOne: function(techniqueModel) {
-			var techniqueItemView = new TechniqueItemView({model:techniqueModel})
+			var techniqueItemView = new TechniqueItemView({
+				model:techniqueModel
+			});
 			techniqueHtml = techniqueItemView.render();
 
 			this.techniqueList.append(techniqueHtml);

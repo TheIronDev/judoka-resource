@@ -22,7 +22,7 @@ module.exports = function (app, models) {
 		if (!user || !user.isAdmin) {
 			req.model.error = {
 				message: 'Sorry, you do not have appropriate privileges'
-			}
+			};
 			req.model.isAdmin = false;
 			return res.render('user/admin', req.model);
 		}

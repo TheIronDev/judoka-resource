@@ -31,9 +31,9 @@ define(['backbone', 'app/models/vote'], function(Backbone, VoteModel){
 			attr.userId = attr.userId || 0;
 
 			if(attr.userVote > 0) {
-				attr.userVoteClass = 'up'
+				attr.userVoteClass = 'up';
 			} else if(attr.userVote < 0) {
-				attr.userVoteClass = 'down'
+				attr.userVoteClass = 'down';
 			}
 
 			this.$el.html(_.template($(this.template).html(), attr));

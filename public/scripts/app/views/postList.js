@@ -29,7 +29,7 @@ define(['backbone', 'app/collections/posts', 'app/models/post', 'app/views/post'
 
 			this.addNewPost();
 
-			return this.$el
+			return this.$el;
 		},
 		addNewPost: function() {
 

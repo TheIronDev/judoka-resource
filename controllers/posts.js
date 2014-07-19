@@ -4,7 +4,7 @@ module.exports = function(app, models){
 		_ = require('underscore');
 
 	var PostModel = models.PostModel,
-		VoteModel = models.VoteModel
+		VoteModel = models.VoteModel,
 		UserModel = models.UserModel;
 
 	// Get a list of the users and place them on a map
@@ -121,7 +121,7 @@ module.exports = function(app, models){
 				posts: formattedPosts,
 				userVotes: req.currentUserVotesByPostId
 			});
-		})
+		});
 	}
 
 	// Return a single post by its unique id
@@ -166,7 +166,7 @@ module.exports = function(app, models){
 		PostModel.findById(postId, function(err, post){
 			if(err) return console.error(err);
 
-			post.remove()
+			post.remove();
 		});
 	}
 

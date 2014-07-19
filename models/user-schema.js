@@ -31,4 +31,4 @@ module.exports = function(mongoose, JudoRanks) {
 	UserSchema.plugin(passportLocalMongoose);
 
 	return UserSchema;
-}
+};
