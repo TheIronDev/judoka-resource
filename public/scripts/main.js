@@ -3,17 +3,21 @@ require.config({
 	paths: {
 		jquery: 'vendor/jquery-1.11.0.min',
 		backbone: 'vendor/backbone-min',
-		underscore: 'vendor/underscore-min'
+		underscore: 'vendor/underscore-min',
+		lightbox: 'vendor/lightbox.min'
 	},
 	shim: {
 		backbone: {
 			deps: ["underscore", "jquery"],
 			exports: "Backbone"
+		},
+		lightbox: {
+			deps: ["jquery"]
 		}
 	}
 });
 
-require(['jquery', 'backbone', 'underscore', 'app/Router'], function($, Backbone, _, Router){
+require(['jquery', 'backbone', 'underscore', 'app/Router', 'lightbox'], function($, Backbone, _, Router){
 
 	_.templateSettings = {
 		evaluate : /\{\[([\s\S]+?)\]\}/g,

@@ -10,7 +10,9 @@
         {[ } else if(type === 'image') { ]}
             <header title="{{title}}">{{title}}</header>
             <div class="image-wrapper">
-                <img src="{{url}}" />
+                <a href="{{url}}" data-lightbox="image" data-title="{{title}}">
+                    <img src="{{url}}" />
+                </a>
             </div>
         {[ } else { ]}
             <header title="{{title}}" class="link-header">
