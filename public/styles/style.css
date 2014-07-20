@@ -35,14 +35,13 @@ form label {display: block;}
 
 /* Nav-List */
 
-.nav-list {position: relative;padding:0 0.2em; cursor: pointer;text-decoration: underline;}
+.nav-list {position: relative;padding:0 0.2em; cursor: pointer;}
 .nav-list ul:before {
     position: absolute;
     display: block;
     top: 0;
     left: 0;
     z-index: 2;
-    border-bottom: 1px solid #000;
     content: '';
     width: 70px;
 }
@@ -51,12 +50,13 @@ form label {display: block;}
     position: absolute;
     z-index: 1;
     background: #0074B8;
-    border: 1px solid #000;
-    width: 200px;
+    border: 1px solid #aaa;
+    width: 250px;
 }
+.nav-list .nav-arrow{font-size: 0.7em;}
 .nav-list:hover ul {display: block;}
 .nav-list ul li a{display: block;padding: 0.2em;border-bottom: 1px solid #eee;}
-.nav-list ul li a:hover {background: #000;}
+.nav-list ul li a:hover {background: #333;}
 
 
 /* Error Handling */

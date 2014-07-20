@@ -16,4 +16,31 @@
 	"spriteName": "",
 	"description": "Off balancing",
 	"pageId": 100
+}, {
+	"type": "page",
+	"subtype": "",
+	"name": "Kaeshi Waza",
+	"path": "kaeshi-waza",
+	"backgroundPosition": "",
+	"spriteName": "",
+	"description": "Countering Techniques",
+	"pageId": 101
+}, {
+	"type": "page",
+	"subtype": "",
+	"name": "Katas",
+	"path": "katas",
+	"backgroundPosition": "",
+	"spriteName": "",
+	"description": "Prearranged Techniques",
+	"pageId": 102
+}, {
+	"type": "page",
+	"subtype": "",
+	"name": "History",
+	"path": "history",
+	"backgroundPosition": "",
+	"spriteName": "",
+	"description": "",
+	"pageId": 103
 }]
