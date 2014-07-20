@@ -8,8 +8,19 @@ var express = require('express'),
 	app = express(),
 	mongoose = require('mongoose'),
 	passport = require('passport'),
-	serverPort = process.env.PORT || 5000;
+	serverPort = process.env.PORT || 5000,
+	node_env = process.env.NODE_ENV,
+	developConfig = require('./config/development');
 
+// Uncomment for nicer logging
+// require('console.star');
+
+// If we are in development mode, lets set the AWS key with our config file (not checked in)
+if (node_env && node_env === 'development') {
+	process.env.AWS_ACCESS_KEY_ID = developConfig.AWS_ACCESS_KEY_ID;
+	process.env.AWS_SECRET_ACCESS_KEY = developConfig.AWS_SECRET_ACCESS_KEY;
+	process.env.S3_BUCKET = developConfig.S3_BUCKET;
+}
 
 app.engine('ejs', engine);
 app.set('view engine', 'ejs');
