@@ -8,14 +8,17 @@
     <meta name="author" content="Tyler Stark" />
     <link href="/styles/style.css" rel="stylesheet" />
     <link href="/styles/lightbox.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.11/require.min.js" data-main="/scripts/main.js"></script>
 </head>
 <body>
 <div class="page-background"></div>
 <section class="header">
     <div class="inner">
-        <ul class="left">
-            <li><a href="/">The Judoka Resource</a></li>
+        <img class="left logo" src="/images/logo.png" />
+        <ul class="nav">
+            <li class="home-link"><a href="/">The Judoka Resource</a></li>
             <li><a href="/techniques">Techniques</a></li>
             <li class="nav-list">
                 Resources <span class="nav-arrow">&#x25BC;</span>
@@ -27,8 +30,7 @@
                     <li><a href="/resources/kaeshi-waza">Kaeshi Waza (Countering)</a></li>
                 </ul>
             </li>
-        </ul>
-        <ul class="right">
+
             <li><a href="/users">Users</a></li>
             <% if (!user) { %>
                 <li><a href="/login">Login</a></li>
@@ -46,7 +48,7 @@
 </section>
 
 <div class="container">
-    <section class="inner">
+    <section class="inner hero">
         <section class="main">
             <% if(error) { %>
                 <div class="error">

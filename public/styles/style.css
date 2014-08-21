@@ -1,40 +1,50 @@
 /* Globals */
 *{box-sizing: border-box; -moz-box-sizing: border-box}
-html{margin: 0;font-family: 'Helvetica', 'Arial'}
+html{margin: 0;font-family: 'Helvetica', 'Arial';background: #F2F2F2}
 body{margin: 0;}
 
-h1{text-align: center;font-size: 1.5em;margin: 0.5em;}
+h1{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: normal;
+
+    margin: 0.5em;
+    padding: 0.2em 3em;
+    display: inline-block;
+    border-radius: 1em;
+    background: #3C96CB;
+    color: #fff;
+}
 h2{font-size: 1.25em;}
 
 /* Layout */
-.page-background {
-    height: 200px;
-    width: 200px;
-
-    position: fixed;
-    bottom: 1em;
-    right:1em;
-    z-index: -1;
-
-    background: url(/images/judoka-background.jpg) no-repeat center center;
-}
-.container {margin-bottom: 2.5em;}
-.inner{padding:5px;max-width: 1024px;width: 100%;margin: 0 auto;}
+.container {position: absolute;left: 0;right: 0;top: 0;z-index: -1}
+.inner{padding:5px;max-width: 960px;width: 100%;margin: 0 auto;}
 .inner:after{clear: both;display: block;content: ' '}
-.container .inner{background:#fff; border: 1px solid #0074B8;}
-form label {display: block;}
+.container .inner{
+    background: url(/images/hero.jpg) no-repeat top center #fff;
+    border: 1px solid #D8D8D8;
+    border-top:0;
 
-/* Global Styles */
-.header{background: #0074B8;box-shadow:0 3px 3px #999;color: #fff;margin-bottom: 1em;top: 0;}
+    box-shadow: 0 0 0.5em #ccc;
+    padding-top: 150px;
+}
+form label {display: block;}
+.main {text-align: center}
+
+/* Header */
+.header{background: #0074B8;color: #fff;height: 3em;}
+.logo{height: 2.5em;margin-right: 0.5em;}
+.home-link {font-size: 1.5em;margin-right: 0.5em;}
 .header ul{margin: 0;padding: 0;}
 .header ul li{display: inline;}
-.header li a{color: #fff;}
-.footer{background: #444444;color: #fff;bottom: 0;}
-.footer {position: fixed;width: 100%;}
+.header li a{color: #fff;text-decoration: none;}
 
+.header .nav {margin-top: 0.5em;font-size: 0.9em;}
+.header .nav > li {padding: 0 1em; border-left: 1px solid #fff;}
+.header .nav li.home-link {padding: 0; border: 0;}
 
 /* Nav-List */
-
 .nav-list {position: relative;padding:0 0.2em; cursor: pointer;}
 .nav-list ul:before {
     position: absolute;
@@ -57,6 +67,10 @@ form label {display: block;}
 .nav-list:hover ul {display: block;}
 .nav-list ul li a{display: block;padding: 0.2em;border-bottom: 1px solid #eee;}
 .nav-list ul li a:hover {background: #333;}
+
+/* Footer */
+.footer{background: #444444;color: #fff;bottom: 0;}
+.footer {position: fixed;width: 100%;}
 
 
 /* Error Handling */
