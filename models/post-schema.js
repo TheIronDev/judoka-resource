@@ -51,7 +51,7 @@ module.exports = function(mongoose) {
 		} else if (type === 'image') {
 
 			http.get(this.url, function(resp) {
-				filesize = resp.headers['content-length'],
+				filesize = resp.headers['content-length'];
 				headers = {
 					'Content-Length': filesize,
 					'Content-Type': resp.headers['content-type'],
