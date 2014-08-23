@@ -41,6 +41,7 @@ define(['backbone', 'app/models/vote'], function(Backbone, VoteModel){
 		},
 		submitNewPost: function(event) {
 			event.preventDefault();
+			this.$('.new-post-error').text('');
 
 			this.model.set({
 				'title': this.$('input[name=title]').val(),
@@ -57,8 +58,9 @@ define(['backbone', 'app/models/vote'], function(Backbone, VoteModel){
 			this.$el.html(_.template($(this.savePostTemplate).html()));
 			Backbone.trigger('addNewModel');
 		},
-		handleError: function(model) {
+		handleError: function(model, response) {
 			this.$el.addClass('hasError');
+			this.$('.new-post-error').text(response.responseText);
 		},
 		focusInputs: function() {
 			this.$el.removeClass('hasError');

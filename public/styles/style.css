@@ -83,6 +83,10 @@ form label {display: block;}
 .clear{clear: both}
 .block {display: block}
 
+.text-left {text-align: left}
+.text-right {text-align: right}
+.text-center {text-align: center}
+
 .col1 label {width: 100%}
 .col2 label {width: 50%}
 .col3 label{width: 33.33%}
@@ -90,6 +94,11 @@ form label {display: block;}
 .col5 label{width: 20%}
 
 label.col2 {width: 50%;}
+
+.column2 {width: 50%;}
+.column3 {width: 33.33%;}
+.column4 {width: 25%;}
+.column5 {width: 20%;}
 
 /* Auth Pages */
 .auth-form {max-width: 250px;margin: 0 auto;}
@@ -203,6 +212,29 @@ label.col2 {width: 50%;}
     display: block
 }
 .post .submittedBy {font-size: 0.8em;}
+.post .submitNewPost {
+    background: #3C96CB;
+    color: #fff;
+    margin-top: 1em;
+    height: 5em;
+    border-radius: 4em;
+    width: 5em;
+    cursor: pointer;
+}
+.post .submitNewPost:hover {
+    color: #efefef;
+    background: #3C46CB;
+}
+.post .new-post-type label {
+    padding: 0 0.5em;
+}
+.post .new-post-type label:nth-child(even) {
+    background: #efefef;
+}
+.post .new-post-type label:hover {
+    background: #aaa;
+}
+.post .new-post-error {color: red;}
 .post .voteWrapper{
     cursor: pointer;
     float: right;

@@ -1,14 +1,20 @@
 <script id="newPostTemplate" type="text/template">
-        <header>Add a new Post</header>
-            <label><strong>Title: </strong><input type="text" name="title" /></label>
-            <label><strong>Url:</strong><input type="text" name="url" /></label>
-            <strong>Type </strong><br/>
-            <label>Youtube: <input type="radio" name="type" value="youtube" /></label>
-            <label>Image: <input type="radio" name="type" value="image" /></label>
-            <label>Link: <input type="radio" name="type" value="link" /></label>
-
-            <input type="hidden" name="pageId" value="{{pageId}}" />
+    <header>Add a new Post</header>
+    <label><strong>Title: </strong><input type="text" name="title" /></label>
+    <label><strong>Url:</strong><input type="text" name="url" /></label>
+    <input type="hidden" name="pageId" value="{{pageId}}" />
+    <div>
+        <div class="column2 text-left left new-post-type">
+            <div class="text-center"><strong>Type:</strong></div>
+            <label class="clear block">Youtube: <input type="radio" name="type" value="youtube" class="right" /></label>
+            <label class="clear block">Image: <input type="radio" name="type" value="image" class="right" /></label>
+            <label class="clear block">Link: <input type="radio" name="type" value="link" class="right" /></label>
+        </div>
+        <div class="column2 left">
             <input class="submitNewPost" type="submit" />
+        </div>
+    </div>
+    <div class="clear new-post-error"></div>
 </script>
 
 <script id="savedPostTemplate" type="text/template">
