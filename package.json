@@ -44,5 +44,7 @@
     "grunt-contrib-jshint": "~0.10.0",
     "console.star": "0.0.1"
   },
-  "engine": "node >= 0.10.22"
+  "engines": {
+    "node": "0.10.x"
+  }
 }
