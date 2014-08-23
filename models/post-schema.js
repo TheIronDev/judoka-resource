@@ -42,6 +42,7 @@ module.exports = function(mongoose) {
 			queryParams = parsedUrl.query,
 			postReference = this,
 			fileName = md5(this.url),
+			filesize,
 			headers;
 
 		if (type === 'youtube') {
@@ -50,31 +51,36 @@ module.exports = function(mongoose) {
 		} else if (type === 'image') {
 
 			http.get(this.url, function(resp) {
-
+				filesize = resp.headers['content-length'],
 				headers = {
-					'Content-Length': resp.headers['content-length'],
+					'Content-Length': filesize,
 					'Content-Type': resp.headers['content-type'],
 					'x-amz-acl': 'public-read'
 				};
 
-				// Make the AWS3 Call, and update the post with a url pointing to Amazon
-				knoxClient.putStream(resp, fileName, headers, function(err, res){
+				if (filesize < 2000000) {
+					// Make the AWS3 Call, and update the post with a url pointing to Amazon
+					knoxClient.putStream(resp, fileName, headers, function(err, res){
 
-					if (err) {
-						return console.log(err);
-					}
+						if (err) {
+							console.log(err);
+							return cb('There was an error uploading the image.');
+						}
 
-					postReference.url = res.req.url;
+						postReference.url = res.req.url;
 
-					cb();
-				});
+						cb();
+					});
+				} else {
+					cb('Image too large');
+				}
 			});
 
 		} else if (type === 'link') {
 			cb();
 		} else {
 			this.approved = false;
-			cb();
+			cb('Invalid post type');
 		}
 	};
 

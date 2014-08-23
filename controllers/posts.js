@@ -142,7 +142,10 @@ module.exports = function(app, models){
 
 		var newPost = new PostModel(payload);
 
-		newPost.updateUrl(function() {
+		newPost.updateUrl(function(err) {
+			if (err) {
+				return resp.send(500, { error: err });
+			}
 			newPost.save();
 			resp.json({posts: newPost});
 		});
