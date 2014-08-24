@@ -7,6 +7,7 @@ define(['backbone', 'app/collections/techniques', 'app/views/techniquesItem', 'a
 		events: {
 			'change input[name=group]': 'sortByGroup',
 			'change input[name=subgroup]': 'sortBySubGroup',
+			'change select': 'sortByDropdownSelection',
 			'click .technique-item': 'navigateToPage'
 		},
 		initialize: function(options) {
@@ -170,6 +171,33 @@ define(['backbone', 'app/collections/techniques', 'app/views/techniquesItem', 'a
 				});
 			}
 			this.shouldResetH1 = true;
+		},
+		/**
+		 * When the user changes the dropdown, update the selected technique.
+		 * TODO: Refactor this and the other two functions, there is a large amount of redundancy.
+		 * @param event
+		 */
+		sortByDropdownSelection: function(event) {
+			var $dropdown = $(event.currentTarget),
+				$selectedOption = $dropdown.find('option:selected'),
+				selectedValue = $dropdown.val(),
+				groupType = $selectedOption.data('type'),
+				newTitle = $selectedOption.data('title'),
+				groupedBy;
+
+			if (groupType === "subtype") {
+				groupedBy = this.collection.where({'subtype': selectedValue});
+				this.navigateTo('/group/'+selectedValue);
+			} else if (groupType === 'type') {
+				groupedBy = this.collection.where({'type': selectedValue});
+				this.navigateTo('/group/'+selectedValue);
+			} else {
+				groupedBy = this.collection.models;
+				this.navigateTo('/');
+			}
+
+			this.renderGroup(groupedBy);
+			this.updateTitle(newTitle);
 		}
 	});
 

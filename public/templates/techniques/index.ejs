@@ -2,28 +2,50 @@
 
 <section class="techniques-container">
     <h1><%= titleOverride ? titleOverride : 'Judo Techniques' %></h1>
-    <section class="technique-groups">
-        <section class="technique-group col1">
-            <label class="<%= allTechniquesClass %>" ><input type="radio" name="group" value="all" checked="checked" data-title="Judo Techniques"><span><strong>All Judo Techniques</strong></span></label>
+    <div class="visible-tablet">
+        <select>
+            <option>All</option>
+            <optgroup label="Nage Waza (Throws)">
+                <option value="Nage-Waza" data-type="type" data-title="Nage-Waza Techniques"> Nage-Waza (Throws) </option>
+                <option value="Ashi-Waza" data-type="subtype" data-title="Ashi-Waza Techniques"> Ashi-Waza</option>
+                <option value="Koshi-Waza" data-type="subtype" data-title="Koshi-Waza Techniques"> Koshi-Waza </option>
+                <option value="Te-Waza" data-type="subtype" data-title="Te-Waza Techniques"> Te-Waza </option>
+                <option value="Yoko-sutemi" data-type="subtype" data-title="Yoko-sutemi Techniques"> Yoko-sutemi </option>
+                <option value="Ma-sutemi" data-type="subtype" data-title="Ma-sutemi Techniques"> Ma-sutemi </option>
+            </optgroup>
+            <optgroup label="Katame-Waza">
+                <option value="Katame-Waza" data-type="type" data-title="Katame-Waza Techniques"> Katame-Waza (Grappling) </option>
+                <option value="Osaekomi-Waza" data-type="subtype" data-title="Osaekomi-Waza Techniques"> Osaekomi-Waza </option>
+                <option value="Shimewaza" data-type="subtype" data-title="Shimewaza Techniques"> Shimewaza </option>
+                <option value="Kinshi-Waza" data-type="subtype" data-title="Kinshi-Waza Techniques"> Kinshi-Waza </option>
+                <option value="Kansetsu-Waza" data-type="subtype" data-title="Kansetsu-Waza Techniques"> Kansetsu-Waza </option>
+            </optgroup>
+        </select>
+    </div>
+    <div class="hidden-tablet">
+        <section class="technique-groups">
+            <section class="technique-group col1">
+                <label class="<%= allTechniquesClass %>" ><input type="radio" name="group" value="all" checked="checked" data-title="Judo Techniques"><span><strong>All Judo Techniques</strong></span></label>
+            </section>
+            <section class="technique-group col2">
+                <label class="throws"><input type="radio" name="group" value="Nage-Waza" data-title="Nage-Waza Techniques"> <span><strong>Nage-Waza (Throws)</strong></span> </label>
+                <label class="grapples"><input type="radio" name="group" value="Katame-Waza" data-title="Katame-Waza Techniques"> <span><strong>Katame-Waza (Grappling)</strong></span> </label>
+            </section>
+            <section class="technique-group sub-group throws col3">
+                <label><input type="radio" name="subgroup" value="Ashi-Waza" data-title="Ashi-Waza Techniques"> <span>Ashi-Waza</span></label>
+                <label><input type="radio" name="subgroup" value="Koshi-Waza" data-title="Koshi-Waza Techniques"> <span>Koshi-Waza</span> </label>
+                <label><input type="radio" name="subgroup" value="Te-Waza" data-title="Te-Waza Techniques"> <span>Te-Waza</span> </label>
+                <label class="col2"><input type="radio" name="subgroup" value="Yoko-sutemi" data-title="Yoko-sutemi Techniques"> <span>Yoko-sutemi</span> </label>
+                <label class="col2"><input type="radio" name="subgroup" value="Ma-sutemi" data-title="Ma-sutemi Techniques"> <span>Ma-sutemi</span> </label>
+            </section>
+            <section class="technique-group sub-group grapples col2">
+                <label><input type="radio" name="subgroup" value="Osaekomi-Waza" data-title="Osaekomi-Waza Techniques"> <span>Osaekomi-Waza</span> </label>
+                <label><input type="radio" name="subgroup" value="Shimewaza" data-title="Shimewaza Techniques"> <span>Shimewaza</span> </label>
+                <label><input type="radio" name="subgroup" value="Kinshi-Waza" data-title="Kinshi-Waza Techniques"> <span>Kinshi-Waza</span> </label>
+                <label><input type="radio" name="subgroup" value="Kansetsu-Waza" data-title="Kansetsu-Waza Techniques"> <span>Kansetsu-Waza</span> </label>
+            </section>
         </section>
-        <section class="technique-group col2">
-            <label class="throws"><input type="radio" name="group" value="Nage-Waza" data-title="Nage-Waza Techniques"> <span><strong>Nage-Waza (Throws)</strong></span> </label>
-            <label class="grapples"><input type="radio" name="group" value="Katame-Waza" data-title="Katame-Waza Techniques"> <span><strong>Katame-Waza (Grappling)</strong></span> </label>
-        </section>
-        <section class="technique-group sub-group throws col3">
-            <label><input type="radio" name="subgroup" value="Ashi-Waza" data-title="Ashi-Waza Techniques"> <span>Ashi-Waza</span></label>
-            <label><input type="radio" name="subgroup" value="Koshi-Waza" data-title="Koshi-Waza Techniques"> <span>Koshi-Waza</span> </label>
-            <label><input type="radio" name="subgroup" value="Te-Waza" data-title="Te-Waza Techniques"> <span>Te-Waza</span> </label>
-            <label class="col2"><input type="radio" name="subgroup" value="Yoko-sutemi" data-title="Yoko-sutemi Techniques"> <span>Yoko-sutemi</span> </label>
-            <label class="col2"><input type="radio" name="subgroup" value="Ma-sutemi" data-title="Ma-sutemi Techniques"> <span>Ma-sutemi</span> </label>
-        </section>
-        <section class="technique-group sub-group grapples col2">
-            <label><input type="radio" name="subgroup" value="Osaekomi-Waza" data-title="Osaekomi-Waza Techniques"> <span>Osaekomi-Waza</span> </label>
-            <label><input type="radio" name="subgroup" value="Shimewaza" data-title="Shimewaza Techniques"> <span>Shimewaza</span> </label>
-            <label><input type="radio" name="subgroup" value="Kinshi-Waza" data-title="Kinshi-Waza Techniques"> <span>Kinshi-Waza</span> </label>
-            <label><input type="radio" name="subgroup" value="Kansetsu-Waza" data-title="Kansetsu-Waza Techniques"> <span>Kansetsu-Waza</span> </label>
-        </section>
-    </section>
+    </div>
 
     <section class="technique-list" data-techniques='<%- techniquesJson %>'></section>
 

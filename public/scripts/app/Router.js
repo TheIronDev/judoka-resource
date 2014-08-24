@@ -7,6 +7,7 @@ define(['backbone', 'app/views/techniquesList', 'app/views/page', 'app/models/pa
 		routes: {
 			"": "index",
 			"techniques": "techniques",
+			"techniques/": "techniques",
 			"techniques/:techniquePath": "techniquePage",
 			"resources/:page": "page",
 			"techniques/group/:techniqueGroup": "techniquesGroup"

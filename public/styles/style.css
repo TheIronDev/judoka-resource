@@ -244,6 +244,13 @@ label.col2 {width: 50%;}
 .post .voteWrapper.down .downVote{color: #0074B8;background: #efefef;}
 
 /* Media Queries */
+
+.visible-mobile,
+.visible-tablet  {display: none}
+
+.hidden-mobile,
+.hidden-tablet {display: block;}
+
 @media (max-width: 1024px) {
     .post,
     .technique-item{max-width: 32%;}
@@ -256,9 +263,15 @@ label.col2 {width: 50%;}
 
 @media (max-width: 550px) {
     .users .user a {max-width: 99%;}
+
+    .visible-tablet {display: block;}
+    .hidden-tablet {display: none}
 }
 
 @media (max-width: 480px) {
     .post,
     .technique-item{max-width: 99%;}
+
+    .visible-mobile {display: block;}
+    .hidden-mobile {display: none;}
 }
