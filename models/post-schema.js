@@ -77,6 +77,9 @@ module.exports = function(mongoose) {
 			});
 
 		} else if (type === 'link') {
+			if (this.url.indexOf('http') !== 0) {
+				this.url = 'http://' + this.url;
+			}
 			cb();
 		} else {
 			this.approved = false;
