@@ -26,7 +26,7 @@ module.exports = function(app, models){
 	require('./user')(app, models);
 	require('./posts')(app, models);
 
-	app.get('/', function(req, resp) {
-		resp.render('home', req.model);
+	app.get('/about', function(req, resp) {
+		resp.render('about', req.model);
 	});
 };

@@ -42,6 +42,7 @@ form label {display: block;}
 
 .header .nav {margin-top: 0.5em;font-size: 0.9em;}
 .header .nav > li {padding: 0 1em; border-left: 1px solid #fff;}
+.header .nav > li.right {margin-top:.5em;}
 .header .nav li.home-link {padding: 0; border: 0;}
 
 /* Nav-List */

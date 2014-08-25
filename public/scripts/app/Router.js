@@ -6,7 +6,7 @@ define(['backbone', 'app/views/techniquesList', 'app/views/page', 'app/views/adm
 			this.start();
 		},
 		routes: {
-			"": "index",
+			"": "techniques",
 			"techniques": "techniques",
 			"techniques/": "techniques",
 			"techniques/:techniquePath": "techniquePage",

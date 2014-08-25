@@ -34,6 +34,7 @@ module.exports = function(app){
 		resp.redirect('/techniques');
 	}
 
+	app.get('/', techniquesPage);
 	app.get('/techniques', techniquesPage);
 	app.get('/techniques/:techniqueName', techniquePage);
 

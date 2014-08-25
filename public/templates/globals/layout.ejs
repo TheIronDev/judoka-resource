@@ -18,8 +18,9 @@
     <div class="inner">
         <img class="left logo" src="/images/logo.png" />
         <ul class="nav">
-            <li class="home-link"><a href="/">The Judoka Resource</a></li>
+            <li class="home-link"><a href="/">The Judo Resource</a></li>
             <li><a href="/techniques">Techniques</a></li>
+            <li><a href="/about">About</a></li>
             <li class="nav-list">
                 Resources <span class="nav-arrow">&#x25BC;</span>
                 <ul>
@@ -30,16 +31,17 @@
                     <li><a href="/resources/kaeshi-waza">Kaeshi Waza (Countering)</a></li>
                 </ul>
             </li>
-
             <li><a href="/users">Users</a></li>
+
+
             <% if (!user) { %>
-                <li><a href="/login">Login</a></li>
-                <li><a href="/register">Register</a></li>
+                <li class="right"><a href="/register">Register</a></li>
+                <li class="right"><a href="/login">Login</a></li>
             <% } else { %>
-                <li>You are currently logged in as <a href="/myaccount"><%= user.username %></a></li>
-                <li><a href="/logout">(logout)</a></li>
+                <li class="right">You are currently logged in as <a href="/myaccount"><%= user.username %></a></li>
+                <li class="right"><a href="/logout">(logout)</a></li>
                 <% if (user.isAdmin) { %>
-                    <li><a href="/admin">(admin)</a></li>
+                    <li class="right"><a href="/admin">(admin)</a></li>
                 <% } %>
             <% } %>
         </ul>
