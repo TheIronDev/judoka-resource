@@ -1,4 +1,7 @@
 <script id="postTemplate" type="text/template">
+    <% if (isAdmin) { %>
+        <span class="admin-operation delete-item" data-url="/posts/{{id}}" data-method="DELETE" data-callback="removeParent">x</span>
+    <% } %>
         {[ if(type === 'youtube') { ]}
             <header title="{{title}}">{{title}}</header>
             <object width="210" height="150">

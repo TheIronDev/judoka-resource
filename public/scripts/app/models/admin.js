@@ -1,7 +1,7 @@
 define(['backbone'], function(Backbone){
 
 	/**
-	 * The Admin model, for now we are using this as
+	 * The Admin model
 	 */
 	var Admin = Backbone.Model.extend({});
 

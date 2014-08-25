@@ -243,6 +243,11 @@ label.col2 {width: 50%;}
 .post .voteWrapper.up .upVote,
 .post .voteWrapper.down .downVote{color: #0074B8;background: #efefef;}
 
+/* Admin */
+.admin-operation {cursor:pointer;}
+.admin-operation:hover {text-shadow: 0 0 1px #000;}
+.admin-operation.delete-item {color: red;position: absolute;right: 0.5em;top: 0;}
+
 /* Media Queries */
 
 .visible-mobile,

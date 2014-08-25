@@ -3,7 +3,7 @@
     <li class="user">
         <a href="/users/<%= user.username %>">
             <% if (isAdmin) { %>
-                <span class="admin-operation" data-url="/users/<%= user.username %>" data-method="DELETE">x</span>
+                <span class="admin-operation delete-item" data-url="/users/<%= user.username %>" data-method="DELETE" data-callback="removeParent">x</span>
             <% } %>
             <span class="avatar">
                 <% if (user.gravatarHash) { %>

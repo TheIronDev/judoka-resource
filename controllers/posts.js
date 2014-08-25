@@ -170,6 +170,7 @@ module.exports = function(app, models){
 			if(err) return console.error(err);
 
 			post.remove();
+			resp.json({post: post});
 		});
 	}
 
@@ -208,7 +209,7 @@ module.exports = function(app, models){
 	app.get('/posts', getUsers, getVotes, returnAllPosts);
 	app.get('/posts/:postId', getUsers, returnPostById);
 	app.post('/posts/:postId', validateUser, isAdmin, updatePostById);
-	app.delete('/posts/:postId', removePostById);
+	app.delete('/posts/:postId', isAdmin, removePostById);
 
 	// Votes Routes
 	app.post('/votes', validateUser, addVote);

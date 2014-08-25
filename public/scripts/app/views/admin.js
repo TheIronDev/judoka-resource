@@ -1,7 +1,7 @@
 /**
  * Cheaty helper for all admin functionality.
  */
-define(['backbone', 'app/models/admin'], function(Backbone, AdminModel){
+define(['jquery', 'backbone', 'app/models/admin'], function($, Backbone, AdminModel){
 
 	var AdminView = Backbone.View.extend({
 		el: 'body',
@@ -19,13 +19,25 @@ define(['backbone', 'app/models/admin'], function(Backbone, AdminModel){
 			var elData = event.currentTarget.dataset,
 				method = elData.method,
 				url = elData.url,
-				data = elData.data || {};
+				callbackName = elData.callback,
+				data = elData.data || {},
+				adminView = this;
 
 			this.model.fetch({
 				'method': method,
 				'url': url,
-				'data': data
+				'data': data,
+				'success': function() {
+					adminView.callbacks[callbackName].call(adminView, event);
+				}
 			});
+		},
+		callbacks: {
+			'removeParent': function(event) {
+				var $target = $(event.currentTarget),
+					$parent = $target.parent();
+				$parent.fadeOut();
+			}
 		}
 	});
 
