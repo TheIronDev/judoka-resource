@@ -1,0 +1,23 @@
+<ul class="users">
+    <% userList.forEach(function(user){ %>
+    <li class="user">
+        <a href="/users/<%= user.username %>">
+            <% if (isAdmin) { %>
+                <span class="admin-operation" data-url="/users/<%= user.username %>" data-method="DELETE">x</span>
+            <% } %>
+            <span class="avatar">
+                <% if (user.gravatarHash) { %>
+                <img src="http://www.gravatar.com/avatar/<%= user.gravatarHash %>?s=75" />
+                <% } else { %>
+                &nbsp;
+                <% } %>
+                <span class="rank <%= user.rank ? user.rankClass : 'hide' %>"></span>
+            </span>
+            <span class="profile-info">
+                <span class="block"><%= user.displayName %></span>
+                <span class="block"><%= user.location ? user.location : '' %></span>
+            </span>
+        </a>
+    </li>
+    <% }); %>
+</ul>

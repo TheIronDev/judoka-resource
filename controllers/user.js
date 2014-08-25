@@ -17,18 +17,13 @@ module.exports = function (app, models) {
 		res.render('user/register', req.model);
 	}
 
-	function adminPage(req, res, next) {
-		var user = req.user;
-		if (!user || !user.isAdmin) {
-			req.model.error = {
-				message: 'Sorry, you do not have appropriate privileges'
-			};
-			req.model.isAdmin = false;
-			return res.render('user/admin', req.model);
+	// Verify the user was logged in
+	function isAdmin(req, resp, next) {
+		if(req.user && req.user.isAdmin) {
+			return next();
 		}
 
-		req.model.isAdmin = true;
-		next();
+		resp.send(500, 'User does not have proper privileges');
 	}
 
 	function renderAdminPage(req, res) {
@@ -163,6 +158,20 @@ module.exports = function (app, models) {
 		});
 	}
 
+	function deleteUser(req, res, next) {
+
+		var selectedUser = req.model.selectedUser;
+		selectedUser.remove(function (err, user) {
+			if (err) {
+				req.model.error = err;
+				return next();
+			}
+			UserModel.findById(user._id, function (err, foundUser) {
+				res.json({selectedUser: user});
+			});
+		});
+	}
+
 
 	function findPostsByUser(req, res, next) {
 
@@ -220,13 +229,14 @@ module.exports = function (app, models) {
 
 	app.get('/users', getUsers, displayUsers);
 	app.get('/users/:username', findUser, getUsers, findPostsByUser);
+	app.delete('/users/:username', isAdmin, findUser, deleteUser);
 
 	app.get('/myaccount', myAccountPage);
 	app.post('/myaccount', updateUser, myAccountPage);
 
 	app.get('/register', registerPage);
 	app.get('/login', loginPage);
-	app.get('/admin', adminPage, getUsers, getAllPosts, renderAdminPage);
+	app.get('/admin', isAdmin, getUsers, getAllPosts, renderAdminPage);
 	app.get('/logout', logoutPage);
 
 	app.post('/register', postRegistration, redirectToLoggedInPage);

@@ -1,7 +1,8 @@
-define(['backbone', 'app/views/techniquesList', 'app/views/page', 'app/models/page'],
-	function(Backbone, TechniquesView, PageView, PageModel){
+define(['backbone', 'app/views/techniquesList', 'app/views/page', 'app/views/admin', 'app/models/page'],
+	function(Backbone, TechniquesView, PageView, AdminView, PageModel){
 	var Router = Backbone.Router.extend({
 		initialize: function(options) {
+			this.adminView = new AdminView();
 			this.start();
 		},
 		routes: {
