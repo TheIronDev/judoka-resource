@@ -49,7 +49,6 @@ module.exports = function(mongoose) {
 			this.url = 'www.youtube.com/v/'+queryParams.v;
 			cb();
 		} else if (type === 'image') {
-
 			http.get(this.url, function(resp) {
 				filesize = resp.headers['content-length'];
 				headers = {
@@ -84,6 +83,17 @@ module.exports = function(mongoose) {
 		} else {
 			this.approved = false;
 			cb('Invalid post type');
+		}
+	};
+
+	PostSchema.methods.removeImageFromAmazon = function(cb) {
+		var amazonFileName = path.basename(this.url);
+		if (this.type === 'image') {
+			knoxClient.del(amazonFileName).on('response', function(res){
+				cb();
+			}).end();
+		} else {
+			cb();
 		}
 	};
 

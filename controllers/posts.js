@@ -169,8 +169,12 @@ module.exports = function(app, models){
 		PostModel.findById(postId, function(err, post){
 			if(err) return console.error(err);
 
-			post.remove();
-			resp.json({post: post});
+			var removedPost = new PostModel(post);
+
+			removedPost.removeImageFromAmazon(function() {
+				post.remove();
+				resp.json({post: post});
+			});
 		});
 	}
 
