@@ -113,13 +113,30 @@ label.col2 {width: 50%;}
 .technique-groups{overflow: hidden;}
 .technique-group{text-align: center;}
 .technique-group label{float: left;padding: 8px 0;}
-.technique-group label span {background: #efefef;padding: 5px 1em;border-radius: 1em;border: 1px solid #D1D1D1;}
-.technique-group.sub-group label span {background: #fff;}
+.technique-group label span {
+    background: #B2B2B2;
+    color:#fff;
+
+    margin: 0 auto;
+    padding: 5px 1em;
+    width: 75%;
+
+    border-radius: 1em;
+    border: 1px solid #D1D1D1;
+
+    display: block;
+}
+.technique-group.sub-group label span {background: #fff;color:#000;width: 95%;}
 .technique-group label:hover{cursor: pointer}
+.technique-group.all label span,
 .technique-group label.selectedLabel span{background: #3C96CB;color:#fff;text-shadow: 1px 1px 1px #666;}
 .technique-group input{display: none;}
 
-.technique-group.sub-group {width: 50%;float: left}
+.technique-group.all span{display: inline;}
+
+.technique-group.all span,
+.technique-group.group span {font-size: 1.1em;}
+.technique-group.sub-group {padding: 0 4%;width: 50%;float: left}
 
 .technique-item{
     float:left;
