@@ -47,7 +47,15 @@
         </section>
     </div>
 
-    <section class="technique-list" data-techniques='<%- techniquesJson %>'></section>
+    <section class="technique-list" data-techniques='<%- techniquesJson %>'>
+        <% techniquesArray.forEach(function(technique) { %>
+            <article class="technique-item" data-path="<%= technique.path %>">
+                <div class="sprite <%= technique.spriteName %>" style="background-position: <%= technique.backgroundPosition %>">&nbsp;</div>
+                <header><%= technique.name %></header>
+                <section><%= technique.description %></section>
+            </article>
+        <% }); %>
+    </section>
 
     <section class="page"></section>
 </section>

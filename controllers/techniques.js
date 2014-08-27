@@ -5,27 +5,42 @@ module.exports = function(app){
 		techniqueGroups = 'Nage-Waza|Katame-Waza|Ashi-Waza|Koshi-Waza|Te-Waza|Yoko-sutemi|Ma-sutemi|' +
 			'Osaekomi-Waza|Shimewaza|Kinshi-Waza|Kansetsu-Waza';
 
+	// Page - /techniques
 	function techniquesPage(req, resp) {
 		resp.render('techniques/index', _.extend(req.model, {
 			techniquesJson: JSON.stringify(techniquesJson),
+			techniquesArray: _.toArray(techniquesJson),
 			titleOverride: '',
 			allTechniquesClass: 'selectedLabel'
 		}));
 	}
 
+	// Page - /techniques/:id
 	function techniquePage(req, resp) {
 
 		resp.render('techniques/index', _.extend(req.model, {
 			techniquesJson: JSON.stringify(techniquesJson),
+			techniquesArray: [],
 			titleOverride: req.param('techniqueName'),
 			allTechniquesClass: ''
 		}));
 	}
 
+	// Page - /techniques/group/:id
 	function techniquesGroupPage(req, resp) {
+
+		var techniqueGroup = req.param('techniqueGroup'),
+			filteredList;
+		if (techniqueGroup === 'Nage-Waza' || techniqueGroup === 'Katame-Waza') {
+			filteredList = _.where(techniquesJson, {'type': techniqueGroup});
+		} else {
+			filteredList = _.where(techniquesJson, {'subtype': techniqueGroup});
+		}
+
 		resp.render('techniques/index', _.extend(req.model, {
 			techniquesJson: JSON.stringify(techniquesJson),
-			titleOverride: req.param('techniqueGroup')+ ' Techniques',
+			techniquesArray: filteredList,
+			titleOverride: techniqueGroup + ' Techniques',
 			allTechniquesClass: ''
 		}));
 	}
