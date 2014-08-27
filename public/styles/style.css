@@ -28,12 +28,13 @@ h2{font-size: 1.25em;clear: both;}
 
     box-shadow: 0 0 0.5em #ccc;
     padding-top: 150px;
+    margin-bottom: 2.2em;
 }
 form label {display: block;}
 .main {text-align: center}
 
 /* Header */
-.header{background: #0074B8;color: #fff;height: 3em;}
+.header{background: rgba(0, 116, 184, .9);color: #fff;height: 3em;}
 .logo{height: 2.5em;margin-right: 0.5em;}
 .home-link {font-size: 1.5em;margin-right: 0.5em;}
 .header ul{margin: 0;padding: 0;}
@@ -112,17 +113,31 @@ label.col2 {width: 50%;}
 .technique-groups{overflow: hidden;}
 .technique-group{text-align: center;}
 .technique-group label{float: left;padding: 8px 0;}
-.technique-group label span {background: #efefef;padding: 5px 1em;border-radius: 1em;}
+.technique-group label span {background: #efefef;padding: 5px 1em;border-radius: 1em;border: 1px solid #D1D1D1;}
+.technique-group.sub-group label span {background: #fff;}
 .technique-group label:hover{cursor: pointer}
-.technique-group .selectedLabel span{background: #3C96CB;color:#fff;text-shadow: 1px 1px 1px #666;}
+.technique-group label.selectedLabel span{background: #3C96CB;color:#fff;text-shadow: 1px 1px 1px #666;}
 .technique-group input{display: none;}
 
 .technique-group.sub-group {width: 50%;float: left}
 
-.technique-item{float:left;width:100%;max-width: 24%;height: 5em;text-align: center;border: 1px solid #8DB0F0;margin: 0.5%;cursor: pointer}
+.technique-item{
+    float:left;
+    overflow: hidden;
+
+    width:100%;
+    max-width: 24%;
+    height: 5em;
+    text-align: center;
+
+    border: 1px solid #8DB0F0;
+    border-radius:0.7em;
+    margin: 0.5%;
+    cursor: pointer
+}
 .technique-item:hover{box-shadow: 0 0 5px #999;}
-.technique-item header{font-weight: bold;}
-.technique-item section{font-size: 0.8em;}
+.technique-item header{font-weight: bold;margin-top: 1em;}
+.technique-item section{font-size: 0.8em;color: #4298ca;}
 
 /* User */
 .users {list-style: none;padding: 0;overflow: hidden;}
@@ -177,7 +192,7 @@ label.col2 {width: 50%;}
 
 .post-list{overflow: hidden;}
 .posts {padding: 0;}
-.post{border: 1px solid #8DB0F0;float: left;padding: 0.5em;box-shadow: 0 0 5px #ccc;margin: 0.5%;width: 100%;height: 225px;list-style: none;max-width: 24%;position: relative}
+.post{border: 1px solid #8DB0F0;border-radius:0.7em;float: left;padding: 0.5em;box-shadow: 0 0 5px #ccc;margin: 0.5%;width: 100%;height: 225px;list-style: none;max-width: 24%;position: relative}
 .post.approved-false {background: red;}
 .post input[type=text]{display: block;width: 100%;}
 .post .toggleApproved {display: inline}
