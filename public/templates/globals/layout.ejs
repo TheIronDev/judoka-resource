@@ -33,12 +33,11 @@
             </li>
             <li><a href="/users">Users</a></li>
 
-
             <% if (!user) { %>
                 <li class="right"><a href="/register">Register</a></li>
                 <li class="right"><a href="/login">Login</a></li>
             <% } else { %>
-                <li class="right">You are currently logged in as <a href="/myaccount"><%= user.username %></a></li>
+                <li class="right">Hi <a href="/myaccount"><%= user.username %></a>!</li>
                 <li class="right"><a href="/logout">(logout)</a></li>
                 <% if (user.isAdmin) { %>
                     <li class="right"><a href="/admin">(admin)</a></li>

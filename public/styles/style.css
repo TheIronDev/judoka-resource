@@ -215,6 +215,13 @@ label.col2 {width: 50%;}
 .post .toggleApproved {display: inline}
 .post embed {width: 100%;}
 
+.new-post-row {margin-bottom: 0.5em;}
+.radio-wrap {background: #ccc;border-radius: 1em;overflow: hidden;}
+.radio-wrap input {display: none;}
+.radio-wrap label {padding: 0.2em;cursor: pointer;}
+.radio-wrap input:checked + label {background: #3C96CB;color: #fff}
+.url-text {font-size: 0.2em;text-align: left;}
+
 .post header {
     text-align: center;
     height: 1.2em;

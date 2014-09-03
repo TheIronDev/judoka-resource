@@ -14,7 +14,7 @@ define(['backbone'], function(Backbone){
 		},
 		defaults: {
 			'title': 'Default Title',
-			'type': 'youtube',
+			'type': '',
 			'score': 0,
 			'userVote': '',
 			'userVoteClass': '',

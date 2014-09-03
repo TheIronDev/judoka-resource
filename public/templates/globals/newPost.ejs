@@ -1,19 +1,23 @@
 <script id="newPostTemplate" type="text/template">
     <header>Add a new Post</header>
-    <label><strong>Title: </strong><input type="text" name="title" /></label>
-    <label><strong>Url:</strong><input type="text" name="url" /></label>
-    <input type="hidden" name="pageId" value="{{pageId}}" />
-    <div>
-        <div class="column2 text-left left new-post-type">
-            <div class="text-center"><strong>Type:</strong></div>
-            <label class="clear block">Youtube: <input type="radio" name="type" value="youtube" class="right" /></label>
-            <label class="clear block">Image: <input type="radio" name="type" value="image" class="right" /></label>
-            <label class="clear block">Link: <input type="radio" name="type" value="link" class="right" /></label>
-        </div>
-        <div class="column2 left">
-            <input class="submitNewPost" type="submit" />
-        </div>
-    </div>
+	<div class="new-post-row radio-wrap">
+		<input type="radio" name="type" value="youtube" id="type-youtube" checked="checked" />
+		<label for="type-youtube" class="left col2">Youtube</label>
+		<input type="radio" name="type" value="image" id="type-image" />
+		<label for="type-image" class="left col2">Image</label>
+	</div>
+    <div class="new-post-row"><input type="text" name="title" placeholder="Title" /></div>
+    <div class="new-post-row">
+		<input type="text" name="url" placeholder="Url" />
+		<div class="url-text"
+			 data-youtube="Example: https://www.youtube.com/watch?v=aaa"
+			 data-image="Example: http://www.judo.com/image.jpg">
+			&nbsp;
+		</div>
+	</div>
+
+	<div class="new-post-row"><input class="submitNewPost" type="submit" /></div>
+	<input type="hidden" name="pageId" value="{{pageId}}" />
     <div class="clear new-post-error"></div>
 </script>
 

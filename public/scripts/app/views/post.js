@@ -17,10 +17,14 @@ define(['backbone', 'app/models/vote'], function(Backbone, VoteModel){
 			this.listenTo(this.model, 'sync', this.savedModel);
 			this.listenTo(this.model, 'error', this.handleError);
 			this.listenTo(this.voteModel, 'updateScoreClass', this.updateScoreClass);
+
+			// Update toggle change
+			this.listenTo(this.model, 'change:type', this.toggleType);
 		},
 		events: {
 			'click .submitNewPost': 'submitNewPost',
 			'click .vote': 'vote',
+			'click input[type=radio]': 'updateRadio',
 			'focus input[type=text]': 'focusInputs'
 		},
 		render: function() {
@@ -37,6 +41,7 @@ define(['backbone', 'app/models/vote'], function(Backbone, VoteModel){
 			}
 
 			this.$el.html(_.template($(this.template).html(), attr));
+			this.model.set({'type': 'youtube'});
 			return this.el;
 		},
 		submitNewPost: function(event) {
@@ -64,6 +69,17 @@ define(['backbone', 'app/models/vote'], function(Backbone, VoteModel){
 		},
 		focusInputs: function() {
 			this.$el.removeClass('hasError');
+		},
+		updateRadio: function(event) {
+			var $radio = $(event.currentTarget);
+			this.model.set('type', $radio.val());
+		},
+		toggleType: function() {
+			var type = this.model.get('type'),
+				$helperText = this.$('.url-text'),
+				placeholder = $helperText.data(type) || '';
+
+			$helperText.text(placeholder);
 		},
 		vote: function(event) {
 
