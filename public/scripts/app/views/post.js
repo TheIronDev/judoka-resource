@@ -84,7 +84,10 @@ define(['backbone', 'app/models/vote'], function(Backbone, VoteModel){
 		vote: function(event) {
 
 			var score = parseInt(event.currentTarget.dataset.score, 10);
-			this.voteModel.set({'score': score});
+			this.voteModel.set({
+				'score': score,
+				'userVote': score
+			});
 			this.voteModel.save();
 		},
 		updateVote: function(scoreClass, score) {
