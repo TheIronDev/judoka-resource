@@ -16,7 +16,7 @@ define(['backbone', 'app/models/vote'], function(Backbone, VoteModel){
 			});
 			this.listenTo(this.model, 'sync', this.savedModel);
 			this.listenTo(this.model, 'error', this.handleError);
-			this.listenTo(this.voteModel, 'updateScoreClass', this.updateScoreClass);
+			this.listenTo(this.voteModel, 'updateScoreClass', this.updateVote);
 
 			// Update toggle change
 			this.listenTo(this.model, 'change:type', this.toggleType);
@@ -87,7 +87,16 @@ define(['backbone', 'app/models/vote'], function(Backbone, VoteModel){
 			this.voteModel.set({'score': score});
 			this.voteModel.save();
 		},
-		updateScoreClass: function(scoreClass) {
+		updateVote: function(scoreClass, score) {
+			if (score > 0) {
+				score = '+ ' + score;
+			}
+
+			var self = this,
+				fade = 500;
+			this.$('.scoreValue').fadeOut(fade, function() {
+				self.$('.scoreValue').text(score).fadeIn(fade);
+			});
 
 			this.$('.voteWrapper').removeClass('down')
 				.removeClass('up')

@@ -8,19 +8,23 @@ define(['backbone'], function(Backbone){
 			this.listenTo(this, 'change:score', this.updateScoreClass);
 		},
 		updateScoreClass: function(){
-			var score = this.get('score'),
-				scoreClass = '';
+			var score = this.get('userVote'),
+				scoreClass = (score >= 0 ? 'up' : 'down');
 
-			scoreClass = (score >= 0 ? 'up' : 'down');
-			this.trigger('updateScoreClass', scoreClass);
+			this.trigger('updateScoreClass', scoreClass, this.get('score'));
 		},
 		urlRoot: '/votes/',
 		parse: function(resp) {
-			return resp.vote;
+			var votes = {
+				score: resp.votes,
+				userVote: resp.userVote
+			};
+			return votes;
 		},
 		defaults: {
 			'postId': '',
-			'score': 0
+			'score': 0,
+			'total': 0
 		}
 	});
 

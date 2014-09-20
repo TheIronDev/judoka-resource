@@ -52,7 +52,9 @@ module.exports = function(app, models){
 			callback = function(err, respVote){
 				if(err) {return console.error(err);}
 
-				resp.json({vote: respVote});
+				req.userVote = req.body.score;
+				req.postId = payload.postId;
+				next();
 			};
 
 		payload.userId = req.user._id;
@@ -71,9 +73,11 @@ module.exports = function(app, models){
 
 	function returnVotesByPostId(req, resp, next) {
 
-		var postId = req.param('postId') || '';
+		var postId = req.param('postId') || req.postId || '',
+			userVote = req.userVote || 0;
 		resp.json({
-			votes: req.votesByPostId[postId]
+			votes: req.votesByPostId[postId],
+			userVote: userVote
 		});
 	}
 
@@ -216,7 +220,7 @@ module.exports = function(app, models){
 	app.delete('/posts/:postId', isAdmin, removePostById);
 
 	// Votes Routes
-	app.post('/votes', validateUser, addVote);
+	app.post('/votes', validateUser, addVote, getVotes, returnVotesByPostId);
 	app.get('/votes', getVotes, returnAllVotes);
 	app.get('/votes/:postId', getVotes, returnVotesByPostId);
 };

@@ -22,15 +22,22 @@
                 <a href="{{url}}">{{title}}</a>
             </header>
         {[ } ]}
+		<div class="voteWrapper {{userVoteClass}}" title="You must be logged in">
+			<div class="upVote vote left" data-score="1">&#x25B2;</div>
+			<span class="scoreValue">
+				{[ if(score > 0) { ]}
+					+ {{score}}
+				{[ } else { ]}
+					{{score}}
+				{[ } ]}
+			</span>
+        	<div class="downVote vote right" data-score="-1">&#x25BC;</div>
+        </div>
 
-		<footer>
+		<footer class="text-left">
             <div>Posted on {{dateString}}</div>
             {[ if(username) { ]}
-                <div class="left submittedBy">Submitted by: <a href="/users/{{username}}">{{username}}</a></div>
+                <div>by <a href="/users/{{username}}">{{username}}</a></div>
             {[ } ]}
-            <span class="voteWrapper {{userVoteClass}}" title="You must be logged in">
-                <span class="upVote vote" data-score="1">&#x25B2;</span>
-                <span class="downVote vote" data-score="-1">&#x25BC;</span>
-            </span>
         </footer>
 </script>

@@ -1,6 +1,6 @@
 /* Globals */
 *{box-sizing: border-box; -moz-box-sizing: border-box}
-html{margin: 0;font-family: 'Helvetica', 'Arial';background: #F2F2F2}
+html{margin: 0;font-family: 'Helvetica', 'Arial';background: url(/images/background.jpg) center top fixed;background-size: 730px;}
 body{margin: 0;}
 
 h1{
@@ -60,6 +60,7 @@ form label {display: block;}
 .nav-list ul {
     display: none;
     position: absolute;
+    top: 0.9em;
     z-index: 1;
     background: #0074B8;
     border: 1px solid #aaa;
@@ -209,14 +210,42 @@ label.col2 {width: 50%;}
 
 .post-list{overflow: hidden;}
 .posts {padding: 0;}
-.post{border: 1px solid #8DB0F0;border-radius:0.7em;float: left;padding: 0.5em;box-shadow: 0 0 5px #ccc;margin: 0.5%;width: 100%;height: 225px;list-style: none;max-width: 24%;position: relative}
+.post{
+    border: 2px solid #3E97CC;
+    border-radius:0.7em;
+
+    float: left;
+    padding: 0.5em;
+
+    background: #F8F8F8;
+    box-shadow: 0 0 5px #ccc;
+    margin: 0.5%;
+    width: 100%;
+    height: 280px;
+    list-style: none;
+    max-width: 24%;
+    position: relative
+}
 .post.approved-false {background: red;}
-.post input[type=text]{display: block;width: 100%;}
+.post input[type=text]{
+    background: #fff;
+    border: 1px solid #ACACAC;
+    border-radius: 5px;
+    display: block;
+    line-height: 2em;
+    padding-left: 1em;
+    width: 100%;
+}
 .post .toggleApproved {display: inline}
 .post embed {width: 100%;}
 
 .new-post-row {margin-bottom: 0.5em;}
-.radio-wrap {background: #ccc;border-radius: 1em;overflow: hidden;}
+.radio-wrap {
+    background: #fff;
+    border-radius: 5px;
+    border:1px solid #3C96CB;
+    overflow: hidden;
+}
 .radio-wrap input {display: none;}
 .radio-wrap label {padding: 0.2em;cursor: pointer;}
 .radio-wrap input:checked + label {background: #3C96CB;color: #fff}
@@ -232,6 +261,7 @@ label.col2 {width: 50%;}
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+.post footer {color: #151515;}
 .post .link-header {height: 150px;}
 .post .image-wrapper {
     background: #333;
@@ -246,14 +276,15 @@ label.col2 {width: 50%;}
     height: 100%;
     display: block
 }
-.post .submittedBy {font-size: 0.8em;}
+
 .post .submitNewPost {
     background: #3C96CB;
+    border: none;
     color: #fff;
     margin-top: 1em;
-    height: 5em;
-    border-radius: 4em;
-    width: 5em;
+    line-height: 2em;
+    border-radius: 5px;
+    width: 100%;
     cursor: pointer;
 }
 .post .submitNewPost:hover {
@@ -271,14 +302,16 @@ label.col2 {width: 50%;}
 }
 .post .new-post-error {color: red;}
 .post .voteWrapper{
+    border: 1px solid #3D97CC;
+    border-radius: 5px;
     cursor: pointer;
-    float: right;
-    border: 1px solid #efefef;
-    position: absolute;
-    bottom: 3px;
-    right: 3px;
+    line-height: 1.5em;
+    margin-bottom: 0.5em;
+    overflow: hidden;
 }
-.post .voteWrapper .vote {float: left;}
+.post .voteWrapper .vote {color: #B2B2B2;width: 3em;}
+.post .voteWrapper .vote.left {border-right: 1px solid #3D97CC;}
+.post .voteWrapper .vote.right {border-left: 1px solid #3D97CC;}
 .post .voteWrapper .vote:hover {background: #efefef;}
 .post .voteWrapper.up .upVote,
 .post .voteWrapper.down .downVote{color: #0074B8;background: #efefef;}
