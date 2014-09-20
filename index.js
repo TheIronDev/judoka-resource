@@ -6,6 +6,8 @@ var express = require('express'),
 	ejs = require('ejs'),
 	engine = require('ejs-locals'),
 	app = express(),
+	session = require('express-session'),
+	MongoStore = require('connect-mongo')({session: session}),
 	mongoose = require('mongoose'),
 	passport = require('passport'),
 	serverPort = process.env.PORT || 5000,
@@ -32,16 +34,23 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser());
 app.use(methodOverride());
 app.use(cookieParser('unicorns and candy'));
-app.use(connect.session());
-app.use(passport.initialize());
-app.use(passport.session());
-//app.use(app.router);
 
 if (process.env.MONGOHQ_URL) {
 	mongoose.connect(process.env.MONGOHQ_URL);
 } else {
 	mongoose.connect('mongodb://localhost/test');
 }
+
+// After DB connection is established, bind the session to mongo
+app.use(connect.session({
+	secret: 'keyboard katicorn',
+	maxAge: 3600000,
+	store : new MongoStore({
+		db: mongoose.connection.db
+	})
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
