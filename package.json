@@ -1,7 +1,7 @@
 {
   "name": "judoka-resource",
   "version": "0.0.0",
-  "description": "A resource for judoka to post and learn more about judo",
+  "description": "A place to share all things Judo.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

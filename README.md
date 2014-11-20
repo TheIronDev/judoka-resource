@@ -1,7 +1,7 @@
 judoka-resource
 ===============
 
-Resource for judoka to post online
+A place to share all things Judo.
 
 # Getting Started
 This is a NodeJS/Express app that uses MongoDB as a datastore.
@@ -16,7 +16,7 @@ In one terminal, type:
 In another, type:
 ```
     npm install
-    node .
+    NODE_ENV=development node .
 ```
 
 Visit `localhost:5000/` ... and, thats it!
